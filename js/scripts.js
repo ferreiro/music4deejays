@@ -19,6 +19,9 @@ $(window).resize(function() {
 // Executes this when the ajax finish
 $( document ).ajaxComplete(function( event,request, settings ) {
   	
+  	// Añadir clase a la impaginación
+  	$('.page-numbers').addClass("button");
+
 	$('.sliderDiapos').DDSlider({
 
 	  nextSlide: '.sliderButtonNext',
@@ -26,33 +29,6 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 	  selector: '.sliderSelector'
 
 	});
-
-	$('#openLogin').click(function(){
-		$('.loginPop').slideToggle(0);
-		$('.loginPopBackground').slideToggle(0); 
-		$('#loginPop').slideToggle(0);
-		return false;
-	});
-	$('#openRegister').click(function(){
-		$('.loginPop').slideToggle(0); 
-		$('.loginPopBackground').slideToggle(0); 
-		$('#registerPop').slideToggle(0);
-		return false;
-	});
-
-	$('.userpro-close-popup').click(function(){
-		$('.loginPop').hide(0); 
-		$('.loginPopBackground').hide(0); 
-		$('#registerPop').hide(0);
-		return false;
-	});
-
-	$('.loginPopBackground').click(function(){
-		$('.loginPop').hide(0); 
-		$('.loginPopBackground').hide(0);  
-		return false;
-	});
-
 
 
 	/** Calculate the height of the box depending on the width **/
@@ -67,25 +43,6 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 	// $('.sliderDiapos').css("height",sliderWidth / 2.8);
 
 	/** Calculate the height of the song depending on the width **/
-
-	var songAvatarWidth = $('.SongAvatar').width() ;
-	$('.SongAvatar').css("height",songAvatarWidth);
-
-
-	var songHeader = $('.SongHeader').height();
- 
-	$('#SongBackground').hide(0);
-
-	$('#SongBackgroundBlur').blurjs({
-	  source: '#SongBackground',
-	  radius: 30,
-	  overlay: 'rgba(36, 36, 36, .2)'
-	}); 
-	$(function() {
-		// Handler for .ready() called.
-		$('#SongBackground').delay(500);
-		$('#SongBackground').fadeIn(1000);
-	});
 
 	var totalElements = $('.trendingList .wpp-list li').length;
 

@@ -14,7 +14,8 @@
       <title>Music4deejays </title>
       <meta content="<?php bloginfo('description'); ?>" name="description" />
     <?php else: ?>
-      <title><?php the_title(); ?> - <?php the_field('author'); ?> - Music4deejays</title>
+      <?php $category = get_the_category(); ?>
+      <title><?php the_title(); ?> <?php echo $category[0]->cat_name; ?> - <?php the_field('author'); ?> - Music4deejays</title>
       <meta content="<?php the_title(); ?> - <?php the_field('author'); ?> - Music4deejays" />
       <meta name="keywords" content="<?php the_tags(' ',' ',' '); ?>" />
     <?php endif; ?>
@@ -67,7 +68,8 @@
         <div class="loaderGif"></div>
       </div>
 
-      <section class="modal">
+      <section class="modal" id="modalProfile">
+
         <div class="modalBox">
           <div class="modalBoxClose" onclick="event.preventDefault(); $('.modal').fadeToggle('fast');">
             <a href="#" class="icon-close"></a>
@@ -79,16 +81,25 @@
             Hey! This feature is on <strong>Beta</strong>. If you'd like to get an  <u>early access</u> to it, please give us your email and we'll send you an invitation.
           </p>
           <p class="invitation">
-            <a href="#" onclick="event.preventDefault(); $('.betaForm').show(); $('.invitation').hide();">Request invitation!</a>
+            <a href="#" onclick="event.preventDefault(); $('#formularioInvitacion').show();  ">Request invitation!</a>
           </p>
-          <div class="betaForm">
-            <form action="contacto.php" method="post" class="formulario">
+<!--           <div class="betaForm">
+            <form target="_blank" action="sent_invitation.php" method="post" class="formulario">
               <input type="email" name="name" placeholder="Write your email" required />
               <input type="submit" value="Request invitation" />
             </form>
-          </div>
+          </div> -->
+        </div>  
+
+
+        <div id="formularioInvitacion" style=" display:none; background-color: rgb(231,238,247); padding:30px; padding-bottom:15px; position:absolute; top:50%; left:50%; margin-left:-300px; margin-top:-225px;">
+            <div class="modalBoxClose" onclick="event.preventDefault(); $('#formularioInvitacion').hide('fast');">
+              <a href="#" class="icon-close"></a>
+            </div>           
+            <iframe src="https://docs.google.com/forms/d/1K3ureKHuRa_97_6MYapid1t6hOphudeH2auO8-E7Ci8/viewform?embedded=true" width="600" height="450" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div> 
-      </section>
+
+      </section> 
       
       <header class="Header">
         <div class="HeaderInt">
@@ -168,7 +179,7 @@
             </div>
 
             <div class="HeaderButton HeaderProfile">
-              <a href="#"  onclick="event.preventDefault(); $('.modal').fadeToggle('fast');">
+              <a href="#"  onclick="event.preventDefault(); $('#modalProfile').fadeToggle('fast');">
                 <span class="icon-profile"></span>
               </a>
               <div class="HeaderButtonAlert">Register or Login</div>

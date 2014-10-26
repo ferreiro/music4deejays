@@ -54,7 +54,7 @@
 			$.address.value(path); // 1 = Just load left
 			return false;
 		}
-		if ((!$el.hasClass("userpro")) && (!$el.hasClass("noAjax")) ) {	
+		if (!$el.hasClass("noAjax")) {	
 
 			$('.Menu li').removeClass("selected");
 
@@ -88,36 +88,36 @@
 			});
 		}	 
 		
-		if (primeraCarga == 0) 
-		{
-			var string = event.value;
+		// if (primeraCarga == 0) 
+		// {
+		// 	var string = event.value;
 			
-			if(string.indexOf("electro") > -1)
-			{
-				$(".electro_m").addClass("selected");
-				primeraCarga++;
-			}
-			else if(string.indexOf("progressive") > -1)
-			{
-				$(".progressive_m").addClass("selected");
-				primeraCarga++;
-			}
-			else if(string.indexOf("dubstep") > -1)
-			{
-				$(".dubstep_m").addClass("selected");
-				primeraCarga++;
-			}
-			else if(string.indexOf("trending") > -1)
-			{
-				$(".trending_m").addClass("selected");
-				primeraCarga++;
-			}
-			else
-			{
-				$(".novedades_m").addClass("selected");
-				primeraCarga++;
-			}
-		}
+		// 	if(string.indexOf("electro") > -1)
+		// 	{
+		// 		$(".electro_m").addClass("selected");
+		// 		primeraCarga++;
+		// 	}
+		// 	else if(string.indexOf("progressive") > -1)
+		// 	{
+		// 		$(".progressive_m").addClass("selected");
+		// 		primeraCarga++;
+		// 	}
+		// 	else if(string.indexOf("dubstep") > -1)
+		// 	{
+		// 		$(".dubstep_m").addClass("selected");
+		// 		primeraCarga++;
+		// 	}
+		// 	else if(string.indexOf("trending") > -1)
+		// 	{
+		// 		$(".trending_m").addClass("selected");
+		// 		primeraCarga++;
+		// 	}
+		// 	else
+		// 	{
+		// 		$(".novedades_m").addClass("selected");
+		// 		primeraCarga++;
+		// 	}
+		// }
 			
 		var current = location.protocol + '//' + location.hostname + location.pathname;
 		if (base + '/' != current) {

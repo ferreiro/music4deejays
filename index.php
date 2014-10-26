@@ -112,9 +112,7 @@
                 $url = $thumb[0];
             }
         ?> 
-
         <article class="Box" id="<?php echo $id; ?>">
-
 
             <div class="BoxLineVertical"></div>
             <div class="BoxLineHorizontal"></div> 
@@ -130,7 +128,7 @@
             <div class="BoxLeft">
 
                 <div class="BoxPlay">
-                    <a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxBoxUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">
+                    <a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend( $('#<?php echo $id; ?> .BoxSongUrl') ); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">
                         <span class="icon-playsong"></span>
                     </a>
                 </div> 
@@ -163,7 +161,7 @@
 
                     <ul>
                         <li class="comments">
-                            <a href="<?php the_permalink(); ?>#comments">
+                            <a href="<?php the_permalink(); ?>">
                                 <span class="icon-comment"></span>
                                 <span class="text">Comment</span>
                             </a>
@@ -211,7 +209,8 @@
                         query_posts(array('orderby' => 'date', 'showposts' => 3, 'cat' => '-208')); 
                         if (have_posts()) : while (have_posts()) : the_post(); 
                     ?>
-                        <?php PostSlide($i, "thumbnail"); ?> 
+                        <?php PostSlide($i, "thumbnail"); ?>    
+                        <?php $i++; ?>
 
                     <? endwhile; endif; ?>
                 </ul>
@@ -235,6 +234,7 @@
                     <?php $i++; ?>
                 <?php else: ?>
                     <?php Post($i, "thumbnail"); ?> 
+                    <?php $i++; ?>
                 <?php endif; ?>
 
             <? endwhile; endif; ?>

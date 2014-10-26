@@ -17,12 +17,21 @@
                 $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
             ?>
             <div class="SongHero" style="background-image:url(<?php echo $featuredImage; ?>);">
+                
+                <div class="BoxSongUrl" style="display:none;">
+                    <?php if(get_field('soundcloudURL')): ?>
+                            <li class= 'playlistItem' data-type='soundcloud' data-path='<?php the_field('soundcloudURL'); ?>' data-thumb='<?php echo $url; ?>'/>
+                    <?php else: ?>
+                            
+                    <?php endif; ?>
+                </div>
+
                 <div class="SongHeroVerticalLine" style="display:none;"></div>
                 <div class="SongHeroGradient"></div>
                 <div class="SongHeroInfo">
 
                     <div class="PlayButton">
-                        <a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxBoxUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">
+                        <a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">
                           <span class="icon-playsong"></span>
                         </a>
                     </div>  
@@ -33,7 +42,7 @@
 
                       <ul>
                         <li class="comments">
-                          <a href="#">
+                          <a>
                             <span class="icon-comment"></span>
                             <span class="text">Comment</span>
                           </a>
@@ -103,12 +112,6 @@
                     <? endwhile; endif; ?> 
                 </ul>
             </div>           
-
-            <div class="load_more">
-                <a href="/electro" class="button">
-                    Load more songs
-                </a>
-            </div>
 
         </div><!-- Fin container Left -->
    
