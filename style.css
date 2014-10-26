@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'music4deejays_icons';
-	src:url('fonts/music4deejays_icons.eot?8pnb47');
-	src:url('fonts/music4deejays_icons.eot?#iefix8pnb47') format('embedded-opentype'),
-		url('fonts/music4deejays_icons.woff?8pnb47') format('woff'),
-		url('fonts/music4deejays_icons.ttf?8pnb47') format('truetype'),
-		url('fonts/music4deejays_icons.svg?8pnb47#music4deejays_icons') format('svg');
+	src:url('fonts/music4deejays_icons.eot?-ju7mzl');
+	src:url('fonts/music4deejays_icons.eot?#iefix-ju7mzl') format('embedded-opentype'),
+		url('fonts/music4deejays_icons.woff?-ju7mzl') format('woff'),
+		url('fonts/music4deejays_icons.ttf?-ju7mzl') format('truetype'),
+		url('fonts/music4deejays_icons.svg?-ju7mzl#music4deejays_icons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -109,6 +109,9 @@
 }
 .icon-upload:before {
 	content: "\e608";
+}
+.icon-menu:before {
+	content: "\e61e";
 }
 .icon-close:before {
 	content: "\e605";
@@ -726,7 +729,8 @@ ul, li
 {
 	float: left;
 	display: inline-block;
-	margin-right: 10px;  
+	margin-right: 10px; 
+	margin-top: 8px;  
 }
 .HeaderLogoIcon
 {
@@ -870,6 +874,26 @@ ul, li
 	display: inline-block;
 	vertical-align: middle; 
 }
+.HeaderMenuMobile
+{
+	width: 62px;
+	height: 62px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	float: left;
+	cursor: pointer;
+	font-size: 2.4em;
+	text-align: center;
+}
+.HeaderMenuMobile span
+{
+	float: left;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin-top: 8px;
+}
 .HeaderSearch
 {
 	width: 30px;
@@ -984,6 +1008,8 @@ ul, li
 	background: #709001;
 }
 
+
+
 /*** Container ***/
 
 
@@ -994,11 +1020,11 @@ ul, li
 	background: #fff; 
 	text-align: left;
 	display: inline-block;
+	margin-top:75px;
 }
 .ContainerInt
 {
 	margin: 0 1em;
-	margin-top:75px;
 } 
 .ContainerMiddle
 {
@@ -2149,15 +2175,36 @@ ul, li
 }
 
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 629px) {
+	.Container
+	{
+		margin-top: 43px;
+	}
+	.HeaderMenu-current .currentIcon
+	{		
+		display: none;
+	}
+	.HeaderMenuMobile
+	{
+		display: block !important;
+	}
+	.HeaderRight
+	{
+		display: none;
+	}
 	.HeaderMenu 
 	{
-		width: 100%;
+		width: 300px;
+		height: 100%;
+		float: left;
 		background: #fff;
-		position: absolute;
-		top: 100%;
-		left: 0;
+		position: fixed;
+		top: 0;
+		left: inherit;
+		bottom: 0;
 		right: 0;
+		z-index: 1000;
+		display: none;
 	}
 	.HeaderMenu-current
 	{
@@ -2168,6 +2215,7 @@ ul, li
 	.HeaderMenu-submenu 
 	{
 		width: 100%;
+		display: block !important;
 	}
 	.sliderSelector
 	{
@@ -2181,7 +2229,7 @@ ul, li
 		display: none;
 	}
 }
-@media all and (min-width: 600px) {
+@media all and (min-width: 630px) {
 
 	.Header
 	{ 
@@ -2192,9 +2240,17 @@ ul, li
 		margin-top: 18px;
 		float: left;
 	}
+	#closemobile
+	{
+		display: none !important;
+	}
+	.HeaderMenuMobile
+	{
+		display: none;
+	}
 	.HeaderSearch
 	{
-		width: 230px;
+		width: 120px;
 		height: 40px;
 		background: #e0e0e0;
 		-webkit-border-radius: 8px;
@@ -2250,6 +2306,12 @@ ul, li
 
 }
 
+@media all and (min-width: 750px) {
+	.HeaderSearch
+	{
+		width: 230px; 
+	}
+}
 @media all and (min-width: 1150px) {
 	.Player
 	{

@@ -61,6 +61,9 @@
 			$.address.value(path); // 0 = Load left and right
 
 			$el.parent().addClass("selected");
+			
+			$('.HeaderMenu-submenu').hide();
+
 
 			if($el.parent('.HeaderLogo').length == 1)
 			{

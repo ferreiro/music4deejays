@@ -19,6 +19,49 @@ $(window).resize(function() {
 // Executes this when the ajax finish
 $( document ).ajaxComplete(function( event,request, settings ) {
   	
+  	$( "#open_mobile" ).click(function() {
+  		$('.HeaderMenu').slideToggle(0);
+  		$('#closemobile').show(0);
+  	}); 
+  	$( "#closemobile" ).click(function() {
+  		$('.HeaderMenu').slideToggle(0);
+  		$('#closemobile').hide(0);
+  	}); 
+
+  	if(navigator.userAgent.match(/Android/i)
+  	  	|| navigator.userAgent.match(/webOS/i)
+  	  	|| navigator.userAgent.match(/iPhone/i)
+  	  	|| navigator.userAgent.match(/iPad/i)
+  	  	|| navigator.userAgent.match(/iPod/i)
+  	  	|| navigator.userAgent.match(/BlackBerry/i)
+  	  	|| navigator.userAgent.match(/Windows Phone/i)) {
+
+  		// Open the menu
+
+  		$( ".HeaderMenu" ).click(function() {
+  			$('.HeaderMenu-submenu').show(0); 
+  			$( ".HeaderMenu" ).addClass('menu_pulsado');
+  		});
+
+  		$( ".menu_pulsado" ).click(function() {
+  			$('.HeaderMenu-submenu').hide(0); 
+  			$( ".HeaderMenu" ).removeClass('menu_pulsado');
+  		});
+  	 
+  	}
+  	else
+  	{   
+
+  		$( ".HeaderMenu" ).hover(
+  		  function() {
+  		    $('.HeaderMenu-submenu').show();
+  		  }, function() {
+  		    $('.HeaderMenu-submenu').hide();
+  		  }
+  		);
+
+  	}
+
   	// Añadir clase a la impaginación
   	$('.page-numbers').addClass("button");
 

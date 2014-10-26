@@ -111,7 +111,15 @@
             </a>
           </div>
 
+          <div class="HeaderMenuMobile" id="open_mobile">
+              <span class="icon-menu"></span>
+          </div>
+
+
           <div class="HeaderMenu">
+            <div id="closemobile" style="z-index:300; padding:15px; position:absolute; top:0; right:0;">
+                <span class="icon-close" style="font-size:1.5em;"></span>
+            </div>
             <div class="HeaderMenu-current">
               <span class="currentText">Featured</span>
               <span class="currentIcon icon-down"></span>
