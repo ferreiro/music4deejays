@@ -112,7 +112,9 @@
                 $url = $thumb[0];
             }
         ?> 
+
         <article class="Box" id="<?php echo $id; ?>">
+
 
             <div class="BoxLineVertical"></div>
             <div class="BoxLineHorizontal"></div> 
@@ -196,8 +198,8 @@
     }
     ?>
 
-        <div class="ContainerLeft">
-            <div class="slider">
+        <div class="ContainerMiddle">
+            <div class="slider" style="height:320px;">
                 <div class="sliderVerticalLine"></div>
 
                 <div class="sliderButtonPrev icon-prev"></div>
@@ -215,7 +217,15 @@
                 </ul>
             </div><!-- End of the slider -->
 
+        </div><!-- End of the slider -->
+        <div class="ContainerLeft">
+
             <section class="all_posts">
+
+                <h1 style="font-weight:400; border-left:10px solid #f4f4f4; padding-top:15px; padding-bottom:5px; padding-left:20px; position:relative; font-size:22px;">
+                    New tracks <span style="opacity:0.6;">on music4deejays</span>
+                </h1>
+
             <? 
                 $i = 0;
                 query_posts(array('orderby' => 'date', 'showposts' => 9, 'cat' => '-208')); 
@@ -236,6 +246,14 @@
                 </a>
             </div>
 
+            <style type="text/css">
+            .ContainerRight
+            {
+                margin-top: 20px;
+            }
+            </style>
+
+
         </div><!-- Fin container Left -->
 
     </div>
@@ -244,21 +262,12 @@
 
         <div class="ContainerRight"> 
 
-
             <div class="uploadTracks">
-                <h3>Do you have a track<h3>
+                <h3>Do you have a track?<h3>
                 <a href="/send_tracks" class="button button_color">Upload to m4d.com</a>
                 <span class="short icon-upload"></span>
                 <span class="medium icon-upload"></span>
                 <span class="big icon-upload"></span>
-            </div>
-
-            <div class="followUs">
-                <h3>Follow us!<h3>
-                <ul>
-                    <li><a href="http://twitter.com/music4deejays" target="_blank" class="icon-twitter"></a></li>
-                    <li><a href="http://facebook.com/music4deejays"  target="_blank" class="icon-facebook"></a></li>
-                </ul> 
             </div>
 
             <div class="SectionToptracks">
@@ -275,25 +284,32 @@
                     <?php
                         $categories = get_the_category();
                         $category_id = $categories[0]->cat_ID;
-                        wpp_get_mostpopular( "range=weekly&limit=5&post_type=post&freshness=1&order_by=views&title_length=8&title_by_words=1&thumbnail_width=40&thumbnail_height=40&stats_views=0&post_html=\"<li><span class='songsRelatedCover'>{thumb}</span><span class='songsRelatedInfo'><h2><a href='{url}'>{text_title}</a></h2></span></a></li>\"" );
+                        wpp_get_mostpopular( "range=weekly&limit=10&post_type=post&freshness=1&order_by=views&title_length=8&title_by_words=1&thumbnail_width=40&thumbnail_height=40&stats_views=0&post_html=\"<li><span class='songsRelatedCover'>{thumb}</span><span class='songsRelatedInfo'><h2><a href='{url}'>{text_title}</a></h2></span></a></li>\"" );
                     ?>
                     </div>
                     <div id="month_featured" style="display:none;">
                     <?php 
                         $categories = get_the_category();
                         $category_id = $categories[0]->cat_ID;
-                        wpp_get_mostpopular( "range=monthly&limit=5&post_type=post&freshness=1&order_by=views&title_length=8&title_by_words=1&thumbnail_width=40&thumbnail_height=40&stats_views=0&post_html=\"<li><span class='songsRelatedCover'>{thumb}</span><span class='songsRelatedInfo'><h2><a href='{url}'>{text_title}</a></h2></span></a></li>\"" );
+                        wpp_get_mostpopular( "range=monthly&limit=10&post_type=post&freshness=1&order_by=views&title_length=8&title_by_words=1&thumbnail_width=40&thumbnail_height=40&stats_views=0&post_html=\"<li><span class='songsRelatedCover'>{thumb}</span><span class='songsRelatedInfo'><h2><a href='{url}'>{text_title}</a></h2></span></a></li>\"" );
                     ?>
                     </div>
                     <div id="all_featured">
                     <?php
                         $categories = get_the_category();
                         $category_id = $categories[0]->cat_ID;
-                        wpp_get_mostpopular( "range=all&limit=5&post_type=post&freshness=1&order_by=views&title_length=8&title_by_words=1&thumbnail_width=40&thumbnail_height=40&stats_views=0&post_html=\"<li><span class='songsRelatedCover'>{thumb}</span><span class='songsRelatedInfo'><h2><a href='{url}'>{text_title}</a></h2></span></a></li>\"" );
+                        wpp_get_mostpopular( "range=all&limit=10&post_type=post&freshness=1&order_by=views&title_length=8&title_by_words=1&thumbnail_width=40&thumbnail_height=40&stats_views=0&post_html=\"<li><span class='songsRelatedCover'>{thumb}</span><span class='songsRelatedInfo'><h2><a href='{url}'>{text_title}</a></h2></span></a></li>\"" );
                     ?>
                     </div>
                 </ul>
             </div><!-- Fin SectionToptracks -->
 
+            <div class="followUs">
+                <h3>Follow us!<h3>
+                <ul>
+                    <li><a href="http://twitter.com/music4deejays" target="_blank" class="icon-twitter"></a></li>
+                    <li><a href="http://facebook.com/music4deejays"  target="_blank" class="icon-facebook"></a></li>
+                </ul> 
+            </div>
             <?php get_footer(); ?>
 

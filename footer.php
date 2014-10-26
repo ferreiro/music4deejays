@@ -42,7 +42,7 @@
 
 	<div class="PlayerContent">
 
-		<div class="PlayerLeft">
+		<div class="PlayerMiddle">
 			<div class="PlayerImage">
 				<div class="thumb"></div>
 			</div>
@@ -54,11 +54,6 @@
 						</div>
 					</a>
 				</h1>
-				<h2>
-					<a href="">
-					Nick Gardner - Lose You
-					</a>
-				</h2> 
 			</div>
 		</div>
 
@@ -86,23 +81,15 @@
 			
 		</div>
 
-		<div class="PlayerRight">
-			
+		<div class="PlayerLeft">
 			<div class="PlayerTime" style="display: ;">
 				<div class="player_mediaTime_current">00:00</div>
 				<div class="player_mediaTime_total">00:00</div>
 			</div>
- 
-			<div class="PlayerShare">
-				<div class="controls ">
-					<div class="icon-share"></div>
-				</div> 
-			</div>
-
+		</div>
+		<div class="PlayerRight">
+			
 			<div class="PlayerVolume">
-				<div class="controls player_volume">
-					<div class="icon-volume-high"></div>
-				</div>
 				<div class="volume_seekbar" data-orientation="horizontal" >
 					<div class="volume_bg"></div>
 					<div class="volume_level"><span></span></div>
@@ -236,12 +223,14 @@
  	 
 	<!-- analytics -->
 	<script>
-	(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
-	(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
-	l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-	ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
-	ga('send', 'pageview');
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-51299955-1', 'auto');
+	  ga('send', 'pageview');
+
 	</script>
 
 </body>

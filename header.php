@@ -102,7 +102,7 @@
 
           <div class="HeaderMenu">
             <div class="HeaderMenu-current">
-              <span class="currentText">Featured tracks</span>
+              <span class="currentText">Featured</span>
               <span class="currentIcon icon-down"></span>
             </div>
             <div class="HeaderMenu-submenu">
@@ -111,7 +111,7 @@
                   <a href="/">
                     <span class="icon icon-popular"></span>
                     <span class="text">
-                      Featured tracks
+                      Featured 
                     </span>
                   </a>
                 </li>

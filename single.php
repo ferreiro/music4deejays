@@ -87,21 +87,20 @@
                 </p>
             </div>      
 
+            <? endwhile; endif; ?>    
+
             <div class="SongRelated">
                 <h2>Related songs</h2>
                 <ul>
-                    <li style="background-image:url();">
-                        <a href=""></a>
-                    </li>
-                    <li style="background-image:url();">
-                        <a href=""></a>
-                    </li>
-                    <li style="background-image:url();">
-                        <a href=""></a>
-                    </li>
-                    <li style="background-image:url();">
-                        <a href=""></a>
-                    </li>
+                    <?php query_posts(array('orderby' => 'rand', 'showposts' => 4 )); 
+                        if (have_posts()) : while (have_posts()) : the_post(); ?>
+                        <?php 
+                            $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+                        ?>
+                        <li style="background-image:url(<?php echo $featuredImage; ?>);">
+                            <a href="<?php the_permalink(); ?>"></a>
+                        </li>
+                    <? endwhile; endif; ?> 
                 </ul>
             </div>           
 
@@ -112,8 +111,7 @@
             </div>
 
         </div><!-- Fin container Left -->
-
-        <? endwhile; endif; ?>       
+   
 
     </div>
     </div><!-- Fin ajax left -->

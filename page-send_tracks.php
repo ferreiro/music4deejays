@@ -1,15 +1,11 @@
 
     <?php get_header(); ?>
 
-    <div id="ajaxCenterContainer">
-    <div id="ajaxCenterContainerint">
-
+        <div class="ContainerMiddle">
         <style type="text/css">
 
-        .sectionContentLeft,
-        .sectionContentRight,
-        .linea_derecha,
-        .footer
+        .footer,
+        .ContainerRight
         {
             display: none !important;
         }
@@ -18,52 +14,35 @@
         <div class="Uploder">
             <div class="UploderContent">
             <h1>
-                Upload your track
+                You can appear on music4deejays.com!
             </h1>
-            <form method="" action="">
+
+            <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dF9PT2EwVk5xbVMzSElDRWxlai04VUE6MA" width="320" height="912" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+            <!-- 
+            <form action="form_sent.php" method="post">
 
                 <div class="UploaderInput">
                     <div class="UploaderInputLeft">
                         <p>Song Title</p>
                     </div>
                     <div class="UploaderInputRight">
-                        <input type="text" requiered autofocus placeholder="Song Title" >
+                        <input type="text" name="song_title" placeholder="Song Title" requiered autofocus />
                     </div> 
                 </div>
                 <div class="UploaderInput">
                     <div class="UploaderInputLeft">
-                        <p>Artist</p>
+                        <p>Download link to the song</p>
                     </div>
                     <div class="UploaderInputRight">
-                        <input type="text" requiered autofocus placeholder="Artist name" >
-                    </div> 
-                </div> 
-                <div class="UploaderInput">
-                    <div class="UploaderInputTitle">
-                        <h2>Song Url</h2>
-                        <p>Choose one of this providers</p>
-                    </div>
-                    <div class="UploaderInputChoose">
-                        <a href="#" id="Soundcloud">
-                            <span>Soundcloud</span
-                        </a>
-                        <a href="#" id="Zippy">
-                            <span>ZippyShare</span
-                        </a>
-                        <a href="#" id="Mega">
-                            <span>Mega</span
-                        </a>
-                    </div>
-                    <div class="UploaderInputUrl">
-                        <input type="url" id="url" requiered autofocus >
-                    </div>
+                        <input type="text" name="download_link" placeholder="Download link: Mega, zippyshare, dropbox, drive..." requiered autofocus />
+                    </div>  
                 </div> 
                 <div class="UploaderInput">
                     <div class="UploaderInputLeft">
-                        <p>Artist</p>
+                        <p>Email</p>
                     </div>
                     <div class="UploaderInputRight">
-                        <input type="text" requiered autofocus placeholder="Your email " >
+                        <input type="email" name="email" requiered autofocus placeholder="Your email " >
                     </div> 
                 </div>  
                 <div class="UploaderInput" style="margin-top:-27px;"> 
@@ -71,13 +50,13 @@
                 </div>  
         
             </form>
+            -->
+
             </div>      
         </div>
-
+        
     </div>
-    </div>
-
-</div>
-</div><!-- Fin section wrap -->
+    </div><!-- Fin ajax left -->
+ 
  
 <?php get_footer(); ?>
