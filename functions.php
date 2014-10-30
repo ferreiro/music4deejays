@@ -50,7 +50,7 @@ if ( !is_multisite() && !is_child_theme() ) {
             'script_loader_src',
             'style_loader_src'
         );
-        add_filters($tags, 'nowp_clean_urls');
+        add_filter($tags, 'nowp_clean_urls');
     }
 }
 
@@ -88,7 +88,7 @@ $root_rel_filters = array(
     'script_loader_src',
     'style_loader_src'
 );
-add_filters($root_rel_filters, 'nowp_root_relative_url');
+add_filter($root_rel_filters, 'nowp_root_relative_url');
 
 
 /**
