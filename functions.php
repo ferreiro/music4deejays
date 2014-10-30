@@ -11,6 +11,172 @@
 
 // Load any external files you have here
 
+/**
+ * URL Rewriting
+ *
+ * Rewrite:
+ *  /wp-content/themes/themename/assets/css/ to /static/css/
+ *  /wp-content/themes/themename/assets/js/ to /static/js/
+ *  /wp-content/themes/themename/assets/img/ to /static/img/
+ *  /wp-content/plugins/ to /addons/
+ */
+function nowp_add_rewrites($content) {
+    global $wp_rewrite;
+    $nowp_new_non_wp_rules = array(
+        'static/(.*)' => THEME_PATH . '/assets/$1',
+        'addons/(.*)'   => RELATIVE_PLUGIN_PATH . '/$1'
+    );
+    $wp_rewrite->non_wp_rules = array_merge($wp_rewrite->non_wp_rules, $nowp_new_non_wp_rules);
+    return $content;
+}
+
+function nowp_clean_urls($content) {
+    if (strpos($content, RELATIVE_PLUGIN_PATH) > 0) {
+        return str_replace('/' . RELATIVE_PLUGIN_PATH,  '/plugins', $content);
+    } else {
+        return str_replace('/' . THEME_PATH, '', $content);
+    }
+}
+
+// No rewrites for multisite or child themes
+if ( !is_multisite() && !is_child_theme() ) {
+    add_action('generate_rewrite_rules', 'nowp_add_rewrites');
+    if ( !is_admin() ) {
+        $tags = array(
+            'plugins_url',
+            'bloginfo',
+            'stylesheet_directory_uri',
+            'template_directory_uri',
+            'script_loader_src',
+            'style_loader_src'
+        );
+        add_filters($tags, 'nowp_clean_urls');
+    }
+}
+
+/**
+ * Relative URLs
+ *
+ * Inspired by Roots.io
+ */
+function nowp_root_relative_url($input) {
+    preg_match('|https?://([^/]+)(/.*)|i', $input, $matches);
+
+    if (isset($matches[1]) && isset($matches[2]) && $matches[1] === $_SERVER['SERVER_NAME']) {
+        return wp_make_link_relative($input);
+    } else {
+        return $input;
+    }
+}
+function nowp_enable_root_relative_urls() {
+    return !( is_admin() || in_array($GLOBALS['pagenow'], array('wp-login.php', 'wp-register.php')) );
+}
+$root_rel_filters = array(
+    'bloginfo_url',
+    'the_permalink',
+    'wp_list_pages',
+    'wp_list_categories',
+    'the_content_more_link',
+    'the_tags',
+    'get_pagenum_link',
+    'get_comment_link',
+    'month_link',
+    'day_link',
+    'year_link',
+    'tag_link',
+    'the_author_posts_link',
+    'script_loader_src',
+    'style_loader_src'
+);
+add_filters($root_rel_filters, 'nowp_root_relative_url');
+
+
+/**
+ * Clean up wp_head()
+ *
+ * Remove unnecessary <link>'s
+ * Remove inline CSS used by Recent Comments widget
+ * Remove inline CSS used by posts with galleries
+ * Remove self-closing tag and change ''s to "'s on rel_canonical()
+ */
+function nowp_head_cleanup() {
+    // Remove junk from head
+    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'wp_generator');
+    remove_action('wp_head', 'feed_links', 2);
+    remove_action('wp_head', 'index_rel_link');
+    remove_action('wp_head', 'wlwmanifest_link');
+    remove_action('wp_head', 'feed_links_extra', 3);
+    remove_action('wp_head', 'start_post_rel_link', 10, 0);
+    remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+    remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+    remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+    remove_action('wp_head', 'feed_links', 2);
+    remove_action('wp_head', 'feed_links_extra', 3);
+
+    global $wp_widget_factory;
+    remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+
+    if (!class_exists('WPSEO_Frontend')) {
+        remove_action('wp_head', 'rel_canonical');
+        add_action('wp_head', 'nowp_rel_canonical');
+    }
+}
+function nowp_rel_canonical() {
+    global $wp_the_query;
+
+    if (!is_singular()) {
+        return;
+    }
+
+    if (!$id = $wp_the_query->get_queried_object_id()) {
+        return;
+    }
+
+    $link = get_permalink($id);
+    echo "\t<link rel=\"canonical\" href=\"$link\">\n";
+}
+add_action('init', 'nowp_head_cleanup');
+
+
+/**
+ * Remove the WordPress version
+ */
+add_filter('the_generator', '__return_false');
+
+
+/**
+ * Clean up language_attributes() used in <html> tag
+ *
+ * Change lang="en-US" to lang="en"
+ * Remove dir="ltr"
+ */
+function nowp_language_attributes() {
+    $attributes = array();
+    $output = '';
+
+    if (function_exists('is_rtl')) {
+        if (is_rtl() == 'rtl') {
+            $attributes[] = 'dir="rtl"';
+        }
+    }
+
+    $lang = get_bloginfo('language');
+
+    if ($lang && $lang !== 'en-US') {
+        $attributes[] = "lang=\"$lang\"";
+    } else {
+        $attributes[] = 'lang="en"';
+    }
+
+    $output = implode(' ', $attributes);
+    $output = apply_filters('nowp_language_attributes', $output);
+
+    return $output;
+}
+add_filter('language_attributes', 'nowp_language_attributes');
+
 /*------------------------------------*\
 	Theme Support
 \*------------------------------------*/
