@@ -49,6 +49,11 @@
 		$el = $(this); // Caching
 		loadInsidePage = 0;
 
+
+		$('.HeaderMenu').hide(0);
+		$('.HeaderWhiteBg').hide(0);
+		$('#closemobile').hide(0);
+
 		if ($el.parents('.pagination').length == 1) {
 			loadInsidePage = 1;
 			$.address.value(path); // 1 = Just load left

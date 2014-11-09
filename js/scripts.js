@@ -52,11 +52,14 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 
 
   	$( "#open_mobile" ).click(function() {
-  		$('.HeaderMenu').slideToggle(0);
+  		$('.HeaderMenu').show(0);
+  		$('.HeaderWhiteBg').show(0);
   		$('#closemobile').show(0);
   	}); 
+
   	$( "#closemobile" ).click(function() {
-  		$('.HeaderMenu').slideToggle(0);
+  		$('.HeaderMenu').hide(0);
+  		$('.HeaderWhiteBg').hide(0);
   		$('#closemobile').hide(0);
   	}); 
 

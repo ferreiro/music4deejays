@@ -23,7 +23,7 @@
             <div class="sliderDiaposInfo">
                 <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
                 <h2><?php echo $category[0]->cat_name; ?></h2>
-                <p><a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">Listen song</a></p>
+                <!-- <p><a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">Listen song</a></p> -->
             </div>
             <div class="sliderDiaposLink">
                 <a href="<?php the_permalink(); ?>"></a>

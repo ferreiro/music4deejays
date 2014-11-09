@@ -103,7 +103,10 @@
 
       </section> 
       
+      <div class="Header headerBlur"></div>
+
       <header class="Header">
+        <div class="HeaderWhiteBg"></div>
         <div class="HeaderInt">
 
           <div class="HeaderLogo">
