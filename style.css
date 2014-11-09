@@ -624,6 +624,7 @@ ul, li
 .PlayerVolume .volume_level
 {
 	width: 100%;
+	max-width: 100%;
 	background-color: #cb9b9b;
 	height: 2px;
 	position: absolute;
@@ -748,9 +749,30 @@ ul, li
 	width: 100%;
 	padding: 13px 0;
 	background: #e9e9e9;
+	background: rgba(233, 233, 233, 0.98);
 	position: fixed;
 	text-align: right;
 	z-index: 50;
+}
+.HeaderWhiteBg
+{
+	width: 100%;
+	height: 100%;
+	z-index: 60;
+	float: left;
+	position: fixed;
+	display: none;
+	left: 0;
+	top: 0;
+	background: rgba(255,255,255,0.6); 
+}
+.headerBlur {
+	-webkit-filter: blur(8px) contrast(0.4) brightness(1.4);
+	-moz-filter: blur(8px) contrast(0.4) brightness(1.4);
+	-o-filter: blur(8px) contrast(0.4) brightness(1.4);
+	-ms-filter: blur(8px) contrast(0.4) brightness(1.4);  
+	transition: all 0.5s ease-in-out;
+	-webkit-transform: translate3d(0,0,0); 
 }
 .HeaderInt
 {
@@ -1538,7 +1560,7 @@ ul, li
 	padding: 0;
 	font-size: 14px;
 	font-weight: 300;
-	color: rgba(255,255,255,0.9);
+	color: rgba(255,255,255,0.6);
 }
 .sliderDiaposInfo p
 {
@@ -1572,6 +1594,165 @@ ul, li
 	height: 100%;
 	float: left;
 }
+
+/*********************
+	Song Cover
+**********************/
+
+.SongCover
+{
+	width: 100%;
+	height: 280px;
+	position: relative; 
+	float: left; 
+	background: #f4f4f4 50% 50% no-repeat;
+	background-size: cover;
+} 
+.SongCoverGradient
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 1%, rgba(0,0,0,0.37) 99%, rgba(0,0,0,0.37) 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0)), color-stop(1%,rgba(0,0,0,0)), color-stop(99%,rgba(0,0,0,0.37)), color-stop(100%,rgba(0,0,0,0.37))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.37) 99%,rgba(0,0,0,0.37) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.37) 99%,rgba(0,0,0,0.37) 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.37) 99%,rgba(0,0,0,0.37) 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 1%,rgba(0,0,0,0.37) 99%,rgba(0,0,0,0.37) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#5e000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.SongCoverPlay:hover
+{
+	background-color: rgba(209, 0, 0, 0.9);
+}
+.SongCoverPlay
+{
+	width: 50px;
+	height: 50px;
+	z-index: 10;
+	border-radius: 100%;
+	-webkit-border-radius:100%;
+	-moz-border-radius:100%;
+	border:2px solid #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: -25px; 
+	overflow: hidden;
+	transition:0.3s;
+	background: rgba(0,0,0,0.6);
+}
+.SongCoverPlay a
+{
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	float: left;
+	position: relative;
+}
+.SongCoverPlay a:before
+{
+	width: 12px;
+	height: 15px; 
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -7.5px;
+	margin-left: -4.4px;
+	color: #fff;
+}
+.SongCoverInfo
+{
+	padding: 21px 35px;
+	padding-top: 90px;
+	margin-bottom: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 3;
+	position: absolute;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.79) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.79)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.79) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#c9000000',GradientType=0 );
+}
+.SongCoverInfo h1
+{
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: 500;
+	color: rgba(255,255,255,0.9);
+}
+.SongCoverOptions
+{
+	width: 100%;
+	margin-top: 7px;
+	float: left;
+}
+.SongCoverOptions ul 
+{
+	width: 100%; 
+}
+.SongCoverOptions ul li:first-child:after
+{
+	content: " -"; 
+	border-right: 1px solid #4C4C4C;
+	padding-right: 10px !important;
+	float: left;
+} 
+.SongCoverOptions ul li
+{  
+	display: inline-block;
+	list-style: none;
+	margin-right: 15px;
+	position: relative;
+} 
+.SongCoverOptions ul li a
+{   
+	color: rgba(255,255,255,0.8) !important;
+	font-weight: 600;
+	font-size: 14px;
+}
+.SongCoverOptions ul li a.downloadButton
+{
+	background: #ce5858;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	padding: 2px 8px;
+}
+.SongCoverOptions ul li a.downloadButton
+{
+	background: rgb(196, 46, 46); 
+}
+ 
+li.share:hover .BoxShareMenu
+{
+	display: block;
+}
+.SongCoverOptions a
+{  
+	float: left;
+}
+
+.SongCoverOptions .BoxShareMenu
+{ 
+	max-width: 200px; 
+	background: rgba(255,255,255,1);  
+	color: #3f3f3f !important;
+}	
+.SongCoverOptions .BoxShareMenu a,
+.SongCoverOptions .BoxShareMenu a:hover
+{ 
+	color: #3f3f3f !important;
+	font-weight: 300;
+}	 	
+
 
 /*********************
 	Song page
@@ -1649,7 +1830,7 @@ ul, li
 	position: absolute;
 	left: 80px;
 	right: 30px;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 .SongHeroInfo h1 a
 { 
@@ -1745,6 +1926,36 @@ ul, li
 {
 	background:  #f3f3f3;
 	color: #919090;
+}
+.downloadButton
+{
+	background: #EFEFEF;
+	color: #6F6F6F;
+}
+
+.SongInfo
+{
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 20px;
+}
+.SongInfo:after
+{
+	content: "";
+	width: 100%;
+	height: 30px;
+	float: left;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(1%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 }
 .SongComments
 {
@@ -1881,12 +2092,12 @@ ul, li
 	width: 100%;
 	float: left;
 	text-align: center;
-	padding: 20px 0;
 	padding-bottom: 0;
-	background-color: rgb(242, 242, 242);
-	border: 1px solid rgb(229, 229, 229);
+	padding: 20px 0;
 	border: 0;
 	background: transparent;
+	background-color: rgb(242, 242, 242);
+	border: 1px solid rgb(229, 229, 229);
 	border-top: 1px solid rgb(229, 229, 229);
 	position: relative;
 	display: block;
@@ -2234,17 +2445,21 @@ ul, li
 	margin:0;
 	padding: 0;
 }
-.footerContent ul li:before
+.footerContent ul li:after
 {
 	content: '\b7\a0'; /* \b7 is a middot, \a0 is a space */ 
-	margin-right: 5px;
+	margin-left: 5px;
+}
+.footerContent ul li:last-child:after
+{
+	content: ' '; /* \b7 is a middot, \a0 is a space */  
 }
 .footerContent ul li
 {
 	margin:0;
 	padding: 0;
 	display: inline-block;
-	margin-left: 5px;
+	margin-right: 5px;
 }
 .footerContent ul li a:hover
 {
@@ -2279,15 +2494,12 @@ ul, li
 	}
 	.HeaderMenu 
 	{
-		width: 300px;
-		height: 100%;
+		width: 300px; 
 		float: left;
-		background: #fff;
 		position: fixed;
-		top: 0;
-		left: inherit;
-		bottom: 0;
-		right: 0;
+		top: 0.5em;
+		left: inherit; 
+		right: 0.5em;
 		z-index: 1000;
 		display: none;
 	}
@@ -2302,6 +2514,10 @@ ul, li
 		width: 100%;
 		display: block !important;
 	}
+	.slider
+	{
+		height: 220px !important;
+	}
 	.sliderSelector
 	{
 		display: none;
@@ -2313,12 +2529,9 @@ ul, li
 	{
 		display: none;
 	}
-	.slider
-	{
-		height: 220px !important;
-	}
 	.all_posts
 	{
+		width: 100%;
 		display: inline-block;
 	}
 	.sliderDiaposInfo,
@@ -2377,6 +2590,14 @@ ul, li
 		width: 100%;
 		height: 220px !important; 
 	}
+	.SongCoverOptions .share
+	{
+		display: none;
+	}
+	.BoxOptions
+	{
+		height: auto;
+	}
 }
 @media all and (min-width: 630px) {
 
@@ -2384,6 +2605,14 @@ ul, li
 	.Header
 	{ 
 		padding: 10px 0;  
+	} 
+	.HeaderMenu
+	{
+		display: inline-block !important;
+	}
+	.HeaderWhiteBg
+	{
+		display: none !important;
 	}
 	.HeaderLogo
 	{
@@ -2457,7 +2686,7 @@ ul, li
 		width: 600px !important; 
 	}
 
-	
+
 	.leftTitle
 	{
 		font-weight:400; 
@@ -2475,6 +2704,12 @@ ul, li
 		height: 160px; 
 	}
 
+
+	.slider, 
+	.SongCover
+	{ 
+		height: 350px;
+	}
 
 
 
@@ -2565,6 +2800,7 @@ ul, li
 		position:relative; 
 		font-size:22px;
 	}
+
 
 
 	.SongRelated li

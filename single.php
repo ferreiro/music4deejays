@@ -16,7 +16,58 @@
             <?php 
                 $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
             ?>
-            <div class="SongHero" style="background-image:url(<?php echo $featuredImage; ?>);">
+
+            <?php
+                $category = get_the_category(); 
+                $category_id = get_cat_ID( $category[0]->cat_name );
+                $category_link = get_category_link( $category_id );
+            ?>
+
+            <?php if ( ! is_admin() ) : ?>
+            <div class="SongCover" style="background-image:url(<?php echo $featuredImage; ?>);">
+                <div class="SongCoverGradient"></div>
+                <div class="SongCoverPlay">
+                    <a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;" class="icon-playsong"></a>
+                </div>
+                <div class="SongCoverInfo">
+                    <h1><?php the_title(); ?></h1>
+                    <div class="SongCoverOptions">
+                        <ul>
+                            <li>
+                                <a href="<?php  echo $category_link; ?>" class="category">
+                                    <?php  echo $category[0]->cat_name; ?>
+                                </a>
+                            </li>
+
+                            <li class="share">
+                                <a href="#" onclick="event.preventDefault();">
+                                    <span class="icon-share"></span>
+                                    <span class="text">Share song</span>
+                                </a>
+                                <div class="BoxShareMenu">
+                                    <div class="facebookLink" id="<?php echo 'facebook'.$id; ?>" style="display:none;">
+                                        <span>https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?></span>
+                                    </div>
+                                    <div class="twitterLink" id="<?php echo 'twitter'.$id; ?>" style="display:none;">
+                                        <span>https://twitter.com/home?status=Now listeting to <?php echo wp_get_shortlink(); ?> via @music4deejays</span>
+                                    </div>
+                                    <a href="#" class="icon-twitter shareTwitter">Twitter</a> 
+                                    <a href="#" class="icon-facebook shareFacebook">Facebook</a> 
+                                </div>
+                            </li>
+                            <li>
+                                <?php if(get_field('downloadURL')): ?>       
+                                    <a href="<?php the_field('downloadURL'); ?>" class="downloadButton" target="_blank">Exclusive Download</a>
+                                <?php endif; ?> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <?php endif; ?>
+
+
+            <div class="SongHero" style=" display:none; background-image:url(<?php echo $featuredImage; ?>);">
                 
                 <div class="BoxSongUrl" style="display:none;">
                     <?php if(get_field('soundcloudURL')): ?>
@@ -79,21 +130,23 @@
                 </div>
             </div>   
 
-            <div class="SongTags">
-                <div class="LineVertical"></div>
-                <a href="" class="category">Electro House</a>
-                <?php the_tags('',' ',''); ?>
+            <div class="SongTags"> 
+
+                <?php the_tags('',' ',''); ?> 
+
+                <!-- 
+                <?php if(get_field('downloadURL')): ?>       
+                    <a href="<?php the_field('downloadURL'); ?>" class="downloadButton" target="_blank">Exclusive Download</a>
+                <?php endif; ?>  
+                -->      
+
             </div>
 
             <?php if($post->post_content != ""): ?>
                 <div class="SongInfo">
                     <?php the_content(); ?>
                 </div>
-            <?php endif; ?>   
-
-            <?php if(the_field('downloadURL')): ?>
-                <a href="<?php the_field('downloadURL'); ?>">Exclusive Download</a>
-            <?php endif; ?>            
+            <?php endif; ?>       
 
             <div class="SongComments" id="comments">
                 <h2>Comments</h2>
