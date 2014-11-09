@@ -2,7 +2,7 @@
 	        <footer class="footer">
 	        <div class="footerContent">
 	  				<ul>
-	  					<strong>music4deejays 2014</strong>
+	  					<p>music4deejays 2014</p>
 	  					<li>
 	  						<a href="#">Upload</a>
 	  					</li>
@@ -103,30 +103,15 @@
 
 	<!-- List of playlists -->
 	<div id="playlist_list">
-	    <!-- local playlist -->
+
 	    <ul id='playlist2'>
-
-	     	<?php 
-	     		query_posts(array('orderby' => 'date', 'showposts' => 3 , cat =>'-192')); 
-	     		if (have_posts()) : while (have_posts()) : the_post(); 
-	     	?>
-	     	<?php                     
-	     		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' );
-	     		$playlistImage = $thumb[0];
-	     	?>
-	     	<?php if(get_field('soundcloudURL')): ?>
-	     		<li class="playlistItem" data-type="soundcloud" data-path="<?php the_field('soundcloudURL'); ?>" data-thumb="<?php echo $playlistImage; ?>"></li>
-	     	<?php endif; ?>
-
-	     	<?php endwhile; ?>
-	     	<?php endif; ?>
-
+	    	<!-- Loads the content when pressed the play -->
 	    </ul>
 
 	    <!-- local playlist -->
 	    <ul id='playlist1'>
 			<?php 
-				query_posts(array('orderby' => 'date', 'showposts' => 5)); 
+				query_posts(array('orderby' => 'date', 'showposts' => 3)); 
 				if (have_posts()) : while (have_posts()) : the_post(); 
 			?>
 			<?php                     

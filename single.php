@@ -48,14 +48,20 @@
                           </a>
                         </li>
                         <li class="share">
-                          <a href="#" onclick="event.preventDefault();">
-                            <span class="icon-share"></span>
-                            <span class="text">Share song</span>
-                          </a>
-                          <div class="BoxShareMenu">
-                            <a href="#twitter" class="icon-twitter">Twitter</a>
-                            <a href="#facebook" class="icon-facebook">Facebook</a>
-                          </div>
+                            <a href="#" onclick="event.preventDefault();">
+                                <span class="icon-share"></span>
+                                <span class="text">Share song</span>
+                            </a>
+                            <div class="BoxShareMenu">
+                                <div class="facebookLink" id="<?php echo 'facebook'.$id; ?>" style="display:none;">
+                                    <span>https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?></span>
+                                </div>
+                                <div class="twitterLink" id="<?php echo 'twitter'.$id; ?>" style="display:none;">
+                                    <span>https://twitter.com/home?status=Now listeting to <?php echo wp_get_shortlink(); ?> via @music4deejays</span>
+                                </div>
+                                <a href="#" class="icon-twitter shareTwitter">Twitter</a> 
+                                <a href="#" class="icon-facebook shareFacebook">Facebook</a> 
+                            </div>
                         </li>
                         <li class="like_dislike">
                           <a href="#">

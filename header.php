@@ -10,6 +10,8 @@
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta charset="utf-8" />
 
+    <meta name="bitly-verification" content="a6efe32a8aaf"/>
+
     <?php if (is_home()): ?>
       <title>Music4deejays </title>
       <meta content="<?php bloginfo('description'); ?>" name="description" />

@@ -56,20 +56,17 @@
 		}
 		if (!$el.hasClass("noAjax")) {	
 
-			$('.Menu li').removeClass("selected");
-
+			$('.HeaderMenu-submenu').hide(); // Hide the menu 
 			$.address.value(path); // 0 = Load left and right
-
+			
+			$('.HeaderMenu-submenu ul li').removeClass("selected");
 			$el.parent().addClass("selected");
 			
-			$('.HeaderMenu-submenu').hide();
-
-
 			if($el.parent('.HeaderLogo').length == 1)
 			{
 				$('.Menu li:first-child').addClass("selected");
 			}
-
+ 
 			return false;
 		}
 
@@ -79,7 +76,32 @@
 
 	// Fancy ALL AJAX Stuff
 	$.address.change(function(event){ 
- 	
+ 
+		// Change the page URL
+		var pageTitle = event.value; 
+
+		if(pageTitle.indexOf("electro") > -1) 
+		{
+			$('.currentText').replaceWith("<span class='currentText'>Electro</span>");
+			$('.HeaderMenu-submenu ul li:nth-child(3)').addClass("selected");
+		}
+		else if(pageTitle.indexOf("progressive") > -1)
+		{
+			$('.currentText').replaceWith("<span class='currentText'>Progressive</span>");
+		}
+		else if(pageTitle.indexOf("dubstep") > -1)
+		{
+			$('.currentText').replaceWith("<span class='currentText'>Dubstep</span>");
+		} 
+		else if(pageTitle.indexOf("mixes") > -1)
+		{
+			$('.currentText').replaceWith("<span class='currentText'>Mixes</span>");
+		} 
+		else
+		{
+			$('.currentText').replaceWith("<span class='currentText'>Featured</span>");
+		}
+
 		if (event.value){
 			$loader.show(0);
 			$footer.hide(0);
@@ -90,6 +112,10 @@
 				$footer.show(0);
 			});
 		}	 
+
+		// Animate to top
+		$("html, body").animate({ scrollTop: 0 }, 400);
+
 		
 		// if (primeraCarga == 0) 
 		// {

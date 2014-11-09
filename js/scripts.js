@@ -19,6 +19,38 @@ $(window).resize(function() {
 // Executes this when the ajax finish
 $( document ).ajaxComplete(function( event,request, settings ) {
   	
+
+	$(".shareTwitter").click(function() {
+		var shareContent = $(this).siblings('.twitterLink');  
+		var twitterUrl = $(shareContent).find('span').html();
+		
+		var windowTop = (window.screen.availWidth/2) - 500;
+		var windowLeft = (window.screen.availHeight/2) + 150;
+		// var w = 500, h = 300;
+		// var left = (screen.width/2)-(w/2);
+  // 		var top = (screen.height/2)-(h/2);
+
+		// window.open(twitterUrl, 'Share on twitter', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
+
+		window.open(twitterUrl, '_blank', 'location=no,directories=no, status=no, menubar=no, scrollbars=no, resizable=no,height=250,width=520, top='+windowTop+', left='+windowLeft+' ');
+
+		return false;
+	});
+
+	$(".shareFacebook").click(function() {
+		var shareContent = $(this).siblings('.facebookLink');  
+		var facebookUrl = $(shareContent).find('span').html();
+		
+		var windowTop = (window.screen.availWidth/2) - 550;
+		var windowLeft = (window.screen.availHeight/2) + 170;
+ 
+		window.open(facebookUrl, '_blank', 'location=no,directories=no, status=no, menubar=no, scrollbars=no, resizable=no,height=300,width=560, top='+windowTop+', left='+windowLeft+' ');
+
+		return false;
+	});
+
+
+
   	$( "#open_mobile" ).click(function() {
   		$('.HeaderMenu').slideToggle(0);
   		$('#closemobile').show(0);

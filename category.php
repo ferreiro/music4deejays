@@ -33,66 +33,6 @@
     }
     ?>
  
-    <?php function PostLarge($id, $imageSize) {
-        echo ''?> 
-        <?php 
-            $category = get_the_category(); 
-            $category_id = get_cat_ID( $category[0]->cat_name );
-            $category_link = get_category_link( $category_id );
-            $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-            
-            if ($imageSize == "thumbnail")
-            {
-                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' );
-                $url = $thumb[0];
-            }
-            else
-            {
-                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' );
-                $url = $thumb[0];
-            }
-        ?> 
-        <div class="BoxLarge" id="<?php echo $id; ?>">
-            <div class="BoxLargeSongUrl" style="display:none;">
-                <?php if(get_field('soundcloudURL')): ?>
-                        <li class= 'playlistItem' data-type='soundcloud' data-path='<?php the_field('soundcloudURL'); ?>' data-thumb='<?php echo $url; ?>'/>
-                <?php else: ?>
-                        
-                <?php endif; ?>
-            </div>
-            <div class="BoxLargeImage" style="background-image:url(<?php echo $url; ?>);">
-                
-                <div class="BoxLargeImagePlay">
-                    <a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">
-                        <span class="icon-play"></span>
-                    </a>
-                </div>
-                <?php if ($category[0]->cat_name == 'Mixes') :?>
-                <div class="BoxLargeImageMix">
-                    <span class="icon-mix"></span>
-                </div>
-                <?php endif; ?>
-                <div class="BoxLargeImageOverlay">
-                    <a href="<?php the_permalink(); ?>"></a>
-                </div>
-            </div>
-            <div class="BoxLargeInfo">
-                <div class="BoxLargeInfoTop">
-                    <a href="<?php the_permalink(); ?>" class="BoxLargeInfoTopTitle">
-                        <?php the_title(); ?>
-                    </a> 
-                    <a href="<?php echo $category_link; ?>" class="BoxLargeInfoTopSubtitle">
-                       <?php 
-                            echo $category[0]->cat_name;
-                        ?>
-                    </a>
-                </div>
-            </div>
-        </div>
-      <?php ;
-    }
-    ?>
-
     <?php function Post($id, $imageSize) {
         echo ''?> 
         <?php 
@@ -172,8 +112,14 @@
                                 <span class="text">Share song</span>
                             </a>
                             <div class="BoxShareMenu">
-                                <a href="#twitter" class="icon-twitter">Twitter</a>
-                                <a href="#facebook" class="icon-facebook">Facebook</a>
+                                <div class="facebookLink" id="<?php echo 'facebook'.$id; ?>" style="display:none;">
+                                    <span>https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?></span>
+                                </div>
+                                <div class="twitterLink" id="<?php echo 'twitter'.$id; ?>" style="display:none;">
+                                    <span>https://twitter.com/home?status=Now listeting to <?php echo wp_get_shortlink(); ?> via @music4deejays</span>
+                                </div>
+                                <a href="#" class="icon-twitter shareTwitter">Twitter</a> 
+                                <a href="#" class="icon-facebook shareFacebook">Facebook</a> 
                             </div>
                         </li>
                         <li class="like_dislike">
@@ -249,6 +195,19 @@
             <?php get_template_part('pagination'); ?>
 
         </div><!-- Fin container Left -->
+
+        
+        <!-- analytics -->
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-51299955-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
 
     </div>
     </div><!-- Fin ajax left -->

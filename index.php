@@ -32,66 +32,6 @@
       <?php ;
     }
     ?>
- 
-    <?php function PostLarge($id, $imageSize) {
-        echo ''?> 
-        <?php 
-            $category = get_the_category(); 
-            $category_id = get_cat_ID( $category[0]->cat_name );
-            $category_link = get_category_link( $category_id );
-            $featuredImage = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
-            
-            if ($imageSize == "thumbnail")
-            {
-                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' );
-                $url = $thumb[0];
-            }
-            else
-            {
-                $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' );
-                $url = $thumb[0];
-            }
-        ?> 
-        <div class="BoxLarge" id="<?php echo $id; ?>">
-            <div class="BoxLargeSongUrl" style="display:none;">
-                <?php if(get_field('soundcloudURL')): ?>
-                        <li class= 'playlistItem' data-type='soundcloud' data-path='<?php the_field('soundcloudURL'); ?>' data-thumb='<?php echo $url; ?>'/>
-                <?php else: ?>
-                        
-                <?php endif; ?>
-            </div>
-            <div class="BoxLargeImage" style="background-image:url(<?php echo $url; ?>);">
-                
-                <div class="BoxLargeImagePlay">
-                    <a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">
-                        <span class="icon-play"></span>
-                    </a>
-                </div>
-                <?php if ($category[0]->cat_name == 'Mixes') :?>
-                <div class="BoxLargeImageMix">
-                    <span class="icon-mix"></span>
-                </div>
-                <?php endif; ?>
-                <div class="BoxLargeImageOverlay">
-                    <a href="<?php the_permalink(); ?>"></a>
-                </div>
-            </div>
-            <div class="BoxLargeInfo">
-                <div class="BoxLargeInfoTop">
-                    <a href="<?php the_permalink(); ?>" class="BoxLargeInfoTopTitle">
-                        <?php the_title(); ?>
-                    </a> 
-                    <a href="<?php echo $category_link; ?>" class="BoxLargeInfoTopSubtitle">
-                       <?php 
-                            echo $category[0]->cat_name;
-                        ?>
-                    </a>
-                </div>
-            </div>
-        </div>
-      <?php ;
-    }
-    ?>
 
     <?php function Post($id, $imageSize) {
         echo ''?> 
@@ -172,8 +112,14 @@
                                 <span class="text">Share song</span>
                             </a>
                             <div class="BoxShareMenu">
-                                <a href="#twitter" class="icon-twitter">Twitter</a>
-                                <a href="#facebook" class="icon-facebook">Facebook</a>
+                                <div class="facebookLink" id="<?php echo 'facebook'.$id; ?>" style="display:none;">
+                                    <span>https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?></span>
+                                </div>
+                                <div class="twitterLink" id="<?php echo 'twitter'.$id; ?>" style="display:none;">
+                                    <span>https://twitter.com/home?status=Now listeting to <?php echo wp_get_shortlink(); ?> via @music4deejays</span>
+                                </div>
+                                <a href="#" class="icon-twitter shareTwitter">Twitter</a> 
+                                <a href="#" class="icon-facebook shareFacebook">Facebook</a> 
                             </div>
                         </li>
                         <li class="like_dislike">
@@ -221,8 +167,8 @@
 
             <section class="all_posts">
 
-                <h1 style="font-weight:400; border-left:10px solid #f4f4f4; padding-top:15px; padding-bottom:5px; padding-left:20px; position:relative; font-size:22px;">
-                    New tracks <span style="opacity:0.6;">on music4deejays</span>
+                <h1 class="leftTitle">
+                    New tracks <span>on music4deejays</span>
                 </h1>
 
             <? 
@@ -230,7 +176,7 @@
                 query_posts(array('orderby' => 'date', 'showposts' => 9, 'cat' => '-208')); 
                 if (have_posts()) : while (have_posts()) : the_post(); 
             ?>  
-                <?php if($i < 2): ?>
+                <?php if($i < 3): ?>
                     <?php $i++; ?>
                 <?php else: ?>
                     <?php Post($i, "thumbnail"); ?> 
@@ -271,7 +217,7 @@
             </div>
 
             <div class="SectionToptracks">
-                <h2>
+                <h2 class="ContainerRightTitle">
                     Top tracks
                 </h2>
                 <ul class="classifyRelated">
