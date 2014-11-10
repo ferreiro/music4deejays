@@ -1612,7 +1612,7 @@ ul, li
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 5;
 }
 .sliderDiaposLink a
 {
@@ -2603,14 +2603,21 @@ li.share:hover .BoxShareMenu
 
 	.SongRelated
 	{
-		margin-bottom: 25px;
+		margin-bottom: 10px;
 	}
 
+	.SongRelated li
+	{
+		margin-bottom: 15px;
+	}
 	.SongRelated li:nth-child(odd)
 	{
 		float: right;
 	}
-
+	.SongCoverOptions
+	{
+		display: none;
+	}
 	.SongHero
 	{
 		width: 100%;
@@ -2724,12 +2731,23 @@ li.share:hover .BoxShareMenu
 		font-size:22px;
 	}
 
+ 
+	.SongRelated
+	{
+		margin-bottom: 60px;
+	}
 	.SongRelated li
 	{
-		width: 31%;
-		height: 160px; 
+		width: 23.5%;
+		height: 160px;
+		margin-right: 2%;
+		float: left;
+		background: #f4f4f4 no-repeat;
+		background-size: cover;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
 	}
-
 
 	.slider, 
 	.SongCover
@@ -2828,19 +2846,6 @@ li.share:hover .BoxShareMenu
 	}
 
 
-
-	.SongRelated li
-	{
-		width: 23.5%;
-		height: 160px;
-		margin-right: 2%;
-		float: left;
-		background: #f4f4f4 no-repeat;
-		background-size: cover;
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
-	}
 
 	.Uploder
 	{

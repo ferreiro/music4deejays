@@ -5,6 +5,11 @@ $(window).resize(function() {
 	var boxWidth = $('.Box').width();
 	$('.BoxImage').css("height",boxWidth);
 
+
+	var songRelatedWidth = $('.SongRelated li').width();
+	$('.SongRelated ul li').css("height",songRelatedWidth);
+
+
 	// var sliderWidth = $('.slider').width() ;
 	// $('.slider').css("height",sliderWidth / 2.5);
 	// $('.sliderDiapos').css("height",sliderWidth / 2.5);
