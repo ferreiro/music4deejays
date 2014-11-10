@@ -172,6 +172,20 @@
                 </ul>
             </div>           
 
+            <style type="text/css">
+            .uploadTracks
+            {
+                display: none;
+            }
+            .SectionToptracks
+            {
+                margin-top: 0px;
+            }
+
+            </style>
+
+
+
         </div><!-- Fin container Left -->
    
 
