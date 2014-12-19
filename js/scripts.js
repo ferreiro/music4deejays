@@ -24,6 +24,39 @@ $(window).resize(function() {
 // Executes this when the ajax finish
 $( document ).ajaxComplete(function( event,request, settings ) {
   	
+	var ls = localStorage;
+
+	$('#close_banner').click(function(){
+		ls.twitter = 10;
+	}); 
+
+	if ((ls.twitter == undefined) || (ls.twitter == 0)) {  
+		ls.twitter = 0; 
+		$('.header_advise').addClass('header_adviseFixed');
+		$('.header_advise').delay(500).slideDown(1000); 
+	} 
+	else if (ls.twitter == 10) {
+		// A la decima vez que el usuario entra, se cierra
+		$('.Header').removeClass('headerMarginAdvise');
+		$('.header_advise').removeClass('header_adviseFixed');
+		$('.header_advise').hide(0);
+		$('.containerMarginAdvise').removeClass('containerMarginAdvise');
+	}   
+	else {
+		$('.header_advise').addClass('header_adviseFixed');
+		$('.header_advise').delay(500).slideDown(1000); 
+	}
+
+	
+	$('.sliderDiapos').DDSlider({
+
+	  nextSlide: '.sliderButtonNext',
+	  prevSlide: '.sliderButtonPrev',
+	  selector: '.sliderSelector'
+
+	});
+
+
 
 	$(".shareTwitter").click(function() {
 		var shareContent = $(this).siblings('.twitterLink');  
@@ -104,14 +137,6 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 
   	// Añadir clase a la impaginación
   	$('.page-numbers').addClass("button");
-
-	$('.sliderDiapos').DDSlider({
-
-	  nextSlide: '.sliderButtonNext',
-	  prevSlide: '.sliderButtonPrev',
-	  selector: '.sliderSelector'
-
-	});
 
 
 	/** Calculate the height of the box depending on the width **/
@@ -196,6 +221,7 @@ else
 	// 	 //        });
 	// 	 //    }
 	// });
+
 
 	$('#comment').attr("placeholder", "Enter your number");
 

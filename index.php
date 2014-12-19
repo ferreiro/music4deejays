@@ -170,7 +170,6 @@
                 <h1 class="leftTitle">
                     New tracks <span>on music4deejays</span>
                 </h1>
-
             <? 
                 $i = 0;
                 query_posts(array('orderby' => 'date', 'showposts' => 9, 'cat' => '-208')); 
@@ -179,6 +178,7 @@
                 <?php if($i < 3): ?>
                     <?php $i++; ?>
                 <?php else: ?>
+ 
                     <?php Post($i, "thumbnail"); ?> 
                     <?php $i++; ?>
                 <?php endif; ?>
@@ -208,7 +208,7 @@
 
         <div class="ContainerRight"> 
 
-            <div class="uploadTracks">
+            <div class="uploadTracks" style="display: none;">
                 <h3>Do you have a track?<h3>
                 <a href="/send_tracks" class="button button_color">Upload to m4d.com</a>
                 <span class="short icon-upload"></span>
@@ -216,14 +216,14 @@
                 <span class="big icon-upload"></span>
             </div>
 
-            <div class="SectionToptracks">
+            <div class="SectionToptracks"  style="margin-top:0;">
                 <h2 class="ContainerRightTitle">
                     Top tracks
                 </h2>
                 <ul class="classifyRelated">
+                    <li style="display:none;"><a href="#" onclick=" $('.SectionToptracks div').hide(); $('.classifyRelated li').removeClass('selected'); $('.classifyRelated li:nth-child(1)').addClass('selected'); $('#month_featured').show(); return false; " id="openMonth">Month</a></li>
                     <li class="selected"><a href="#" onclick=" $('.SectionToptracks div').hide(); $('.classifyRelated li').removeClass('selected'); $('.classifyRelated li:nth-child(1)').addClass('selected'); $('#all_featured').show(); return false; " id="openAll">All time</a></li>
                     <li style="display:none;"><a href="#" onclick=" $('.SectionToptracks div').hide(); $('.classifyRelated li').removeClass('selected'); $('.classifyRelated li:nth-child(2)').addClass('selected'); $('#week_featured').show(); return false; " id="openMonth">This week</a></li>
-                    <li style="display:none;"><a href="#" onclick=" $('.SectionToptracks div').hide(); $('.classifyRelated li').removeClass('selected'); $('.classifyRelated li:nth-child(3)').addClass('selected'); $('#month_featured').show(); return false; " id="openMonth">Month</a></li>
                 </ul>
                 <ul class="songsRelated">
                     <div id="week_featured" style="display:none;">
@@ -250,7 +250,18 @@
                 </ul>
             </div><!-- Fin SectionToptracks -->
 
-            <div class="followUs">
+
+            <div class="uploadTracks">
+
+                <h3>Do you have a track?<h3>
+                <a href="/send_tracks" class="button button_color">Upload to m4d.com</a>
+                <span class="short icon-upload"></span>
+                <span class="medium icon-upload"></span>
+                <span class="big icon-upload"></span>
+            </div>
+
+
+            <div class="followUs" style="display:none;">
                 <h3>Follow us!<h3>
                 <ul>
                     <li><a href="http://twitter.com/music4deejays" target="_blank" class="icon-twitter"></a></li>

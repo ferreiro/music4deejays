@@ -59,7 +59,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_min.css" />
 
 </head>
 <body <?php body_class(); ?>>
@@ -106,7 +106,6 @@
       <div class="Header headerBlur"></div>
 
       <div class="header_advise" style="display:none;">
-          <div class="icon-close" id="close_banner" style="position:absolute; top:0; padding:20px; right:0; color:rgba(255,255,255, 0.6);"></div>
           <h2>Do you like electronic music? Follow us on twitter too!</h2>
           <a href="https://twitter.com/music4deejays" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @music4deejays</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
