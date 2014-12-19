@@ -296,6 +296,7 @@ ul, li
 {
 	opacity: 1;
 }
+ 
 .Player
 {
 	width: 100%;
@@ -746,11 +747,7 @@ ul, li
 	color: #fff;
 	border: 1px solid #89b000;
 }
-
-.headerMarginAdvise
-{
-	top: 100px;
-}
+ 
 .Header
 {
 	width: 100%;
@@ -1081,8 +1078,15 @@ ul, li
 /*** Container ***/
 
 .containerMarginAdvise {
-	margin-top: 170px !important;
+	margin-bottom: 120px !important;
 }
+
+@media all and (min-width: 1150px) {
+	.containerMarginAdvise {
+		margin-bottom: 90px !important;
+	} 
+}
+
 .Container
 {
 	width: 100%;
@@ -2081,7 +2085,12 @@ li.share:hover .BoxShareMenu
 .header_adviseFixed {
 	margin-top: 0;
 	position: fixed;
-	bottom: 0;
+	bottom: 55px; 
+}
+@media all and (min-width: 1150px) {
+	.header_adviseFixed {  
+		bottom: 0;
+	}
 }
 .header_advise h2 {
 	margin: 0 2em ;
@@ -2114,7 +2123,7 @@ li.share:hover .BoxShareMenu
 .load_more a 
 {
 	height: auto;
-	padding: 8px 20px;
+	padding: 10px 20px;
 
 }
 

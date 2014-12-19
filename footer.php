@@ -4,16 +4,16 @@
 	  				<ul>
 	  					<p>music4deejays 2014</p>
 	  					<li>
-	  						<a href="#">Upload</a>
+	  						<a href="http://music4deejays.com/#/send_tracks">Upload</a>
 	  					</li>
 	  					<li>
-	  						<a class="pointer ajaxSend" href="#" target="_blank">Facebook</a>
+	  						<a class="pointer ajaxSend" href="http://facebook.com/music4deejays" target="_blank">Facebook</a>
 	  					</li> 
 	  					<li>
-	  						<a class="pointer ajaxSend" href="#" target="_blank">Twitter</a>
+	  						<a class="pointer ajaxSend" href="http://twitter.com/music4deejays" target="_blank">Twitter</a>
 	  					</li> 
 	  					<li>
-	  						<a href="#" class="ajaxSend">Contact us</a>
+	  						<a href="mailto:info@music4deejays.com" class="ajaxSend">Contact us</a>
 	  					</li>
 	  				</ul>
 	        </div>

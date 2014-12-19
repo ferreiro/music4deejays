@@ -106,7 +106,7 @@
       <div class="Header headerBlur"></div>
 
       <div class="header_advise" style="display:none;">
-          <div class="icon-close" id="close_banner" style="position:absolute; top:0; padding:20px; right:0; color:rgba(255,255,255, 0.6);"></div>
+          <div class="closeheaderAdvise icon-close" id="close_banner" style="cursor:pointer; position:absolute; top:0; font-size:22px; padding:20px 23px; right:0; color:rgba(255,255,255, 0.6);"></div>
           <h2>Do you like electronic music? Follow us on twitter too!</h2>
           <a href="https://twitter.com/music4deejays" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @music4deejays</a>
           <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
