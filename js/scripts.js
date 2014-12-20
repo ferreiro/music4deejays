@@ -37,7 +37,7 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 		ls.twitter = 0; 
 		showAdvise();
 	} 
-	else if (ls.twitter == 10) {
+	else if (ls.twitter == 100) {
 		// A la decima vez que el usuario entra, se cierra
 		hideAdvise();
 	}   
