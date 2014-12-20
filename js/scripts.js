@@ -29,7 +29,7 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 	/** Bottom advise **/
 
 	$('#close_banner').click(function(){
-		ls.twitter = 10;
+		ls.twitter = 100;
 		hideAdvise();
 	}); 
 
@@ -206,31 +206,6 @@ if(navigator.userAgent.match(/Android/i)
 else
 {   
 	var scrollHeight;
-
-	// scrollHeight = $('#footer').offset().top - $('#Player').height() - $('#Player').offset().top;
-  
-	// $(window).scroll(function() {
-
-	// 	// topLimit = ($('.footer').offset().top - window.innerHeight())+ window.scrollY;
-	// 	topLimit = 0;
-	// 	console.log('offset desde el footer'+$('.footer').offset().top)
-	// 	console.log('Scroll'+window.scrollY)
-	// 	console.log('Footer - Window'+ ( $('.footer').offset().top - window.innerHeight()) )
-	// 	if (topLimit <= 165) {
-	// 		console.log("es menor")
-	// 	}
-	// 	 //    if (scrollHeight <= 160) {
-	// 	 //        $('#Player').css({
-	// 	 //            'position': 'relative', 
-	// 	 //            'margin-top':'100px'
-	// 	 //        });
-	// 	 //    } else {
-	// 	 //        $('#Player').css({
-	// 	 //            'position': 'fixed'
-	// 	 //        });
-	// 	 //    }
-	// });
-
 
 	$('#comment').attr("placeholder", "Enter your number");
 
