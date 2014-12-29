@@ -75,7 +75,7 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 		var windowLeft = (window.screen.availHeight/2) + 150;
 		// var w = 500, h = 300;
 		// var left = (screen.width/2)-(w/2);
-  // 		var top = (screen.height/2)-(h/2);
+  		// var top = (screen.height/2)-(h/2);
 
 		// window.open(twitterUrl, 'Share on twitter', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width='+w+', height='+h+', top='+top+', left='+left);
 
@@ -97,26 +97,25 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 	});
 
 
-
   	$( "#open_mobile" ).click(function() {
-  		$('.HeaderMenu').show(0);
-  		$('.HeaderWhiteBg').show(0);
-  		$('#closemobile').show(0);
+  		$('.HeaderWhiteBg').fadeIn(200);
+  		$('.HeaderMenu').fadeIn(200); 
+  		$('#closemobile').delay(200).show(0);
   	}); 
 
   	$( "#closemobile" ).click(function() {
+  		$('.HeaderWhiteBg').fadeOut(200);
   		$('.HeaderMenu').hide(0);
-  		$('.HeaderWhiteBg').hide(0);
   		$('#closemobile').hide(0);
   	}); 
 
   	if(navigator.userAgent.match(/Android/i)
-  	  	|| navigator.userAgent.match(/webOS/i)
-  	  	|| navigator.userAgent.match(/iPhone/i)
-  	  	|| navigator.userAgent.match(/iPad/i)
-  	  	|| navigator.userAgent.match(/iPod/i)
-  	  	|| navigator.userAgent.match(/BlackBerry/i)
-  	  	|| navigator.userAgent.match(/Windows Phone/i)) {
+  	|| navigator.userAgent.match(/webOS/i)
+  	|| navigator.userAgent.match(/iPhone/i)
+  	|| navigator.userAgent.match(/iPad/i)
+	|| navigator.userAgent.match(/iPod/i)
+	|| navigator.userAgent.match(/BlackBerry/i)
+  	|| navigator.userAgent.match(/Windows Phone/i)) {
 
   		// Open the menu
 

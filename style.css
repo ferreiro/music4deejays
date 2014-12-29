@@ -259,17 +259,17 @@ ul, li
 	left: 0;
 	right: 0;
 	float: left;
-	z-index: 10; 
+	z-index: 20; 
 	background-color: rgba(255, 255, 255, 0.8);
 }
 .loaderGif
 {
-	width: 200px;
-	height: 120px;
+	width: 150px; /* width: 200px; */ 
+	height: 150px; /* height: 120px; */
 	top: 50%;
 	left: 50%;
-	margin-top: -60px;
-	margin-left: -100px;
+	margin-top: -75px; /* margin-top: -60px; */
+	margin-left: -64px; /* margin-left: -100px; */
 	position: absolute;
 	background:#cecece url(static/loader.gif) 50% 50% no-repeat;
 	background-size: 80px auto; 
@@ -277,6 +277,9 @@ ul, li
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
 }
 
 .LineVertical
@@ -768,7 +771,9 @@ ul, li
 	position: fixed;
 	display: none;
 	left: 0;
+	right: 0;
 	top: 0;
+	bottom: 0; 
 	background: rgba(255,255,255,0.6); 
 }
 .headerBlur {
@@ -949,7 +954,7 @@ ul, li
 	text-align: center;
 	z-index: 1000;
 	margin-top: -3px;
-	margin-right: -10px;
+	margin-right: -15px;
 }
 .HeaderMenuMobile span
 {
@@ -963,23 +968,28 @@ ul, li
 {
 	width: 30px;
 	height: 30px;
-	background: #e0e0e0;
+	/*background: #e0e0e0;*/
 	-webkit-border-radius: 100%;
 	-moz-border-radius: 100%;
 	border-radius: 100%;
 	margin-left: 5px;
 	float: left;
 	position: relative;
+	overflow: hidden;
 }
 .HeaderSearchInput
 {
-	width: 230px;
+	width: 100%;
 	height: 30px;
 	float: left; 
 	outline: 0;
 	border: 0;
 	padding-left: 20px;
 	background: transparent;
+	z-index: 10;
+	position: absolute;
+	left: 0;
+	text-align: 0;
 }
 .HeaderSearchIcon
 {
@@ -988,6 +998,7 @@ ul, li
 	top: 50%;
 	margin-top: -8px;
 	right: 17px;
+	z-index: 0;
 	float: left;
 }
 .HeaderSearchSubmit
@@ -1170,6 +1181,7 @@ ul, li
 	top: 0;
 	background: #f5f5f5;
 	z-index: 1;
+	display: none;
 }
 .BoxLineHorizontal
 {
@@ -1198,8 +1210,7 @@ ul, li
 	height: 150px; 
 	position: relative;
 	display: inline-block;
-	vertical-align: middle;
-	margin-left: 33px;	 
+	vertical-align: middle; 
 }
 .BoxPlay
 {
@@ -1214,6 +1225,7 @@ ul, li
 	right: 0;
 	overflow: hidden;
 	color: #5E5D5B; 
+	display: none;
 }
 .BoxPlay:hover a
 {
@@ -1302,6 +1314,7 @@ ul, li
 	position: absolute;
 	bottom: 0; 
 	z-index: 2;
+	display: none;
 }
 .BoxOptions ul
 {
@@ -1398,6 +1411,7 @@ ul, li
 	top: 0;
 	background: rgba(0,0,0,0.3);
 	z-index: 1;
+	display: none;
 }
 
 .slider:hover .sliderButtonPrev,
@@ -1414,7 +1428,7 @@ ul, li
 	position: absolute;
 	top: 50%;
 	margin-top: -30px;
-	left: 10px;
+	left: 0;
 	cursor: pointer;
 	z-index: 3;
 	background-color: rgba(0, 0, 0, 0.2);  
@@ -1455,7 +1469,7 @@ ul, li
 }
 .sliderSelector
 {
-	left: 10px;
+	left: 0;
 	height: auto;
 	right: 0;
 	position: absolute;
@@ -1651,7 +1665,7 @@ ul, li
 	position: relative; 
 	float: left; 
 	background: #f4f4f4 50% 50% no-repeat;
-	background-size: cover;
+	background-size: cover; 
 } 
 .SongCoverGradient
 {
@@ -2125,8 +2139,9 @@ li.share:hover .BoxShareMenu
 .load_more a 
 {
 	height: auto;
-	padding: 10px 20px;
-
+	padding: 15px 20px;
+	font-size: 16px;
+	font-weight: 500;
 }
 
 /***************/
@@ -2579,6 +2594,15 @@ li.share:hover .BoxShareMenu
 		margin-top: 60px;
 		padding-bottom: 50px;
 	} 
+	.HeaderSearch {
+		position: absolute;
+		right: 55px;
+		margin-top: 5px;
+	}
+	.HeaderSearch a span{
+		font-size: 24px;
+		color: rgb(62, 62, 62);
+	}
 	.HeaderMenu-current .currentIcon
 	{		
 		display: none;
@@ -2596,7 +2620,7 @@ li.share:hover .BoxShareMenu
 		width: 300px; 
 		float: left;
 		position: fixed;
-		top: 0.5em;
+		top: 6px;
 		left: inherit; 
 		right: 0.5em;
 		z-index: 1000;
@@ -2605,7 +2629,8 @@ li.share:hover .BoxShareMenu
 	.HeaderMenu-current
 	{
 		width: 100%;
-		text-align: center;
+		text-align: left;
+		text-indent: 22px;
 		padding: 0;
 	}
 	.HeaderMenu-submenu 
@@ -2623,10 +2648,6 @@ li.share:hover .BoxShareMenu
 	}
 	.sliderButtonPrev, .sliderButtonNext {
 		opacity: 1 !important;
-	}
-	.BoxOptions
-	{
-		display: none;
 	}
 	.all_posts
 	{
@@ -2686,6 +2707,12 @@ li.share:hover .BoxShareMenu
 	{
 		float: right;
 	}
+	.SongCover
+	{
+		margin: -1em;
+		padding-right: 2em;
+		margin-bottom: 0;
+	} 
 	.SongCoverOptions
 	{
 		display: none;
@@ -2796,7 +2823,7 @@ li.share:hover .BoxShareMenu
 }
 
 
-@media all and (min-width:400px) and (max-width: 800px) {
+@media all and (min-width:400px) and (max-width: 1149px) {
  	.slider {
  		display: inline-block;
  	}
@@ -2826,7 +2853,6 @@ li.share:hover .BoxShareMenu
 	} 
 	.HeaderMenu
 	{
-		max-width: 152px;
 		display: inline-block !important;
 	}
 	.HeaderWhiteBg
@@ -2909,10 +2935,10 @@ li.share:hover .BoxShareMenu
 	.leftTitle
 	{
 		font-weight:400; 
-		border-left:10px solid #f4f4f4; 
-		padding-top:30px; 
+		/*border-left:10px solid #f4f4f4; */
+		padding-top:20px; 
 		padding-bottom:10px; 
-		padding-left:20px; 
+		/*padding-left:20px; */
 		position:relative; 
 		font-size:22px;
 	}
@@ -2940,9 +2966,7 @@ li.share:hover .BoxShareMenu
 	{ 
 		height: 350px;
 	}
-
-
-
+ 
 
 }
 
@@ -2952,11 +2976,46 @@ li.share:hover .BoxShareMenu
 	{
 		width: 230px; 
 	}
+	.BoxPlay {
+		display: block;
+	}
 
 
 
 }
 @media all and (min-width: 1150px) {
+	.loaderGif {
+		margin-left: -250px;
+	}
+	.HeaderMenu
+	{
+		width: 165px; 
+		margin-right: -4px;
+		display: inline-block !important;
+	}
+	.HeaderMenu-current .currentIcon {
+		position: absolute;
+		top: 50%;
+		margin-top: -8px;
+		right: 0;
+	}
+	.HeaderProfile {
+		background: #868686;
+	}
+	.HeaderSearch {
+		width: 370px; 
+		float: left;
+	}
+	.HeaderButton
+	{
+		width: 170px;
+		height: 40px; 
+		margin-left: 10px;
+		margin-top: 5px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	} 
 	.Player
 	{
 		width: 300px;
@@ -3027,9 +3086,34 @@ li.share:hover .BoxShareMenu
 		position:relative; 
 		font-size:22px;
 	}
+	/** Slider **/
+	.sliderVerticalLine {
+		display: block;
+	}	
+	.sliderButtonPrev {
+		left: 10px;
+	}
+	.sliderSelector
+	{
+		left: 10px;
+	}
 
+	/** Boxes **/
 
-
+	.BoxLeft { 
+		margin-left: 33px;	 
+	}
+	.BoxLineVertical {
+		display: block;
+	}	
+	.BoxOptions
+	{
+		display: block;
+	}
+	.SongCover {
+		margin: 0;
+		padding:0;
+	}
 	.Uploder
 	{
 		width: 725px;
@@ -3049,5 +3133,6 @@ li.share:hover .BoxShareMenu
 		width: 725px !important; 
 	}
 
-
 }
+
+ 
