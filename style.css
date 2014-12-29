@@ -2672,8 +2672,7 @@ li.share:hover .BoxShareMenu
 		display: inline-block;
 		vertical-align: middle;  
 		margin-top: 5px;
-	}
-
+	} 
 	.SongRelated
 	{
 		margin-bottom: 10px;
@@ -2705,6 +2704,119 @@ li.share:hover .BoxShareMenu
 		height: auto;
 	}
 }
+
+
+/*** New design **/
+
+@media all and (max-width: 800px) {
+
+	.leftTitle {
+		padding-top: 5px;
+	}
+	/*** Box new mobile design ***/
+	.slider {
+		display: none;
+	}
+	.Box {
+		position: relative;  
+		margin-bottom: 20px;
+	}
+	.BoxBackgroundOptions,
+	.BoxLineHorizontal,
+	.BoxLineVertical {
+		display: none;
+	}
+	.BoxLeft {
+		width: 100%;
+		height: 149px;
+		background: #f4f4f4;
+	}
+	.BoxAvatar a {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+	}
+	.BoxAvatar:before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 4;
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0) 3%, rgba(0,0,0,0.65) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(3%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 3%,rgba(0,0,0,0.65) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 3%,rgba(0,0,0,0.65) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 3%,rgba(0,0,0,0.65) 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0) 3%,rgba(0,0,0,0.65) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+	}
+	.BoxAvatar {
+		width: 100%;
+		height: 100%;
+		-moz-border-radius:0;
+		-webkit-border-radius:0;
+		border-radius: 0;
+		background-color: transparent;
+	}
+	.BoxRight
+	{
+		position: absolute;
+		top: default;
+		bottom: 20px;
+		left: 10px;
+		height: auto;
+		right: 10px;
+		display: inline-block;
+		vertical-align: middle;  
+		margin-top: 0;
+		z-index: 11;
+	}
+	.BoxTitle a {
+		width: auto;
+		color: rgba(255,255,255, 0.9);
+		background: rgba(0,0,0,0.6);
+		display: block;
+		padding: 3px;
+		font-size: 16px;
+	}
+	.BoxCategory {
+		position: absolute;
+		top: 100%;
+		margin-top: 20px; 
+	}
+	.load_more a {
+		width: 100%;
+	}
+
+}
+
+
+@media all and (min-width:400px) and (max-width: 800px) {
+ 	.slider {
+ 		display: inline-block;
+ 	}
+ 	.leftTitle {
+ 		padding-top: 20px;
+ 	}
+	.Box {
+		width: 48%;		
+		float: left;
+		position: relative;  
+		margin-bottom: 20px;
+	}
+	.Box:nth-child(even) {
+		width: 49%;		
+		float: right;
+		position: relative;  
+		margin-bottom: 20px;
+	}
+}
+
 @media all and (min-width: 630px) {
 
 
@@ -2714,6 +2826,7 @@ li.share:hover .BoxShareMenu
 	} 
 	.HeaderMenu
 	{
+		max-width: 152px;
 		display: inline-block !important;
 	}
 	.HeaderWhiteBg
@@ -2849,12 +2962,9 @@ li.share:hover .BoxShareMenu
 		width: 300px;
 		min-width: 300px;
 		height: 60px;
-		position: absolute;
+		position: fixed;
 		left: 50%;
-		margin-left: -150px;
-		top: 50%;
-		margin-top: -30px;
-		bottom: default;
+		margin-left: -150px; 
 		bottom: 0;
 		background-color: #fafafa;
 		color: black;

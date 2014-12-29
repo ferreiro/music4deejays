@@ -173,6 +173,18 @@
 
             <section class="all_posts">
                  
+                <style type="text/css">
+
+                @media all and (min-width: 800px) { 
+                    .leftTitle {
+                       display: none;
+                    }
+                }
+                </style>
+
+                <h1 class="leftTitle">
+                    New <?php echo $MaincategoryName; ?> tracks <span>on music4deejays</span>
+                </h1>
             <? 
                 $i = 0;
                 if (have_posts()) : while (have_posts()) : the_post(); 

@@ -2,26 +2,30 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-    <link href="//www.google-analytics.com" rel="dns-prefetch">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="<?php bloginfo('description'); ?>">
-    <meta charset="utf-8" />
-
-    <meta name="bitly-verification" content="a6efe32a8aaf"/>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <?php if (is_home()): ?>
-      <title>Music4deejays - Listen, share and Download the best electronic music from emerging artis - Music for deejays</title>
-      <meta content="<?php bloginfo('description'); ?>" name="description" />
+    <title>Music4deejays - Listen, share and Download the best electronic music from emerging artits - Music for deejays</title>
+    <meta content="<?php bloginfo('description'); ?>" name="description" />
     <?php else: ?>
       <?php $category = get_the_category(); ?>
-      <title><?php the_title(); ?> <?php echo $category[0]->cat_name; ?> <?php the_field('author'); ?> - Music4deejays Music for deejays</title>
-      <meta content="<?php the_title(); ?> - <?php the_field('author'); ?> - Music4deejays" />
-      <meta name="keywords" content="<?php the_tags(' ',' ',' '); ?>" />
+    <title><?php the_title(); ?> <?php echo $category[0]->cat_name; ?> <?php the_field('author'); ?> - Music4deejays Music for deejays</title>
+    <meta content="<?php the_title(); ?> - <?php the_field('author'); ?> - Music4deejays - music for deejays" />
+    <meta name="keywords" content="<?php the_tags(' ',' ',' '); ?>" />
     <?php endif; ?>
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes"> 
 
+    <!-- Stylesheet -->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css" />
+
+ 
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <meta name="bitly-verification" content="a6efe32a8aaf"/>
     <link rel="publisher" href="https://plus.google.com/111741852414956814118"/>
 
     <!--     
@@ -56,10 +60,6 @@
     <meta name="msapplication-config" content="/browserconfig.xml">
 
     <?php wp_head(); ?> 
-
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style.css" />
 
 </head>
 <body <?php body_class(); ?>>
@@ -187,20 +187,18 @@
           </div><!-- Fin headerMenu-->
 
 
-
+          <div class="HeaderSearch">
+            <a href="" id="searchButton">
+              <span class="icon-search"></span>
+            </a>
+            <form action="http://music4deejays.com/" class="searchform" id="searchform" method="get" role="search" _lpchecked="1">
+              <input type="text" class="HeaderSearchInput" name="s" id="s" placeholder="Search..." autocomplete="off">
+              <input type="submit" class="HeaderSearchSubmit" name="submit" id="searchsubmit" value=" ">
+              <span class="HeaderSearchIcon icon-search"></span>
+            </form>
+          </div>
 
           <div class="HeaderRight">
-
-            <div class="HeaderSearch">
-              <a href="" id="searchButton">
-                <span class="icon-search"></span>
-              </a>
-              <form action="http://music4deejays.com/" class="searchform" id="searchform" method="get" role="search" _lpchecked="1">
-                <input type="text" class="HeaderSearchInput" name="s" id="s" placeholder="Search..." autocomplete="off">
-                <input type="submit" class="HeaderSearchSubmit" name="submit" id="searchsubmit" value=" ">
-                <span class="HeaderSearchIcon icon-search"></span>
-              </form>
-            </div>
 
             <div class="HeaderButton HeaderProfile">
               <a href="#"  onclick="event.preventDefault(); $('#modalProfile').fadeToggle('fast');">
@@ -219,88 +217,89 @@
           </div><!-- Fin headerRight -->
 
 
-
-          <div class="Player" id="Player">
-
-            <div class="player_progress">
-              <div class="progress_bg"></div>
-              <div class="load_progress"></div>
-              <div class="play_progress">
-                <span></span>
-              </div>
-              <div class="player_progress_tooltip">
-                <span></span>
-                <p></p>
-              </div>
-            </div>
-
-            <div class="PlayerContent">
-
-              <div class="PlayerMiddle">
-                <div class="PlayerImage">
-                  <div class="thumb"></div>
-                </div>
-                <div class="PlayerInfo">
-                  <h1>
-                    <a href="">
-                      <div class="player_mediaName_Mask">
-                        <div class="player_mediaName"></div>
-                      </div>
-                    </a>
-                  </h1>
-                </div>
-              </div>
-
-              <div class="PlayerCenter">
-                
-                <div class="PlayerControllers">
-
-                  <!-- Controls_prev and control son las clases
-                  que hacen que funcionen estos botones. Controls 
-                  es un estilo que he puesto yo -->
-
-                  <div class="controls controls_prev icon-first">
-                    <div class="go_prev"></div>
-                  </div>
-
-                  <div class="controls controls_toggle ">
-                    <div class="icon-playsong"></div>
-                  </div>
-
-                  <div class="controls controls_next icon-last">
-                    <div class="go_next"></div>
-                  </div> 
-
-                </div>
-                
-              </div>
-
-              <div class="PlayerLeft">
-                <div class="PlayerTime" style="display: ;">
-                  <div class="player_mediaTime_current">00:00</div>
-                  <div class="player_mediaTime_total">00:00</div>
-                </div>
-              </div>
-              <div class="PlayerRight">
-                
-                <div class="PlayerVolume">
-                  <div class="volume_seekbar" data-orientation="horizontal" >
-                    <div class="volume_bg"></div>
-                    <div class="volume_level"><span></span></div>
-                    <div class="player_volume_tooltip"><p style="display:none;"></p></div>
-                  </div>
-                </div>
-              </div>
-              </div>
-
-          </div>
-
-
-
-
         </div>
       </header><!-- Fin Header -->
  
+
+
+
+
+      <div class="Player" id="Player">
+
+        <div class="player_progress">
+          <div class="progress_bg"></div>
+          <div class="load_progress"></div>
+          <div class="play_progress">
+            <span></span>
+          </div>
+          <div class="player_progress_tooltip">
+            <span></span>
+            <p></p>
+          </div>
+        </div>
+
+        <div class="PlayerContent">
+
+          <div class="PlayerMiddle">
+            <div class="PlayerImage">
+              <div class="thumb"></div>
+            </div>
+            <div class="PlayerInfo">
+              <h1>
+                <a href="">
+                  <div class="player_mediaName_Mask">
+                    <div class="player_mediaName"></div>
+                  </div>
+                </a>
+              </h1>
+            </div>
+          </div>
+
+          <div class="PlayerCenter">
+            
+            <div class="PlayerControllers">
+
+              <!-- Controls_prev and control son las clases
+              que hacen que funcionen estos botones. Controls 
+              es un estilo que he puesto yo -->
+
+              <div class="controls controls_prev icon-first">
+                <div class="go_prev"></div>
+              </div>
+
+              <div class="controls controls_toggle ">
+                <div class="icon-playsong"></div>
+              </div>
+
+              <div class="controls controls_next icon-last">
+                <div class="go_next"></div>
+              </div> 
+
+            </div>
+            
+          </div>
+
+          <div class="PlayerLeft">
+            <div class="PlayerTime" style="display: ;">
+              <div class="player_mediaTime_current">00:00</div>
+              <div class="player_mediaTime_total">00:00</div>
+            </div>
+          </div>
+          <div class="PlayerRight">
+            
+            <div class="PlayerVolume">
+              <div class="volume_seekbar" data-orientation="horizontal" >
+                <div class="volume_bg"></div>
+                <div class="volume_level"><span></span></div>
+                <div class="player_volume_tooltip"><p style="display:none;"></p></div>
+              </div>
+            </div>
+          </div>
+          </div>
+
+      </div>
+
+
 
       <!--
         <div class="Player" id="Player">

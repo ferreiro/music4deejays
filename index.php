@@ -50,7 +50,9 @@
                 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium' );
                 $url = $thumb[0];
             }
-        ?> 
+             $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+             $url = $thumb[0];
+       ?> 
         <article class="Box" id="<?php echo $id; ?>">
 
             <div class="BoxLineVertical"></div>

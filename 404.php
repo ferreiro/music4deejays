@@ -22,17 +22,25 @@
   float: left;
 }
     </style>
-    
-    <div class="404Error">
-    <div class="404ErrorContent">
-      <div class="imagen_wave_error"></div>
-      <div class="info_error">
-          <h1>Upss! File not found</h1>
-          <p>Document or file requested were not found, or the whole darn hit and now it will not work :-(</p>
-          <p><a href="/">Try to go back to the home page - Home ></a></p>
-      </div>
+     
+        <div class="ContainerLeft">
+ 
+          <div class="404Error">
+          <div class="404ErrorContent">
+            <div class="imagen_wave_error"></div>
+            <div class="info_error">
+                <h1>Upss! File not found</h1>
+                <p>Document or file requested were not found, or the whole darn hit and now it will not work :-(</p>
+                <p><a href="/">Try to go back to the home page - Home ></a></p>
+            </div>
 
-    </div></div>
+          </div></div> 
+
+        </div><!-- Fin container Left -->
+
+    </div>
+    </div><!-- Fin ajax left -->
+
 
 
 <?php get_footer(); ?>
