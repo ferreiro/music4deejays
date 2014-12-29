@@ -18,7 +18,6 @@
             $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
             $url = $thumb[0];
         ?> 
-
         <li class="fading" style="background-image:url(<?php echo $url; ?>);">
             <div class="sliderDiaposInfo">
                 <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
