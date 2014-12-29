@@ -13,11 +13,11 @@
     <meta name="bitly-verification" content="a6efe32a8aaf"/>
 
     <?php if (is_home()): ?>
-      <title>Music4deejays </title>
+      <title>Music4deejays - Listen, share and Download the best electronic music from emerging artis - Music for deejays</title>
       <meta content="<?php bloginfo('description'); ?>" name="description" />
     <?php else: ?>
       <?php $category = get_the_category(); ?>
-      <title><?php the_title(); ?> <?php echo $category[0]->cat_name; ?> - <?php the_field('author'); ?> - Music4deejays</title>
+      <title><?php the_title(); ?> <?php echo $category[0]->cat_name; ?> <?php the_field('author'); ?> - Music4deejays Music for deejays</title>
       <meta content="<?php the_title(); ?> - <?php the_field('author'); ?> - Music4deejays" />
       <meta name="keywords" content="<?php the_tags(' ',' ',' '); ?>" />
     <?php endif; ?>
@@ -105,17 +105,17 @@
       
       <div class="Header headerBlur"></div>
 
-      <div class="header_advise" style="display:none;">
-          <div class="closeheaderAdvise icon-close" id="close_banner" style="cursor:pointer; position:absolute; top:0; font-size:22px; padding:20px 23px; right:0; color:rgba(255,255,255, 0.6);"></div>
-          <h2>Do you like electronic music? Follow us on twitter too!</h2>
-          <a href="https://twitter.com/music4deejays" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @music4deejays</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-          <span></span>
-      </div>
-            
       <header class="Header">
         <div class="HeaderWhiteBg"></div>
         <div class="HeaderInt">
+
+          <div class="header_advise" style="display:none;">
+              <div class="closeheaderAdvise icon-close" id="close_banner" style="cursor:pointer; position:absolute; top:0; font-size:22px; padding:20px 23px; right:0; color:rgba(255,255,255, 0.6);"></div>
+              <h2>Do you like electronic music? Follow us on twitter!</h2>
+              <a href="https://twitter.com/music4deejays" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @music4deejays</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+              <span></span>
+          </div>
 
           <div class="HeaderLogo">
             <a href="/">

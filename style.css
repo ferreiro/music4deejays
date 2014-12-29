@@ -2086,6 +2086,8 @@ li.share:hover .BoxShareMenu
 	margin-top: 0;
 	position: fixed;
 	bottom: 55px; 
+	left: 0;
+	right: 0;
 }
 @media all and (min-width: 1150px) {
 	.header_adviseFixed {  
