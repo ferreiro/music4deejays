@@ -222,8 +222,8 @@
                     Top tracks
                 </h2>
                 <ul class="classifyRelated">
-                    <li style="display:none;"><a href="#" onclick=" $('.SectionToptracks div').hide(); $('.classifyRelated li').removeClass('selected'); $('.classifyRelated li:nth-child(1)').addClass('selected'); $('#month_featured').show(); return false; " id="openMonth">Month</a></li>
-                    <li class="selected"><a href="#" onclick=" $('.SectionToptracks div').hide(); $('.classifyRelated li').removeClass('selected'); $('.classifyRelated li:nth-child(1)').addClass('selected'); $('#all_featured').show(); return false; " id="openAll">All time</a></li>
+                    <li class="selected"><a href="#" onclick=" $('.SectionToptracks div').hide(); $('.classifyRelated li').removeClass('selected'); $('.classifyRelated li:nth-child(1)').addClass('selected'); $('#month_featured').show(); return false; " id="openMonth">This Month</a></li>
+                    <li style="display:none;"><a href="#" onclick=" $('.SectionToptracks div').hide(); $('.classifyRelated li').removeClass('selected'); $('.classifyRelated li:nth-child(1)').addClass('selected'); $('#all_featured').show(); return false; " id="openAll">All time</a></li>
                     <li style="display:none;"><a href="#" onclick=" $('.SectionToptracks div').hide(); $('.classifyRelated li').removeClass('selected'); $('.classifyRelated li:nth-child(2)').addClass('selected'); $('#week_featured').show(); return false; " id="openMonth">This week</a></li>
                 </ul>
                 <ul class="songsRelated">
@@ -234,14 +234,14 @@
                         wpp_get_mostpopular( "range=weekly&limit=10&post_type=post&freshness=1&order_by=views&title_length=8&title_by_words=1&thumbnail_width=40&thumbnail_height=40&stats_views=0&post_html=\"<li><span class='songsRelatedCover'>{thumb}</span><span class='songsRelatedInfo'><h2><a href='{url}'>{text_title}</a></h2></span></a></li>\"" );
                     ?>
                     </div>
-                    <div id="month_featured" style="display:none;">
+                    <div id="month_featured" style="display:;">
                     <?php 
                         $categories = get_the_category();
                         $category_id = $categories[0]->cat_ID;
                         wpp_get_mostpopular( "range=monthly&limit=10&post_type=post&freshness=1&order_by=views&title_length=8&title_by_words=1&thumbnail_width=40&thumbnail_height=40&stats_views=0&post_html=\"<li><span class='songsRelatedCover'>{thumb}</span><span class='songsRelatedInfo'><h2><a href='{url}'>{text_title}</a></h2></span></a></li>\"" );
                     ?>
                     </div>
-                    <div id="all_featured">
+                    <div id="all_featured" style="display:none;">
                     <?php
                         $categories = get_the_category();
                         $category_id = $categories[0]->cat_ID;
@@ -252,7 +252,7 @@
             </div><!-- Fin SectionToptracks -->
 
 
-            <div class="uploadTracks">
+            <div class="uploadTracks" style="display:none;">
 
                 <h3>Do you have a track?<h3>
                 <a href="/send_tracks" class="button button_color">Upload to m4d.com</a>

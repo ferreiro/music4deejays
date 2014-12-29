@@ -8,9 +8,9 @@
     <title>Music4deejays - Listen, share and Download the best electronic music from emerging artits - Music for deejays</title>
     <meta content="<?php bloginfo('description'); ?>" name="description" />
     <?php else: ?>
-      <?php $category = get_the_category(); ?>
-    <title><?php the_title(); ?> <?php echo $category[0]->cat_name; ?> <?php the_field('author'); ?> - Music4deejays Music for deejays</title>
-    <meta content="<?php the_title(); ?> - <?php the_field('author'); ?> - Music4deejays - music for deejays" />
+    <?php $category = get_the_category(); ?>
+    <title><?php the_title(); ?> <?php echo $category[0]->cat_name; ?> - Music4deejays Music for deejays</title>
+    <meta content="<?php the_title(); ?> - <?php the_field('author'); ?> - Music4deejays - music for deejays" name="description" />
     <meta name="keywords" content="<?php the_tags(' ',' ',' '); ?>" />
     <?php endif; ?>
  
@@ -186,9 +186,30 @@
             </div>
           </div><!-- Fin headerMenu-->
 
+          <div class="HeaderRight">
+            <div class="HeaderButton HeaderProfile">
+              <a href="#"  onclick="event.preventDefault(); $('#modalProfile').fadeToggle('fast');">
+                <span class="icon-profile"></span>
+                <p>Register / Login</p>
+              </a>
+              <!-- <div class="HeaderButtonAlert">Music4deejay profile</div> -->
+            </div>
+
+            <div class="HeaderButton HeaderUpload">
+              <a href="/send_tracks">
+                <span class="icon-plus"></span>
+                <p>Upload song</p>
+              </a>
+              <!-- <div class="HeaderButtonAlert">Do you have a track?</div> -->
+            </div>
+          </div><!-- Fin headerRight -->
+
+          <div class="HeaderSearchOpen" id="openSearch">
+            <span class="icon-search"></span>
+          </div>
 
           <div class="HeaderSearch">
-            <a href="" id="searchButton">
+            <a href="http://music4deejays.com/#/?s=+" id="searchButton">
               <span class="icon-search"></span>
             </a>
             <form action="http://music4deejays.com/" class="searchform" id="searchform" method="get" role="search" _lpchecked="1">
@@ -197,25 +218,6 @@
               <span class="HeaderSearchIcon icon-search"></span>
             </form>
           </div>
-
-          <div class="HeaderRight">
-
-            <div class="HeaderButton HeaderProfile">
-              <a href="#"  onclick="event.preventDefault(); $('#modalProfile').fadeToggle('fast');">
-                <span class="icon-profile"></span>
-              </a>
-              <div class="HeaderButtonAlert">Register or Login</div>
-            </div>
-
-            <div class="HeaderButton HeaderUpload">
-              <a href="/send_tracks">
-                <span class="icon-plus"></span>
-              </a>
-              <div class="HeaderButtonAlert">Upload a song</div>
-            </div>
-
-          </div><!-- Fin headerRight -->
-
 
         </div>
       </header><!-- Fin Header -->

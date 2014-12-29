@@ -94,8 +94,16 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 		window.open(facebookUrl, '_blank', 'location=no,directories=no, status=no, menubar=no, scrollbars=no, resizable=no,height=300,width=560, top='+windowTop+', left='+windowLeft+' ');
 
 		return false;
-	});
+	}); 
 
+  	$( "#openSearch" ).click(function() {
+  		$('.HeaderSearch').slideDown(200);  
+  	}); 
+  	
+
+  	$( "#closeSearch" ).click(function() {
+  		$('.HeaderSearch').slideUp(200);  
+  	}); 
 
   	$( "#open_mobile" ).click(function() {
   		$('.HeaderWhiteBg').fadeIn(200);
