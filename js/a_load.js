@@ -36,8 +36,10 @@
 		var s = $searchInput.val().replace(/ /g, '+');
 		if (s){
 			var query = '/?s=' + s;
-			$.address.value(query);
+			$.address.value(query);  
+			$('.HeaderSearchInput').blur().val('');
 		}
+
 		return false;
 	});
  
@@ -53,6 +55,7 @@
 		$('.HeaderMenu').hide(0);
 		$('.HeaderWhiteBg').hide(0);
 		$('#closemobile').hide(0);
+
 
 		if ($el.parents('.pagination').length == 1) {
 			loadInsidePage = 1;
@@ -116,7 +119,10 @@
 				$mainContentCenter.fadeIn('fast');
 				$footer.show(0);
 			});
-		}	 
+		}	
+		else {
+			console.log("No existe");
+		} 
 
 		// Animate to top
 		$("html, body").animate({ scrollTop: 0 }, 400);

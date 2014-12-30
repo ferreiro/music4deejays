@@ -213,6 +213,9 @@
               <span class="icon-search"></span>
             </a>
             <form action="http://music4deejays.com/" class="searchform" id="searchform" method="get" role="search" _lpchecked="1">
+              <div class="closeMobileSearch">
+                <span class="icon-close"></span>
+              </div>
               <input type="text" class="HeaderSearchInput" name="s" id="s" placeholder="Search..." autocomplete="off">
               <input type="submit" class="HeaderSearchSubmit" name="submit" id="searchsubmit" value=" ">
               <span class="HeaderSearchIcon icon-search"></span>

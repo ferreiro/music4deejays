@@ -98,11 +98,20 @@ $( document ).ajaxComplete(function( event,request, settings ) {
 
   	$( "#openSearch" ).click(function() {
   		$('.HeaderSearch').slideDown(200);  
+  		$('.HeaderSearchInput').val('');
+  		$('.HeaderSearchInput').focus();
   	}); 
-  	
 
-  	$( "#closeSearch" ).click(function() {
-  		$('.HeaderSearch').slideUp(200);  
+
+  	$( "#try_again" ).click(function() {
+  		$('.HeaderSearch').slideDown(200);   
+  		$('.HeaderSearchInput').val('');
+  		$('.HeaderSearchInput').focus();
+  		return false;
+  	}); 
+
+  	$( ".closeMobileSearch" ).click(function() {
+  		$('.HeaderSearch').hide(0);  
   	}); 
 
   	$( "#open_mobile" ).click(function() {

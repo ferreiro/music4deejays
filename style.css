@@ -264,22 +264,22 @@ ul, li
 }
 .loaderGif
 {
-	width: 150px; /* width: 200px; */ 
-	height: 150px; /* height: 120px; */
+	width: 200px; /* width: 200px; */ 
+	height: 120px; /* height: 120px; */
 	top: 50%;
 	left: 50%;
-	margin-top: -75px; /* margin-top: -60px; */
-	margin-left: -64px; /* margin-left: -100px; */
+	margin-top: -60px; /* margin-top: -60px; */
+	margin-left: -100px; /* margin-left: -100px; */
 	position: absolute;
 	background:#cecece url(static/loader.gif) 50% 50% no-repeat;
 	background-size: 80px auto; 
 	opacity: 0.9;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
-	border-radius: 5px;
+	border-radius: 5px;/*
 	-webkit-border-radius: 100%;
 	-moz-border-radius: 100%;
-	border-radius: 100%;
+	border-radius: 100%;*/
 }
 
 .LineVertical
@@ -945,38 +945,68 @@ ul, li
 }
 .HeaderMenuMobile
 {
-	width: 62px;
-	height: 62px;
+	width: 58px;
+	height: 47px;
 	position: absolute;
-	top: 0;
+	top: -1em;
+	padding-top: 1em;
 	right: 0;
 	float: left;
 	cursor: pointer;
-	font-size: 2.4em;
-	text-align: center;
+	font-size: 2.4em; 
 	z-index: 1000;
-	margin-top: -3px;
+	margin-top: -3px; 
 	margin-right: -15px;
 }
 .HeaderMenuMobile span
 {
-	float: left;
-	text-align: center;
-	width: 100%;
+	float: left;  
 	height: 100%;
 	margin-top: 0;
+	margin-left: 8px;
 }
 
 .HeaderSearchOpen {
 	position: absolute;
-	right: 55px;
-	margin-top: 5px; 
+	right: 42px;
+	top: -1em;
+	padding: 0 10px;
+	padding-top: 1em;
+	padding-bottom: 12px;
+	margin-top: 5px;
 	display: none;
 	cursor: pointer;
 } 
-.HeaderSearchOpen span{
+.HeaderSearchOpen span {
 	font-size: 24px;
 	color: rgb(62, 62, 62);
+}
+.closeMobileSearch {
+	width: 60px;
+	height: 55px;
+	position: absolute;  
+	right: 0;
+	display: none;
+	color: #000;
+	text-align: center;
+	z-index: 100000;
+}
+.closeMobileSearch span { 
+	color: #000;
+	margin-top: 10px;
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+}
+.closeMobileSearch span { 
+	color: #000;
+	margin-top: 17px;
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-size: 26px;
+	color: #747474;
 }
 .HeaderSearch
 {
@@ -2382,6 +2412,67 @@ li.share:hover .BoxShareMenu
     margin-bottom: 20px;
 }   
 
+
+/*************
+	Search 
+**************/
+
+.searchResult {
+	width: 100%;
+}
+.searchResult p {
+	font-size: 1em;
+	font-weight: 300;
+}
+.searchResult h1 {
+	font-size: 2.5em;
+	text-transform: capitalize;
+	font-weight: 300;
+}
+.searchNothingFound {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+.searchNothingFound h1 {
+	font-size: 1.4em;
+	font-weight: 500;
+}
+.searchNothingFound h2 {
+	font-size: 1em;
+}
+.searchPageForm {
+	width: 100%;
+	height: 60px;
+	position: relative;
+	border: 1px solid grey;
+	display: none;
+}
+.searchBrokenImage {
+	width: 100%;
+	height: 150px;
+	background:url(static/search_broken.png) no-repeat 50% 50% ;
+	background-size: auto 100%;
+	margin: 50px 0;
+}
+.searchMeme {
+	width: 100%;
+	position: relative;
+	display: none;
+} 
+.searchMeme:before {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	content: "";
+	left: 0;
+} 
+.searchMeme img {
+	width: 100%;
+	opacity: 0.4;
+} 
+  
 /*************
 	Uploder 
 **************/
@@ -2615,8 +2706,12 @@ li.share:hover .BoxShareMenu
 	} 
 
 	/** Search **/
+	.closeMobileSearch,
 	.HeaderSearchOpen {
 		display: block;
+	}
+	.HeaderSearchIcon {
+		display: none;
 	}
 	.HeaderSearch {
 		position: absolute;
@@ -2834,7 +2929,7 @@ li.share:hover .BoxShareMenu
 }
 
 
-@media all and (min-width:400px) and (max-width: 1149px) {
+@media all and (min-width:500px) and (max-width: 1149px) {
  	.slider {
  		display: inline-block;
  	}
@@ -2980,9 +3075,6 @@ li.share:hover .BoxShareMenu
 
 }
 @media all and (min-width: 1150px) {
-	.loaderGif {
-		margin-left: -250px;
-	}
 	.HeaderMenu
 	{
 		width: 165px; 
@@ -3035,7 +3127,7 @@ li.share:hover .BoxShareMenu
 		box-shadow: 0 0 0 #888888;
 		box-shadow: 0 0 0 rgba(0,0,0,0);
 		cursor: default;
-		
+
 	}
 	.PlayerLeft
 	{ 
@@ -3074,8 +3166,7 @@ li.share:hover .BoxShareMenu
 		float: right;
 	}
 	.ContainerRightTitle
-	{ 
-		text-transform: uppercase;
+	{  
 		font-weight: 400;
 		display: block; 
 		font-size: 1.1em;
@@ -3118,6 +3209,20 @@ li.share:hover .BoxShareMenu
 		margin: 0;
 		padding:0;
 	}
+
+
+	.searchResult {
+		width: auto;
+		border-left: 10px solid transparent;
+		padding-left: 25px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #f4f4f4;
+	} 
+
+	/*************
+		Uploader 
+	**************/
+
 	.Uploder
 	{
 		width: 725px;

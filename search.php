@@ -4,14 +4,53 @@
 
         <div class="ContainerLeft"> 
 
-        	<div class="sectionTitle" style="width:100%; clear:both;">
-        	    <h2>
-        	    	Results for your search
-        	    </h2>
-        	    <h1>
-        	        <?php echo sprintf( __( '%s results for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); ?>            
-        	    </h1>
+        	<div class="searchResult">
+        		<p><?php echo sprintf( __( '%s results for ', 'html5blank' ), $wp_query->found_posts );  ?>            </p>
+        		<h1><?php echo get_search_query(); ?></h1>
         	</div>
+ 
+        	<?php 
+        		$total = $wp_query->found_posts;
+        		if ($total == 0) :
+        	?>
+        	<div class="searchNothingFound">
+
+        		<div class="searchBrokenImage"></div>
+
+        	    <h1>Nothing found :-(</h1>
+        		<h2><a href="#" id="try_again">Try again!</a></h2>
+
+        		<div class="searchPageForm">
+	        		<form action="http://music4deejays.com/#/?s=" class="searchform" method="get" role="search" _lpchecked="1">
+	        		    <input type="text" class="HeaderSearchInput" name="s" placeholder="Search..." autocomplete="off">
+	        		    <input type="submit" class="HeaderSearchSubmit" name="submit" id="searchsubmit" value=" ">
+	        		    <span class="HeaderSearchIcon icon-search"></span>
+	        		</form>
+        		</div>
+
+
+        		<div class="searchMeme">
+        			<img src="http://3rrm7021tets2frq9o1kfbbh.wpengine.netdna-cdn.com/wp-content/uploads/2014/07/10494532_10152322970863160_3490187042434914531_n.jpg" />
+        		</div>
+
+        	</div>
+        	<?php
+        		else:
+        	?>
+
+        		<div class="searchform searchPageForm">
+	        		<form action="http://music4deejays.com/" class="searchform" method="get" role="search" _lpchecked="1">
+	        		    <input type="text" class="HeaderSearchInput" name="s" placeholder="Search..." autocomplete="off">
+	        		    <input type="submit" class="HeaderSearchSubmit" name="submit" id="searchsubmit" value=" ">
+	        		    <span class="HeaderSearchIcon icon-search"></span>
+	        		</form>
+        		</div>
+        	<?php endif; ?>
+
+
+
+
+
 
 			<?php  
 			    if (have_posts()) : while (have_posts()) : the_post(); 
