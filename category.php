@@ -144,11 +144,7 @@
     }
     ?>
 
-        <?php if(is_category('mixes')): ?>
-            <div class="ContainerMiddle">
-        <?php else: ?>
-            <div class="ContainerLeft">
-        <?php endif; ?>
+        <div class="ContainerLeft">
 
             <div class="slider">
                 <div class="sliderVerticalLine"></div>
