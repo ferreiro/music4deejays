@@ -124,11 +124,11 @@
                             </div>
                         </li>
                         <li class="like_dislike">
-                            <a href="#">
+                            <a href="#" onclick="event.preventDefault();">
                                 <span class="icon-like"></span>
                                 <span class="text">I like it</span>
                             </a>
-                            <a href="#">
+                            <a href="#" onclick="event.preventDefault();">
                                 <span class="icon-dislike"></span>
                                 <span class="text">I dislike it</span>
                             </a>

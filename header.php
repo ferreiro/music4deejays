@@ -103,20 +103,34 @@
 
       </section> 
       
+
+      <div class="followPop">
+        <div class="followPopInt">
+          <div class="closeFollowPop icon-close" id="close_banner" style="cursor:pointer; position:absolute; top:0; font-size:22px; padding:20px 23px; right:0; color:#222;"></div>
+
+          <div class="followPopTwitter">
+            <span class="icon-twitter"></span>
+          </div>
+          <h2 class="followPopTitle">
+            Are you an electronic music fan?
+          </h2>
+          <p class="followPopSubtitle">
+             Don't miss any track and follow us!
+          </p>
+          <div class="followButton">
+             <a href="https://twitter.com/music4deejays" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @music4deejays</a>
+             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+          </div>
+        </div>
+      </div>
+
+
       <div class="Header headerBlur"></div>
 
       <header class="Header">
         <div class="HeaderWhiteBg"></div>
         <div class="HeaderInt">
-
-          <div class="header_advise" style="display:none;">
-              <div class="closeheaderAdvise icon-close" id="close_banner" style="cursor:pointer; position:absolute; top:0; font-size:22px; padding:20px 23px; right:0; color:rgba(255,255,255, 0.6);"></div>
-              <h2>Do you like electronic music? Follow us on twitter!</h2>
-              <a href="https://twitter.com/music4deejays" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @music4deejays</a>
-              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-              <span></span>
-          </div>
-
+ 
           <div class="HeaderLogo">
             <a href="/">
               <span class="HeaderLogoIcon"></span>
@@ -251,11 +265,9 @@
             </div>
             <div class="PlayerInfo">
               <h1>
-                <a href="">
                   <div class="player_mediaName_Mask">
                     <div class="player_mediaName"></div>
                   </div>
-                </a>
               </h1>
             </div>
           </div>
@@ -284,14 +296,13 @@
             
           </div>
 
-          <div class="PlayerLeft">
+          <div class="PlayerRight">
+            
             <div class="PlayerTime" style="display: ;">
               <div class="player_mediaTime_current">00:00</div>
               <div class="player_mediaTime_total">00:00</div>
             </div>
-          </div>
-          <div class="PlayerRight">
-            
+
             <div class="PlayerVolume">
               <div class="volume_seekbar" data-orientation="horizontal" >
                 <div class="volume_bg"></div>
