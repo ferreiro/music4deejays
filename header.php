@@ -138,9 +138,27 @@
             </a>
           </div>
 
-          <div class="HeaderMenuMobile" id="open_mobile">
+          <div class="HeaderButtonMenuMobile" id="open_mobile">
               <span class="icon-menu"></span>
           </div>
+
+          <!-- 
+
+          <div class="HeaderMenuMobile">  
+          <ul>
+              <li>
+                  <a href="/">Explore</a>
+              </li>
+              <li>
+                  <a href="/electro">Electro House</a>
+              </li>
+              <li>
+                  <a href="/progressive">Progressive House</a>
+              </li>     
+          </ul>
+          </div>
+          -->
+          <!-- Fin headerMenuMobile -->
 
 
           <div class="HeaderMenu">
@@ -201,13 +219,6 @@
           </div><!-- Fin headerMenu-->
 
           <div class="HeaderRight">
-            <div class="HeaderButton HeaderProfile">
-              <a href="#"  onclick="event.preventDefault(); $('#modalProfile').fadeToggle('fast');">
-                <span class="icon-profile"></span>
-                <p>Register / Login</p>
-              </a>
-              <!-- <div class="HeaderButtonAlert">Music4deejay profile</div> -->
-            </div>
 
             <div class="HeaderButton HeaderUpload">
               <a href="/send_tracks">
@@ -216,6 +227,15 @@
               </a>
               <!-- <div class="HeaderButtonAlert">Do you have a track?</div> -->
             </div>
+
+            <div class="HeaderButton HeaderProfile">
+              <a href="#"  onclick="event.preventDefault(); $('#modalProfile').fadeToggle('fast');">
+                <span class="icon-profile"></span>
+                <p>Register / Login</p>
+              </a>
+              <!-- <div class="HeaderButtonAlert">Music4deejay profile</div> -->
+            </div>
+
           </div><!-- Fin headerRight -->
 
           <div class="HeaderSearchOpen" id="openSearch">
