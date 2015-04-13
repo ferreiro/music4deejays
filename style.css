@@ -564,7 +564,6 @@ ul, li
 	border-left: 1px solid #f4f4f4; 
 	top: 0;
 	right: 64px; 
-	opacity: 0;
 	filter: alpha(opacity=0);
 	-webkit-transition: background-color .290s;
 	-moz-transition: background-color .290s;
@@ -1149,17 +1148,15 @@ ul, li
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
-.HeaderProfile
-{
+.HeaderProfile {
 	background: #4a4a4a;
 }
-.HeaderProfile:hover
-{
+.HeaderProfile:hover {
 	background: #343333;
 }
-.HeaderUpload
-{
+.HeaderUpload {
 	background: #89b000;
+	background: transparent;
 }
 .HeaderUpload:hover
 {
