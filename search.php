@@ -18,7 +18,7 @@
         		<div class="searchBrokenImage"></div>
 
         	    <h1>Nothing found :-(</h1>
-        		<h2><a href="#" id="try_again">Try again!</a></h2>
+        		<h2><a href="#" onclick="document.getElementByClass('HeaderSearchInput').focus(); return false;" id="try_again">Try again!</a></h2>
 
         		<div class="searchPageForm">
 	        		<form action="http://music4deejays.com/#/?s=" class="searchform" method="get" role="search" _lpchecked="1">
