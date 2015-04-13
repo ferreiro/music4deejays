@@ -36,6 +36,20 @@
 
 	    <ul id='playlist2'>
 	    	<!-- Loads the content when pressed the play -->
+	    	<?php 
+	    		query_posts(array('orderby' => 'date', 'showposts' => 2)); 
+	    		if (have_posts()) : while (have_posts()) : the_post(); 
+	    	?>
+	    	<?php                     
+	    		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'thumbnail' );
+	    		$playlistImage = $thumb[0];
+	    	?>
+	    	<?php if(get_field('soundcloudURL')): ?>
+	    		<li class="playlistItem" data-type="soundcloud" data-path="<?php the_field('soundcloudURL'); ?>" data-thumb="<?php echo $playlistImage; ?>"></li>
+	    	<?php endif; ?>
+
+	    	<?php endwhile; ?>
+	    	<?php endif; ?>
 	    </ul>
 
 	    <!-- local playlist -->
@@ -103,3 +117,5 @@
 
 </body>
 </html>
+
+ 
