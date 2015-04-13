@@ -270,12 +270,15 @@
             </div><!-- Fin SectionToptracks -->
 
 
-            <div class="followUs" style="background:transparent; border-left:0; border-right:0;">
+            <div class="followUs" style="display:none; background:transparent; border-left:0; border-right:0;">
                 <h3>Follow us!<h3>
                 <ul>
                     <a href="https://twitter.com/music4deejays" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @music4deejays</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                 </ul> 
+            </div>
+
+            <div class="followUs" style="background:transparent; border-left:0; border-right:0;">
             </div>
 
             <div class="uploadTracks" style="display:none;">
