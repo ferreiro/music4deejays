@@ -1,0 +1,559 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>DDSlider - A fancy fully customizable slider with inline content support.</title>
+    	
+        <!-- Layout Options -->
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        
+        <!-- Slider Configurations - VERY IMPORTANT -->
+        <link href="DDSlider.css" rel="stylesheet" type="text/css" />
+    	
+        <!-- jQuery framework -->
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        
+        <!-- jQuery easing plugin - VERY IMPORTANT -->
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        
+        <!-- DDSlider jQuery Plugin - VERY IMPORTANT -->
+        <script type="text/javascript" src="js/jquery.DDSlider.min.js"></script>
+        
+        <!-- Let's start the slider -->
+        <script type="text/javascript">
+        
+		//triggers the slider
+        $(document).ready(function() {
+            
+            $('#yourSliderId').DDSlider({
+				
+				nextSlide: '.slider_arrow_right',
+				prevSlide: '.slider_arrow_left',
+				selector: '.slider_selector'
+				
+				});
+            
+        });
+        
+        
+        </script>
+        
+    </head>
+
+	<body>
+
+        <div class="wrapper">
+        
+            <div id="logo">
+            
+                <div class="left">
+                
+                    <img src="images/logo.gif" width="213" height="112" alt="DDSlider" />
+                    
+                </div>
+                
+                <div class="right">
+                
+                    <img src="images/slogan.gif" width="663px" height="112px" align="Slogan" />
+                
+                </div>
+                
+            </div>
+            
+              <ul id="yourSliderId">
+              
+                  <li class="squareRandom">
+                  
+                    <div style="background: #000000; width: 960px; height: 300px; padding: 50px 0 0 30px">
+                    
+                        <h1 style="color:#ffffff">Yes. I support inline content.</h1>
+                        
+                        <p style="color:#ffffff;"><strong>DDSlider let's you do more with sliders. Besides fancy transitions, <br />
+                        DDSlider supports inline content, lets you define specific transitions<br />
+                        and choose the number of bars and squares.</strong></p>
+                        
+                        <p>
+                        
+                            <a href="http://codecanyon.net/item/ddslider-10-transitions-inline-content-support/104797" class="learn_more"></a>
+                            <a href="http://codecanyon.net/item/ddslider-10-transitions-inline-content-support/104797" class="buy_it"></a>
+                            
+                        </p>
+                    
+                    </div>
+                  
+                  </li>
+                  
+                  <li class="barFadeRandom"><img src="assets/slider_001.gif" alt="" /></li>
+                  
+                  <li><img src="assets/slider_002.gif" alt="" /></li>
+                  
+                  <li><img src="assets/slider_003.gif" alt="" /></li>
+              
+              </ul>
+              <!-- END OF SLIDER -->
+              
+              <div class="container">
+                  
+                  <div class="slider_arrow_left"></div>
+                  <div class="slider_arrow_right"></div>
+                  
+                  <ul class="slider_selector"></ul>
+                  
+              </div>
+              
+              
+            
+            <div class="x1" style="margin: 50px 0 0 0;">
+            
+            	<h1>Documentation - v1.2</h1>
+                
+                <h3 id="introo">Introduction:</h3>
+                
+                <p>Thank you for purchasing DDSlider jQuery plugin. This file is meant to provide you with all information needed to implement and customize your slider.</p>
+                
+                <div class="x3">
+                
+                	<h3>Licensing:</h3>
+                    
+                    <p><strong>Standard License:</strong> This license allows you to use the slider on a <strong>SINGLE</strong>: personal, commercial or or intranet site project.</p>
+                    
+                    <p><strong>Extended License:</strong> You may include this in a software package or in a <strong>SINGLE</strong> themeforest Template file that will be for sale.</p>
+                
+                </div>
+                
+                <div class="x3">
+                
+                	<h3>Support:</h3>
+                    
+                    <p>Please keep in mind that support is NOT the author's responsability. However, DDStudios provides support for this slider. Depending on your issue, it may be 100% free of cost.</p>
+                    
+                    <p>If you are facing any problems please do not hesitate in getting in touch with us using the form provided <a href="http://themeforest.net/user/DDStudios">here</a>.</p>
+                
+                </div>
+                
+                <div class="x3 last">
+                
+                	<h3>Copyright:</h3>
+                    
+                    <p>This jQuery plugin has been developed by Guilherme Salum from DDStudios. You may not modify and/or redistribute file in absolutely any way (save cases where Extended License is purchased).</p>
+                
+                </div>
+            
+            </div>
+            
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            <div class="x1">
+                
+                <h1>Setting up your DDSlider</h1>
+            
+            	<div class="x2">
+                	
+                    <h3>Ensure you have all files needed</h3>
+                    
+                    <p>Very often people can't get their slider to work before there is a file missing or wrong path to a file. Please ensure that you have all files listed below and tha all of them have the correct path.</p>
+                    
+                    <ul>
+                    
+                    	<li><strong>jquery.min.css</strong>: jQuery Framework file. Host this locally or hotlink it from google.</li>
+                    
+                    	<li><strong>jquery.easing.1.3.js</strong>: jQuery easing plugin javascript file. This file is needed if you want a different ease than the standard jquery 'swing'.</li>
+                    
+                    	<li><strong>jquery.DDSlider.min.js</strong>: DDSlider jQuery Plugin javascript file. Contains all functions and events.</li>
+                    
+                    	<li><strong>DDSlider.css</strong>: All modifications you might do will be in this file. Slider does NOT work without this.</li>
+                    
+                    </ul>
+                    
+                    <p>This files must be ALL within the &lt;head> of your file. Make sure to put them in the right order.</p>
+                    <p>Also, don't forget to add the DDSlider folder in your images folder. Arrows and Selectors are in that file.</p>
+                    
+                    <code>&lt;head>
+                    
+  <em>&lt;!-- Slider Configurations - VERY IMPORTANT --></em>
+  &lt;link href="DDSlider.css" rel="stylesheet" type="text/css" />
+    	
+  <em>&lt;!-- jQuery framework --></em>
+  &lt;script type="text/javascript" src="js/jquery.min.js">&lt;/script>
+        
+  <em>&lt;!-- jQuery easing plugin - VERY IMPORTANT --></em>
+  &lt;script type="text/javascript" src="js/jquery.easing.1.3.js">&lt;/script>
+        
+  <em>&lt;!-- DDSlider jQuery Plugin - VERY IMPORTANT --></em>
+  &lt;script type="text/javascript" src="js/jquery.DDSlider.min.js">&lt;/script>
+    
+&lt;/head></code>
+                    
+                </div>
+                
+                <div class="x2 last">
+                
+                	<h3>Create the slider structure</h3>
+                    
+                    <p>The HTML basic structure of the slider is very important. You will need to defined the slider's width and height in the DDSlider.css file in order for this to work. The main parent of the slider has to be a &lt;ul> that you wish.</p>
+                    
+                    <p>The slider is mainly composed by 1 container:</p>
+                    
+                    	<ul>
+                        
+                        	<li><strong>ul#yourSliderId</strong>: This is the mother container of your slider, all &lt;li> tags in it will become items of the slider.</li>
+                        
+                        </ul>
+                        
+                        <code>&lt;ul id="yourSliderId">
+   &lt;li> [...] &lt;/li>
+&lt;/ul></code>
+
+			    <p><strong>IMPORTANT: Do not forget to adjust your slider's height and width in the DDSlider.css file. And make sure your mother container has the same ID as the one in the DDSlider.css file.</strong></p>
+                    
+                    <h3>Trigger DDSlider:</h3>
+                    
+                    <p>Now it is time to trigger DDSlider so jQuery actually executes it. Add the following code to your header: <em>(further on you'll learn how to configure your DDSlider)</em></p>
+                    
+                    <code>&lt;head>
+                    
+   &lt;script type="text/javascript">
+        
+      //triggers the slider
+      $(document).ready(function() {
+         $('#yourSliderId').DDSlider();
+      });
+        
+   &lt;/script>
+    
+&lt;/head></code>
+                
+                </div>
+            
+            </div>
+            
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            <div class="x1">
+            
+            	<h1>Adding Content and Defining Transitions</h1>
+                
+                <div class="x2">
+                
+                	<h3>Adding sliders</h3>
+                    
+                    <p>To add new items to DDSlider is fairly simple. Every &lt;li>&lt;/li> item withing the mother container will count as a slider item, therefore adding a selector.</p>
+                    
+                    <code>&lt;ul id="yourSliderId">
+   
+   &lt;li> [...] &lt;/li> <em>&lt;!-- One Slider Item --></em>
+   
+&lt;/ul></code>
+
+					<h3>Adding Sliders with Inline Content</h3>
+                    
+                    <p>In order to add Sliders with inline content <em>(this means actual HTML instead of lame static images)</em> you should follow the same step as above with a few additional things.</p>
+                    
+                    <p>We highly recommend you to define a background color for your &lt;li>&lt;/li> tag to avoid weird transitions. Even with images as background, we advise to add a solid color as well. Follow the example below:</p>
+                    
+                    <code>&lt;ul id="yourSliderId">
+   
+   &lt;li style="background: #ffffff;"> [...] &lt;/li>
+   
+&lt;/ul></code>
+
+					<p>jQuery will now add this background option in the transition, so the transition is solid and smooth.</p>
+                
+                </div>
+                
+                <div class="x2 last">
+                
+                	<h3>Defining transitions</h3>
+                    
+                    <p>You also have the possibility to define specific transitions for each slider. To do that you must first choose one of the transitions below:</p>
+                    
+                    <ul>
+                    
+                    	<li><strong>random</strong>: Will randomly play one of the transitions below.</li>
+                    
+                    	<li><strong>fading</strong>: Normal standard fading transition.</li>
+                    
+                    	<li><strong>barTop</strong>: Bars animation coming from top left.</li>
+                    
+                    	<li><strong>barBottom</strong>: Bars animation coming from bottom right.</li>
+                    
+                    	<li><strong>barFading</strong>: Bars animation fading from left to right - curtain style.</li>
+                    
+                    	<li><strong>barRandom</strong>: Bars animation fading at random.</li>
+                    
+                    	<li><strong>square</strong>: Square animation fading from left to right.</li>
+                    
+                    	<li><strong>squareMoving</strong>: Square animation where squares fade and move from left to right.</li>
+                    
+                    	<li><strong>squareRandom</strong>: Square animation fading squares at random.</li>
+                    
+                    	<li><strong>squareOut</strong>: Square animation going out from top left.</li>
+                    
+                    	<li><strong>squareOutMoving</strong>: Square animation going out and moving from top left.</li>
+                    	<li><strong>rowInterlaced</strong>: Rows animation coming from both left and right.</li>
+                    
+                    </ul>
+                    
+                  <p>Now that you have chose your transition, all you need to do is add a <em>class=""</em> property to your slider's <em>&lt;li>&lt;/li></em> tag, with the name of your transition.</p>
+                    
+                    <code>&lt;ul id="yourSliderId">
+   
+   &lt;li class="squareRandom"> [...] &lt;/li>
+   
+&lt;/ul></code>
+
+					<p>Please note that if written wrong, the slider will play the default transition.</p>
+                
+                </div>
+            
+            </div>
+            
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            <div class="x1">
+            
+            	<h1>Inline Content</h1>
+                
+                <p>When we talk about inline content, it includes any HTML that you might wanna include in your slides. Buttons, forms, lists, text etc... However, if you don't know HTML and CSS I highly recommend you to learn the basics in order to take full advantage of the inline content feature.</p>
+                
+                <p>The plugin deals with wahtever is inside the &lt;li> tag. Meaning that whatever you have in there, the plugin will clone your content and animate it. So in order to use the feature at its best we need to do the following:</p>
+                
+                <ul style="font-weight: bold;">
+                
+                <li>1) We need to create a wrapping container, that fills our entire slide area with a background color or image, to avoid transparent faulty transitions</li>
+                
+                <li>2) We need to set the proper width ad height of this container, so it actually fills the entire area.</li>
+                
+                <li>3) We will probably be adding padding to this container, so our inline content is not at the edge of the slide, resulting in ugly badly done content.</li>
+                
+                <li>4) Finally add our inline content.</li>
+                
+                </ul>
+                <p>&nbsp;</p>
+                
+                <h4>Adding our wrapping container:</h4>
+                
+                <p>Let's start by adding a wrapping container with a background so we don't get transparent transitions. For this example I'll be using our default width and height values - 960x300. </p>
+                
+                <code>&lt;li>
+	&lt;div style="background: #ffffff url(your background image url) repeat-x top left">
+        
+		[...]
+        
+	&lt;/div>      
+&lt;/li></code>
+
+				<p>With our DIV container wrapping all of our content, we don't have to bother about transparent transitions anymore. But if you add just a little of text, it won't matter much, because or div wrapping container doesn't have and width and height set so it'll automatically assign the width and height of our content (which can be as little as line height). So let's also assign a width and height:</p>
+                
+                <code>&lt;li>
+
+	&lt;div style="
+		background: #ffffff url(your background image url) repeat-x top left;
+		width: 960px;
+		height: 300px;
+	">
+        
+        [...]
+        
+	&lt;/div>
+    
+&lt;/li>
+</code>
+
+				<p>Now we've just added width and height to our DIV container, this exapands our box, and now it fills the entire LI! But hold on, my content is right on the edge of my slider, how can I add some margin to it?</p>
+                
+                <p>Simple, we'll add padding to our DIV container. Adding padding can be quite confusing if you are not used to HTML & CSS. Whenever you add padding to a container that has a width and height defined, the padding is added to the width and height. For example, if you have a 1000px long DIV container, and adding 100px of padding on the left, your DIV container will actually be 1100px wide and not 1000px. Said so, whenever you add padding to the left or right, you'll need to subtract this value from the width, and whenever you add padding on the top or bottom, you'll need to subtract the padding from the height value.</p>
+                
+                <p>In the next example I'll be adding 50px padding on each side of my DIV container, pay attention how my width and height will be reduced.</p>
+                
+                <code>&lt;li>
+                
+	&lt;div style="
+		background: #ffffff url(your background image url) repeat-x top left; 
+		width: 860px; /* (which is actually 960px - 50px - 50px) */
+		height: 200px; /* (which is actually 300px - 50px - 50px) */
+		padding-top: 50px;
+		padding-right: 50px;
+		padding-bottom: 50px;
+		padding-left- 50px;
+	">
+        
+		&lt;h2>Now I can add Inline Content!&lt;/h2>
+        
+	&lt;/div>
+    
+&lt;/li>
+</code>
+
+				<p>From here on, you are free to insert buttons, links, paragraphs, lists and much more. I won't get into details of adding buttons and etc because the point of this documentation is to just explain the inline content function and not to teach HTML and CSS.</p>
+            
+            </div>
+            
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            <div class="x1">
+            
+            	<h1>Customize your slider</h1>
+                
+                <p>In order to customize your slider, you must edit the DDSlider.css file. In there you will find a full description of each of the parts of this slider. Do not forget to edit your slider's width and height in the css file.</p>
+                <p>Other customizations like arrows and selectors are in the style.css file, however, the slider works fine without it.</p>
+            
+            </div>
+            
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            <div class="x1" id="configureSlider">
+            
+            	<h1>Configure your DDSlider</h1>
+                
+                <p>DDSlider gives you the option to fully customize your slider. Below you'll find a list of all options available and how to set them.</p>
+                
+                <div class="x2">
+                
+                    <p>Remember when we triggered DDSlider in our &lt;head> tag? Well to configure our DDSlider we'll have to go back up again. Below there is a full list of all options available and its default values</p>
+                    
+                    <code>&lt;script type="text/javascript">
+       $(document).ready(function() {
+        
+          $('#yourSliderId').DDSlider({
+            
+             trans: 'random',
+             delay: 50,
+             ease: 'swing',
+             waitTime: 5000,
+             duration: 500,
+             stopSlide: 1,
+             bars: 15,
+             columns: 9,
+             rows: 3,
+             selector: <em>null</em>,
+             arrowNext: <em>null</em>,
+             arrowPrev: <em>null</em>
+            
+          });
+        
+        });
+    &lt;/script></code>
+    
+				</div>
+                
+                <div class="x2 last">
+                
+                	<ul>
+                    
+                    	<li><strong>trans</strong>: Choose here your default transition. If no transition is defined in the slider item, this is the transition to be played.<br />
+<em>Default: random</em></li>
+                    
+                    	<li><strong>delay</strong>: Delay between each block of slider is played in miliseconds. ie: the first block starts animating at 0, second starts at x, third starts at 3x and so on.<br />
+<em>Default: 50</em></li>
+                    
+                    	<li><strong>ease</strong>: Type of easing that the animation is going to have. If you have the jQuery easing plugin in your website, you may choose one from there. Remember to put in between apostrophes or quotes.<br />
+<em>Default: 'swing'</em></li>
+                    
+                    	<li><strong>waitTime</strong>: Delay time between each slider in miliseconds. This is the wait time for the next slide to be played automatically.<br />
+<em>Default: 5000</em></li>
+                    
+                    	<li><strong>duration</strong>: Duration of animations in miliseconds. The lower this number is, the faster the animations are gonna be played.<br />
+<em>Default: 500</em></li>
+                    
+                    	<li><strong>stopSlide</strong>: This options does not have a function. Will be available in future updates.<br />
+<em>Default: 1</em></li>
+                    
+                    	<li><strong>bars</strong>: Number of 'slices' to be played in in the 'bars' transitions. Keep this number dividable by the width.<br />
+<em>Default: 15</em></li>
+                    
+                    	<li><strong>columns</strong>: Number of columns to be played in the 'square' transitions.<br />
+<em>Default: 9</em></li>
+                    
+                    	<li><strong>rows</strong>: Number of Rows to be played in the 'square' transitions.<br />
+<em>Default: 3</em></li>
+                    
+                    	<li><strong>selector</strong>: Sets a given selector as the slider selector. The little circles over the slider.<br />
+<em>Default: null</em></li>
+                    
+                    	<li><strong>arrowNext</strong>: Sets a given object so when this is clicked the next slider is called. Works as a next button.<br />
+<em>Default: null</em></li>
+                    
+                    	<li><strong>arrowPrev</strong>: Sets a given object so when this is clicked the previous slider is called. Works as a previous button.<br />
+<em>Default: null</em></li>
+                    
+                    </ul>
+                    
+                    <p>Please note that your selector container HAS TO BE a &lt;ul>&lt;/ul> container. Selectors are added as empty &lt;li>&lt;/li> tags.</p>
+                    
+                    <p>Current selectors are given the class '.current'. You might wanna change the image of the current selector so it differs from the rest.</p>
+                
+                </div>
+            
+            </div>
+            
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            
+            <div class="x1" id="inlineContent">
+            
+            	<h1>Inline Content</h1>
+                
+                <p>To be honest, if you or your client does not have a notion of HTML and CSS, Inline content can be a problem for you.</p>
+        <p>The slider itself deals with whatever is inside the LI tag. if you have text, the script will clone your text into each block of transition. So if your current slide is transparent, this means that you'll pretty much have an invisible transition as well. In order to add Inline content like the one you see in the Live Demo, you need to set up a few things first:</p>
+        <ol>
+          <li>First, we need a container that fills the entire space of the LI tag with a background color or image.</li>
+          <li>We need to set this container's width and height, so it fills the entire LI tag</li>
+          <li>We'll probably be adding padding to this container, so our inline content doesn't stick on the edge of the slider        </li>
+          <li>Add our inline content</li>
+        </ol>
+        <p>Let's start by the steps mentioned above:</p>
+        <h5>Add the wrapping container</h5>
+        <p>Let's start by adding a wrapping container with a background so we don't get transparent transitions. For this example I'll be using our default width and height values - 960x300.      </p>
+      <code>&lt;div style="
+background: #ffffff url(your background image url) repeat-x top left;
+">
+        
+        [...]
+        
+&lt;/div>      </code>
+      <p>With our DIV container wrapping all of our content, we don't have to bother about transparent transitions anymore. But if you add just a little of text, it won't matter much, because or div wrapping container doesn't have and width and height set so it'll automatically assign the width and height of our content (which can be as little as line height). So let's also assign a width and height:</p>
+      <code>&lt;div style="
+	background: #ffffff url(your background image url) repeat-x top left;
+	width: 960px;
+	height: 300px;
+">
+        
+        [...]
+        
+&lt;/div>
+</code>
+      <p>Now we've just added width and height to our DIV container, this exapands our box, and now it fills the entire LI! But hold on, my content is right on the edge of my slider, how can I add some margin to it?</p>
+      <p>Simple, we'll add padding to our DIV container. Adding padding can be quite confusing if you are not used to HTML &amp; CSS. Whenever you add padding to a container that has a width and height defined, the pdding is added to the width and height. For example, if you have a 1000px long DIV container, and adding 100px of padding on the left, your DIV container will actually be 1100px wide and not 1000px. Said so, wheneve you add padding to the left or right, you'll need to subtract this value from the width, and whenever you add padding on the top or bottom, you'll need to usbtract the padding from the height value.</p>
+      <p>In the next example I'll be adding 50px padding on each side of my DIV container, pay attenction how my width and height will be reduced.</p>
+      <code>&lt;div style="
+	background: #ffffff url(your background image url) repeat-x top left; 
+	width: 860px; /* (which is actually 960px - 50px - 50px) */
+	height: 200px; /* (which is actually 300px - 50px - 50px) */
+	padding-top: 50px;
+	padding-right: 50px;
+	padding-bottom: 50px;
+	padding-left- 50px;
+">
+        
+        &lt;h2>Now I can add Inline Content!&lt;/h2>
+        
+&lt;/div>
+</code>
+      <p>From here on, you are free to insert buttons, links, paragraphs, lists and much more. I won't get into details of adding buttons and etc because the point of this documentation is to just explain the inline content function and not to teach HTML and CSS.</p>
+            
+            </div>
+        
+        </div>
+
+	</body>
+    
+</html>
