@@ -1,0 +1,311 @@
+<head>
+	<title>Music4deejays</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="normalize.css">	
+	<link rel="stylesheet" type="text/css" href="style.css">	
+</head>
+<body>
+	
+	<header class="header">
+		<div class="header__logo">
+			<a href="index.html">
+				<span class="icon"></span>
+				<span class="text"></span>
+			</a>
+		</div>
+		<div class="header__menu">
+			<ul>
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				
+				<li id="header__dropdown"> 
+					<a href="#">Explore</a>
+					<!-- DropDown menu inside -->
+					<ul class="header__menuDropdown" id="header__menuDropdown">
+						<h3>
+							by <span>Genres</span>
+						</h3>
+						<li>
+							<a href="#">
+								Progressive House
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Electro House
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Dubstep
+							</a>
+						</li>
+					</ul>
+				</li>
+
+				<li id="header__search">
+					<div class="search_form">
+						<!-- Search Form --> 
+						<form action="http://music4deejays.com/" id="search_form" method="get" role="search" _lpchecked="1">
+							<input type="text" name="s" id="s" placeholder="Search" autocomplete="true" >
+							<input type="submit" name="submit" id="searchsubmit" value="" >
+							<!-- Add Search icon with :after -->
+						</form>
+					</div>
+				</li>
+
+				<li>
+					<a href="upload.html" class="header__upload">
+						Upload
+					</a>
+				</li>
+
+				<li id="register">
+					<a href="#" class="header__register">
+						Sign in <!-- Ponter el icono como after + absolute -->
+					</a>
+				</li>
+
+			</ul>
+		</div>
+	</header>
+
+	<div class="main_container">
+	<div class="main_container_int">
+
+		<div class="middle">
+			<div class="middle_ajax">
+				<!-- middle box -->
+
+				Used on home, for the initial advise and single. 
+
+				<h2 class="content__title">
+					<span>Electro House</span> songs for deejays
+				</h2>
+				
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="content__ajax">
+				<!-- Left content -->
+
+				<div class="slider" style="height:320px;">
+				                <div class="sliderVerticalLine"></div>
+
+				                <div class="sliderButtonPrev icon-prev"></div>
+				                <div class="sliderButtonNext icon-next"></div>
+				                <ul class="sliderSelector"><li class="sel_1"></li><li class="sel_2"></li><li class="sel_3 current"></li></ul>
+				                <ul class="sliderDiapos" id="sliderDiapos">
+				                    <li class="fading slider_1" style="opacity: 1; background-image: url(http://music4deejays.com/media/uploads/2015/06/cartelweb_short.jpg);">
+				                        <div class="sliderDiaposInfo">
+				                            <h1><a href="http://music4deejays.com/4everyone">4every1 Festival</a></h1>
+				                            <h2>Festivals and events</h2>
+				                            <!-- <p><a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">Listen song</a></p> -->
+				                        </div>
+				                        <div class="sliderDiaposLink">
+				                            <a href="http://music4deejays.com/4everyone"></a>
+				                        </div>
+				                    </li> 
+				                                             
+				         
+				        <li class="fading slider_2 current" style="opacity: 1; background-image: url(http://music4deejays.com/media/uploads/2014/12/we_found_aciid.jpg);">
+				            <div class="sliderDiaposInfo">
+				                <h1><a href="http://music4deejays.com/we-found-aciiid-chrisc-bootleg-calvin-harris-ft-rihanna-vs-moguai/">We Found Aciiid (Chrisc Bootleg) – Calvin Harris Ft. Rihanna Vs. Moguai</a></h1>
+				                <h2>Electro house</h2>
+				                <!-- <p><a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">Listen song</a></p> -->
+				            </div>
+				            <div class="sliderDiaposLink">
+				                <a href="http://music4deejays.com/we-found-aciiid-chrisc-bootleg-calvin-harris-ft-rihanna-vs-moguai/"></a>
+				            </div>
+				        </li> 
+				          
+				                        
+				                                             
+				         
+				        <li class="fading slider_3" style="opacity: 1; background-image: url(http://music4deejays.com/media/uploads/2014/05/artworks-000057449940-k8b0wc-t500x500.jpg);">
+				            <div class="sliderDiaposInfo">
+				                <h1><a href="http://music4deejays.com/most-wanted-michael-white-appearance/">Most Wanted – Michael White &amp; Appearance</a></h1>
+				                <h2>Electro house</h2>
+				                <!-- <p><a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">Listen song</a></p> -->
+				            </div>
+				            <div class="sliderDiaposLink">
+				                <a href="http://music4deejays.com/most-wanted-michael-white-appearance/"></a>
+				            </div>
+				        </li> 
+				          
+				                        
+				                                    </ul>
+				            </div>
+
+				
+				<!-- Slider to be build -->
+
+				<ul class="stream">
+
+					<li class="stream__item genericBox">
+						<div class="stream__item_thumbnail">
+							<span class="stream__item_thumbnail_Mask" class="effect">
+								<a href="single.html"></a>
+							</span>
+							<img src="https://i1.sndcdn.com/artworks-000113528769-ji3li6-t500x500.jpg" width="100%" />
+						</div>
+						<div class="stream__item_right">
+							<div class="stream__item_content">
+
+								<h3 class="stream__item_title">
+									<span class="stream__item_Play">
+										<a href=""><span class="icon-controller-play2"></span></a>
+									</span>
+									<a href="single.html">
+									ALVARO &amp; JETFIRE - Guest List (Official Music Video)
+									</a>
+								</h3>
+
+								<div class="stream__item_info">
+									<p class="stream__item_Genre">
+										<a href="#" class="border">Electro House</a>
+									</p>
+									<p>Artist name</p>
+								</div>
+
+								<div class="stream__item_separator"></div>
+
+								<ul class="stream__item_options">
+									<li class="options_comments border">
+										<a href="#">
+											<span class="icon-bubbles2"></span> <!-- Añadir icono por css -->  
+										</a>
+									</li>
+									<li class=" border">
+										<a href="#">
+											<span class="icon-list"></span> <!-- Añadir icono por css --> 
+											Add playlist
+										</a>
+									</li>
+									<li class=" border">
+										<a href="#">
+											<span class="icon-share"></span> <!-- Añadir icono por css --> 
+											Share
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li><!-- single item ends -->
+
+					<li class="stream__item genericBox">
+						<div class="stream__item_thumbnail">
+							<span class="stream__item_thumbnail_Mask" class="effect">
+								<a href="single.html"></a>
+							</span>
+							<img src="https://i1.sndcdn.com/artworks-000113528769-ji3li6-t500x500.jpg" width="100%" />
+						</div>
+						<div class="stream__item_right">
+							<div class="stream__item_content">
+
+								<h3 class="stream__item_title">
+									<span class="stream__item_Play">
+										<a href=""><span class="icon-controller-play2"></span></a>
+									</span>
+									<a href="single.html">
+									ALVARO &amp; JETFIRE - Guest List (Official Music Video)
+									</a>
+								</h3>
+
+								<div class="stream__item_info">
+									<p class="stream__item_Genre">
+										<a href="#" class="border">Electro House</a>
+									</p>
+									<p>Artist name</p>
+								</div>
+
+								<div class="stream__item_separator"></div>
+
+								<ul class="stream__item_options">
+									<li class="options_comments border">
+										<a href="#">
+											<span class="icon-bubbles2"></span> <!-- Añadir icono por css -->  
+										</a>
+									</li>
+									<li class=" border">
+										<a href="#">
+											<span class="icon-list"></span> <!-- Añadir icono por css --> 
+											Add playlist
+										</a>
+									</li>
+									<li class=" border">
+										<a href="#">
+											<span class="icon-share"></span> <!-- Añadir icono por css --> 
+											Share
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li><!-- single item ends -->
+
+					<div class="content__load_more">
+						<a href="#" class="content__load_moreButton genericBox">
+							Load more
+						</a>
+					</div>
+
+                </ul><!-- Stream ends-->
+				
+			</div> 
+		</div><!-- content ends-->
+
+		<div class="sidebar">
+			<div class="sidebar__ajax">
+
+				<!-- right sidebar -->
+				
+				<div class="sidebar__chart genericBox">
+					<div class="sidebar__chart__content">
+						<h3 class="sidebar__chart__title">Top 10</h3>
+						<ul>
+							<li class="sidebar__chart__item"> 
+								<div class="sidebar__chart__thumbnail">
+									<a href="single.html">
+										<img src="http://music4deejays.com/media/uploads/wordpress-popular-posts/292-40x40.jpg" title="Faithless – We Come One [Bumer! Remix]" alt="Faithless – We Come One [Bumer! Remix]" width="40" height="40" class="wpp-thumbnail wpp_cached_thumb wpp_featured" width="100%" />
+									</a>
+								</div>
+								<div class="sidebar__chart__info">
+									<h3 class="sidebar__chart__item_title"><a href="single.html">Titulo</a></h3>
+									<p class="sidebar__chart__genre"><a href="category.html">Genre</a></p>
+								</div>
+							</li>
+							<li class="sidebar__chart__item"> 
+								<div class="sidebar__chart__thumbnail">
+									<a href="single.html">
+										<img src="http://music4deejays.com/media/uploads/wordpress-popular-posts/292-40x40.jpg" title="Faithless – We Come One [Bumer! Remix]" alt="Faithless – We Come One [Bumer! Remix]" width="40" height="40" class="wpp-thumbnail wpp_cached_thumb wpp_featured" width="100%" />
+									</a>
+								</div>
+								<div class="sidebar__chart__info">
+									<h3 class="sidebar__chart__item_title"><a href="single.html">Titulo</a></h3>
+									<p class="sidebar__chart__genre"><a href="category.html">Genre</a></p>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="sidebar__chart__seemore">
+						<a href="#">See more tracks</a>
+					</div> 
+				</div>
+				
+			</div> 
+		</div><!-- right sidebars ends -->
+
+	</div><!-- main_container_int ends -->
+	</div><!-- main_container ends -->
+
+	<footer>
+		<!-- Footer of the page -->
+	</footer>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js?ver=3.9.2"></script>
+
+</body>
