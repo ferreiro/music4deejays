@@ -1,0 +1,34 @@
+
+
+
+ 
+.imagen_contacto { width:505px; height:545px; overflow:hidden; float:left; margin:0; margin-right:40px; }
+
+ 
+
+.formulario { width:505px; height:545px; float:right; margin-top:0;  }
+.capa_individual { width: 100%; display: block; margin-bottom:0px; float:  left; clear: both;  }
+.capa_individual .izq { width: 100%; clear: both; display: inline-block; float:  left; }
+.capa_individual .izq h1 { width: 100%; float: left; margin: 0; text-align: left; padding: 0; color: #3d3e3f; font:28px helvetica; line-height: 28px; font-weight: normal; margin-bottom: 30px; font-weight: bold; border-right: 0 solid #cdcdcd; }
+.capa_individual .der { width: 100%; float:  right; }
+.capa_individual .der .pestana_input { width: 100%; float: left; clear: both; margin-bottom: 20px; }
+.capa_individual .der .pestana_input input { width: 100%; outline: 0; line-height: normal; font:16px arial;-webkit-box-shadow: inset 0px 0px 0px 1px rgba(206, 206, 206, 1); -moz-box-shadow: inset 0px 0px 0px 1px rgba(206, 206, 206, 1); box-shadow: inset 0px 0px 0px 1px rgba(206, 206, 206, 1); border:0; padding: 17px 0; padding-left: 0; float: left; clear: both; background: #fff; text-indent:22px;
+}
+.capa_individual .der .pestana_input textarea { width: 96.5%; min-width:  96.5%; max-width:  96.5%; height: 108px; max-height: 108px; min-height: 108px; outline: 0; line-height: normal; font:16px arial; -webkit-box-shadow: inset 0px 0px 0px 1px rgba(206, 206, 206, 1); -moz-box-shadow: inset 0px 0px 0px 1px rgba(206, 206, 206, 1); box-shadow: inset 0px 0px 0px 1px rgba(206, 206, 206, 1); border:0; padding: 17px 0; padding-left: 20px; float: left; clear: both; background: #fff; }
+.capa_individual .der .pestana_input input#enviar { width: 100%; background: #0097e5; outline: 0; margin: 0; font:18px arial; color: #fff; line-height: auto; font-weight: normal; border:1px solid #cecece; padding: 17px 0; padding-left: 20px; float: left; clear: both; }
+
+.redes { width: 210px; height: 300px; display: none; float: right; margin-top: 30px;  }
+.red_ind { width: 210px; height:138px; background: blue;-webkit-box-shadow: inset 0px 0px 30px 0px rgba(50, 50, 50, 0.34); -moz-box-shadow: inset 0px 0px 30px 0px rgba(50, 50, 50, 0.34); box-shadow: inset 0px 0px 30px 0px rgba(50, 50, 50, 0.34); margin-bottom:22px; float: left; clear:  both; }
+.twitter { background: url(img/twitter_bg.jpg) 50% 50% no-repeat; }
+.facebook { background: url(img/facebook_bg.jpg) 50% 50% no-repeat; }
+.newsletter { background: url(img/newsletter.jpg) 50% 50% no-repeat; }
+  
+ 
+	
+	@media all and (min-width: 0) and (max-width: 1201px) {
+		.imagen_contacto { width: 100%; height:250px; clear: both; display: inline-block; float:  left; margin-bottom:30px; }
+		.formulario { width: 100%; float:left; }
+		.formulario .izq h1 { width: 100%; text-align:center; float:left; }
+
+	} 
+

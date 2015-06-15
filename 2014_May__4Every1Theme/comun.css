@@ -1,0 +1,485 @@
+
+	body { width: 100%; height: 100%; float: left; background: #f6f6f6; background: #f1f1f1; background: #F0F0F0; height: 100%; margin:0; }
+	ul { margin:0; padding:0; }
+	li { margin:0; padding:0; list-style: none; float: left; }
+	a { text-decoration: none; color: #494a4a; font:14px arial;  
+
+		-o-transition:background 0.3s ease-in, color 0.3s linear 0.3s;
+		-ms-transition:background 0.3s ease-in, color 0.3s linear 0.3s;
+		-moz-transition:background 0.3s ease-in, color 0.3s linear 0.3s;
+		-webkit-transition:background 0.3s ease-in, color 0.3s linear 0.3s;
+		/* ...and now override with proper CSS property */
+		transition:background 0.3s ease-in, color 0.3s linear 0.3s;
+		
+	}
+	
+	#ultimo { margin-right: 0; float: right; }
+
+
+/************** AVISO NON SCRIPT *****************/
+
+	.aviso_no_script { width:100%; height:52px; float: left; clear: both; background:#b15151; position:fixed; top:0; z-index:1000000000000;  }
+	.aviso_no_script_int { width:990px; margin:0 auto; padding:0 0; }
+	.aviso_no_script_int p { width:990px; float:left; font:22px "Roboto"; color:#eeeeef; margin: 0; padding: 0; margin-top: 13px; text-align:center; }
+	.aviso_no_script_int p a { float:none; font:22px "Roboto"; font-style: italic; color:#ffffff; border-bottom:2px dotted #fff; padding-bottom:1px; }
+
+/************* SCROLL TO TOP *****************/
+
+	.scrollup { background:url(source/img/comun/scroll_up.png) 50% 50% no-repeat; opacity: 0.5; cursor:pointer; bottom: 20px; width: 50px; height: 50px; display:none; position: fixed; right: 20px; z-index:10000; text-indent: -9999px; }
+	.scrollup span { width: 50px; height: 50px; cursor:pointer; top: 48%; float:left;}
+	.scrollup p { display:none; }
+
+/**********************************************/
+/**************** CABECERA ********************/
+/**********************************************/
+
+	.barra_inferior { width: 100%; height: 40px; background: url(img/degrada_blanco.png); background: #fff; position: fixed; z-index: 10000000; border-top: 3px solid #fff; bottom:0; left: 0; float: left; clear: both; }
+
+	.cab_wrap { width: 100%; height: 70px; position: relative; opacity: 0.99; top: 0; z-index: 100000; float: left; clear: both; border-top: 2px solid #0097e5; background:#fff; border-bottom: 1px solid #e6e7e8; -webkit-box-shadow: 0px 0px 2px 0px rgba(165, 165, 165, 0.2); -moz-box-shadow: 0px 0px 2px 0px rgba(165, 165, 165, 0.2);box-shadow: 0px 0px 2px 0px rgba(165, 165, 165, 0.2);}
+	.cab_wrap:hover { opacity: 1; }
+	.cab { height: 80px; position: relative; padding: 0 30px; }
+
+	.cab .logotipo_wrap { width: 243px; height: 30px; float:left; margin-top:22px;  }
+	.cab .logotipo { width: 250px; margin:0 auto; }
+	.cab .logotipo a {  width: 100%; height: 30px; position: relative; float: left; clear: both; -webkit-tap-highlight-color: rgba(201, 224, 253, 0);}
+	.cab .logotipo .logo {  width: 29px; height: 30px; float: left; background-position: 50% 50%; background-repeat: no-repeat; background-image:url(source/img/logo/logo.png); margin-right: 12px;  }
+	.cab .logotipo .texto {  width: 205px; height: 30px; float: left; background-position: 50% 50%; background-repeat: no-repeat; background-image:url(source/img/logo/logo_texto.png);  }
+	.cab .logotipo .regresar_home { width: 243px; height: 54px; display:none; position: absolute; top:55px; z-index: 1; float: left; clear: both; background: url(img/bg_regresar_home.png); z-index:200; }
+	.cab .logotipo .regresar_home p { width:100%; height:41px; text-align:center; margin-top:25px; }
+	
+	.cab .menu_wrap { width:470px; height: 70px; display: none; margin-top: 0; margin-left:22px; position: relative; top: 0; z-index: 1000; float: left; }
+	.cab .menu { position: relative; margin: 0 auto; }
+	.cab .menu ul { width:100%; height: 70px; margin:0 auto; margin-top:0; clear: both; }
+	.cab .menu ul li { width:25%; float: left; height:70px; margin-right: 0; } 
+	.cab .menu ul li.ultimo { margin-right: 0; } 
+	.cab .menu ul li a { width:100%; height:70px; position: relative; float: left; margin: 0; padding: 0;   }
+	.cab .menu ul li a p { width:100%; float: left; color: #7e888e; font:14px "sans_regular", "Helvetica"; text-align: center; font-weight: normal;  text-transform: uppercase; margin: 0; padding: 0; padding-top:29px; letter-spacing:0; }
+	.cab .menu ul li:hover a p { color: #4d5457; }
+	.cab .menu ul li a:hover { color: #838282; }
+	.cab .menu ul li.pulsado { padding-bottom:0; background: #f4f4f4; -webkit-box-shadow: inset 0px 1px 0px 0px rgba(50, 50, 50, 0.1); -moz-box-shadow: inset 0px 1px 0px 0px rgba(50, 50, 50, 0.1); box-shadow: inset 0px 1px 0px 0px rgba(50, 50, 50, 0.1); color: #0097e5; border-top:2px solid #1c88bf; margin-top:-2px; background:url(img/bg_menu_seleccionado.jpg); }
+	.cab .menu ul li.pulsado a p { font-weight: normal; padding-top:29px;  font-family:sans_bold; color: #0097e5; }
+ 
+	.cab .presupuesto { width: 160px; height: 38px; display: none; margin-top: 15px; margin-left:0; position: relative; top: 0; z-index: 1000; float: right; }
+	.cab .presupuesto:hover a { border:1px solid #65bf1c; background:#ccffa2 url(source/img/comun/bg_solicitar.jpg); }
+	.cab .presupuesto:hover a p { color:#fff; }
+	.cab .presupuesto a { width: 100%; height:38px; float:right; margin:0; padding:0; border:1px solid #65bf1c; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;}
+	.cab .presupuesto a p { width: 100%; float:left; font:14px "fuente_menu", "Helvetica"; margin:0; padding:0; color:#4ea601; margin-top:12px; text-align:center; }
+ 
+	.cab .idiomas_cab { width:65px; height: 38px; display: none; position:relative; top:0; right:0; float:right; padding:0; margin-top: 15px; margin-right: 18px; cursor:pointer; }
+	.cab .idiomas_cab:hover ul { display:block; }
+	.cab .idiomas_cab:hover .actual { height:38px; background-color:#fff; -webkit-box-shadow: 0px -2px 5px 0px rgba(126, 136, 142, 0.4); -moz-box-shadow: 0px -2px 5px 0px rgba(59, 59, 59, 0.4); box-shadow: 0px -2px 5px 0px rgba(59, 59, 59, 0.4); border-color:transparent; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius:0; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px;}
+	.cab .idiomas_cab:hover .actual  span { background-position: 50% 100%; }
+	.cab .idiomas_cab:hover .actual   p { color:#7e888e; }
+	.cab .idiomas_cab .actual { width:100%; height:38px; float:left; position:absolute; z-index:3100; top:0; border:1px solid #cecece; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+	.cab .idiomas_cab .actual p { width:100%; height:38px; font:14px "fuente_menu", "Helvetica"; top:13px; left:35px; margin:0; position:absolute; text-transform:uppercase; color:#9a9a9a; float:left; }
+	.cab .idiomas_cab .actual span { width:18px; height:12px; left:10px; top:14px; position:absolute; background-image:url(source/img/menu/btn_espanol.jpg); background-position:  50% 0%; background-repeat: no-repeat; float:left; }
+	.cab .idiomas_cab  ul { position:absolute; z-index:3000; top:38px; width:120px; right:-2px; float:left; background:#fff; border:1px solid #cecece; border-top:0; border-right:0; margin:0; padding:0; display:none; -webkit-box-shadow: 0px 1px 5px 0px rgba(59, 59, 59, 0.75); -moz-box-shadow: 0px 1px 5px 0px rgba(59, 59, 59, 0.75); box-shadow: 0px 1px 5px 0px rgba(59, 59, 59, 0.75); padding-bottom:10px;-webkit-border-radius: 4px; -webkit-border-top-right-radius: 0; -moz-border-radius: 4px; -moz-border-radius-topright: 0; border-radius: 4px; border-top-right-radius: 0; }
+	.cab .idiomas_cab  ul li { width:100%; float:left; clear:both; margin:0; padding:0; list-style:none; margin-bottom:0; }
+	.cab .idiomas_cab  ul li a { width:100%; float:left; clear:both; margin:0; }
+	.cab .idiomas_cab  ul li a:hover p { text-decoration:underline; }
+	.cab .idiomas_cab  ul li a p { width:100%; float:right; clear:both; margin:0; padding:0; padding:10px 0; padding-bottom:0; text-align:center; font:14px arial; color:#626161; text-transform:uppercase; font-weight:bold; }
+	
+	.cab .boton_menu_desplegable { width:90px; height:70px; float:right; display: none; position: absolute; top:0; right:0; cursor:pointer; background-image: url(source/img/menu/btn_menu.png); background-position:  50% 0%; background-repeat: no-repeat;  border-left:0 solid #dadada; -webkit-tap-highlight-color: rgba(201, 224, 253, 0); }
+	.cab .boton_menu_desplegable:hover { background-position:  50% 50%; }
+
+/**************************************************/
+/***************** MENÚ LATERAL *******************/
+/**************************************************/
+			
+	.capa_menu_desplegado { width:100%; height:100%; position:fixed; -webkit-tap-highlight-color: rgba(201, 224, 253, 0); top:0; left:0; z-index:100000; opacity:0.8; float:left; background:#fff; display:none; }
+
+	.menu_lateral { width:300px; height:100%; overflow: auto; z-index:100000000; background:#262626; float:left; position:fixed; right:0; top:0; display:none;  }
+	.menu_lateral .opciones_top_wrap { width:100%; height:90px; float:left; clear:both; position:relative; }
+	.menu_lateral .opciones_top { width:100%; float:left; }
+	.menu_lateral .opciones_top h1 { width:53px; font:30px tahoma; font-weight:bold; height:53px; float:left; position:relative; clear:none; color:#5dc4ff; position:absolute;  margin-left:30px; margin-top:30px; }
+	.menu_lateral .boton_cerrar_menu { width:53px; height:53px; top:20px; right:30px; float:right; position:relative; cursor:pointer; background:#2a2a2a url(img/btn_cerrar_menu.jpg) 0% 100%; clear:none;  position:absolute;  }
+	.menu_lateral .menu_wrap {width:100%; float:left; margin-top:0;  } 
+	.menu_lateral .menu { width:100%; float:left; } 
+	.menu_lateral .menu ul { width:100%; float:left; margin:0; padding:0; } 
+	.menu_lateral .menu ul .separador { width:100%; height:1px; background:#242424; border-bottom:1px solid #272727; float:left; clear:both; margin:0; padding:0; } 
+	.menu_lateral .menu ul li { width:100%; float:left; margin:0; list-style:none; padding:0; margin-bottom:1px;}  
+	.menu_lateral .menu ul li:hover a { background:#131313; background:transparent; } 
+	.menu_lateral .menu ul li#ultimo { margin:0; } 
+	.menu_lateral .menu ul li#pulsado a { } 
+	.menu_lateral .menu ul li#pulsado a p { font-weight:bold; color:#fff; } 
+	.menu_lateral .menu ul li a { width:100%; float:left; -webkit-tap-highlight-color: rgba(201, 224, 253, 0); margin:0; list-style:none; padding:0; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;} 
+	.menu_lateral .menu ul li a p { float:left; margin:0; list-style:none; padding:0; font:14px arial; font-weight:bold; text-transform:uppercase; color:#9b9b9b; padding-left:0; padding-right:0; padding-top:12px; padding-bottom:12px; margin-left:30px;    } 
+	
+
+/*****************************************************************/
+/************************  CONTAINER *****************************/
+/*****************************************************************/
+
+
+	.contenedor_wrap { width: 100%; float: left; clear: both; background: #f1f1f1; background: #fafafa; padding-bottom: 0; } 
+	.contenedor_marco { margin: 0 30px; background: #fff;  border: 1px solid #e8e7e7; -webkit-box-shadow: 0px 0px 30px 0px rgba(177, 177, 177, 0.3); -moz-box-shadow: 0px 0px 30px 0px rgba(177, 177, 177, 0.3); box-shadow: 0px 0px 30px 0px rgba(177, 177, 177, 0.3); } 
+	.pre_contenedor { width: 100%;   } 
+	.contenedor { margin:40px; display: table; } 
+
+
+	.contenedor_home_wrap { width: 100%; float: left; clear: both; background: #f1f1f1; background: #fafafa; padding-bottom: 0; } 
+	.contenedor_home { width: 100%;   } 
+ 
+
+
+	@media all and (max-width: 240px) {
+
+		.cab { padding: 0 18px; }
+
+		.cab .boton_menu_desplegable { width: 55px; display: table; background-image: url(source/img/menu/btn_menu_short.png);  }
+		.cab .logotipo .logo {  display: none;  }
+		.cab .logotipo .texto { width:150px; background-image:url(source/img/logo/logo_texto_short.png); }
+
+		.contenedor_marco { margin-left: 0;  margin-right: 0; border-bottom: 5px solid #f1f1f1; }
+		.contenedor { margin:0; } 
+
+	}
+
+
+	@media all and (min-width: 241px) and (max-width: 400px) {
+
+		.cab .logotipo { width: 250px; background: red; margin:0 auto; }
+ 
+		.cab_wrap { position: fixed; top:0; left:0; }
+		.cab .boton_menu_desplegable {  display: table; background-image: url(source/img/menu/btn_menu_short.png);  }
+	 
+		.cab .logotipo .logo { width:21px; background-image:url(source/img/logo/logo_short.png); }
+		.cab .logotipo .texto { width:150px; background-image:url(source/img/logo/logo_texto_short.png); }
+
+		.contenedor_marco { margin-left: 0;  margin-right: 0; border-bottom: 5px solid #f1f1f1; }
+		.contenedor { margin:0; } 
+
+
+	}
+
+	@media all and (min-width: 401px) and (max-width: 599px) {
+
+ 
+		.cab .logotipo { width: 250px;  margin:0 auto; }
+		.cab .boton_menu_desplegable { width:95px; display: table; }
+
+		.contenedor_marco { margin-left: 0;  margin-right: 0; border-bottom: 5px solid #f1f1f1; }
+		.contenedor { margin:0; } 
+
+	 	.pie { margin:30px;  } 
+	 
+
+ 
+	}
+  
+	@media all and (min-width: 600px) and (max-width: 1200px) {
+
+		.cab .logotipo_wrap { width:100%; }
+		.cab .logotipo { width: 250px; margin:0 auto; }
+ 
+		.cab .boton_menu_desplegable { width:95px; display: table; }
+
+		.contenedor_marco { margin-left: 0;  margin-right: 0; border-bottom: 5px solid #f1f1f1; -webkit-box-shadow:0 0 0 0; -moz-box-shadow:0 0 0 0; box-shadow: 0 0 0 0;  }
+		.pie_marco { margin: 0;}
+ 
+	}
+
+	@media all and (min-width: 1201px) {
+
+		.cab_wrap { position: fixed; top:0; left:0; }
+ 		.cab { width: 1000px; margin:0 auto;  }
+		.cab .menu_wrap { display: table; }
+		.cab .presupuesto { display: table; }
+		.cab .idiomas_cab { display: table; }
+		.cab .boton_menu_desplegable { display: none; }
+
+		.contenedor_marco { width: 1135px; margin:0 auto; margin-top:100px;  -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px;   }
+		.contenedor_home { width: 1135px; margin:0 auto; margin-top:30px;  -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px;   }
+ 
+ 
+	}
+
+
+
+
+/*****************************************************************/
+/*************************  FOOTER ******************************/
+/*****************************************************************/
+
+	.web_footer {  width: 100%; height: 225px; float: left; clear: both; z-index: 1000000000000000; position: relative; margin-top: 60px; background:#f4f4f4 url(source/img/comun/bg_footer.jpg)repeat-x; padding-bottom: 0; border-top: 3px solid #ededed; }
+	
+	.web_footer:hover .footer_uno .newsletter .formulario { border-color: #bed0df; }
+	.web_footer:hover .footer_uno .newsletter .formulario .correo_input input { color: #8aa2b6; }
+	.web_footer:hover .footer_uno .newsletter .formulario .envio_buton input { background-color: #e8edf2; }
+ 
+	.web_footer:hover .footer_uno .logo {  background:#bed0df;  }
+	.web_footer:hover .footer_uno .logo a span { background-position:  0% 100%;  }
+	.web_footer:hover .footer_uno .logo a p { color: #e9f0f7; }
+	.web_footer:hover .footer_uno .mapa_web ul li a p {  color:#007cbd;  }
+	.web_footer:hover .footer_uno .mapa_web h1 { color: #4f4e4e; }
+	.web_footer:hover .footer_uno .newsletter h1 { color: #4f4e4e; }
+	.web_footer:hover .footer_uno .redes_idiomas h1 { color: #4f4e4e; }
+	.web_footer:hover .footer_uno .newsletter .formulario .correo_input input { color: #8aa2b6; }
+	.web_footer:hover .footer_uno .newsletter .formulario .envio_buton input { background-color: #e8edf2; }
+ 
+
+	.footer_uno { width: 1135px; height: 100px; margin: 0 auto; padding-top: 35px; padding-bottom: 35px; }
+	.footer_uno .logo { width: 100px; height: 100px; float: left; margin-right: 30px; position: relative;  }
+	.footer_uno .logo a { width: 100%; height: 100px; float: left; }
+	.footer_uno .logo a span { width: 100%; height: 100%; float: left; background-color: #eaeaea; background-image: url(source/img/comun/logo_footer.png); background-position:  50% 0%; background-repeat: no-repeat; }
+	.footer_uno .logo a p { width: 100%; height: 20px; float: left; text-align: center; font: 9px arial; margin: 0; padding: 0; color: #cdcdcd; position: absolute; bottom: 0; }
+	
+	.footer_uno .mapa_web  { width: 232px; float: left; margin-right: 30px;  }
+	.footer_uno .mapa_web h1 { width:100%;  font:18px "sans_regular", "tahoma", "arial"; float: left; clear: both; margin:0; padding:0; color: #9a9a9a; }
+	.footer_uno .mapa_web ul { width:50%; float: left; margin:0; padding:0; margin-top: 15px; color: #4d4d4d; }
+	.footer_uno .mapa_web ul li { width: 100%; float: left; margin:0; padding:0; list-style: none; margin-bottom: 8px; }
+	.footer_uno .mapa_web ul li a { float: left; margin:0; padding:0; list-style: none; }
+	.footer_uno .mapa_web ul li a p { float: left; margin:0; padding:0; font:13px "sans_regular", "tahoma", "arial"; color:#007cbd; line-height: 13px; color: #9a9a9a; }
+
+	.footer_uno .newsletter { width: 357px; float: left; }
+	.footer_uno .newsletter h1 { width:100%; font:18px "sans_regular", "tahoma", "arial"; float: left; clear: both; margin:0; padding:0; color: #9a9a9a; }
+	.footer_uno .newsletter .formulario { width: 353px; height:50px; float: left; clear: both; margin-top: 15px; background: #f9f9f9; border:2px solid #e3e3e3; }
+	.footer_uno .newsletter .formulario .correo_input { float:left; margin:0; padding:0; }
+	.footer_uno .newsletter .formulario .correo_input input { width:200px; height:50px; float:left; margin:0; padding:0; background: transparent; border:0; outline:0; font:14px "sans_regular", "tahoma", "arial";  text-indent:18px; color: #a6a6a6; }
+	.footer_uno .newsletter .formulario .envio_buton { width:153px;  font:18px "sans_regular", "tahoma", "arial"; float: left;  margin:0; padding:0; }
+	.footer_uno .newsletter .formulario .envio_buton input { width:100%; height:50px; float:left; margin:0; padding:0; background: transparent; border:0; outline:0; font:14px arial; color: #838383; background: #f0f0f0; cursor: pointer; }
+
+	.footer_uno .redes_idiomas { width:357px; float: right; }
+	.footer_uno .redes_idiomas h1 { width:100%; font:18px "sans_regular", "tahoma", "arial"; float: left; clear: both; margin:0; padding:0; color: #9a9a9a;  }
+ 	.footer_uno .redes_idiomas ul { width:100%; float: left; margin:0; padding:0; margin-top: 15px; color: #4d4d4d; }
+	.footer_uno .redes_idiomas ul li { width: 50px; height:50px; float: left; margin:0; padding:0; list-style: none;  background: url(source/img/comun/bg_red.jpg); border:2px solid #e3e3e3; margin-right: 20px; }
+	.footer_uno .redes_idiomas ul li a { float: left; margin:0; padding:0; list-style: none; }
+	.footer_uno .redes_idiomas ul li a p { float: left; margin:0; padding:0; font:13px "sans_regular", "tahoma", "arial"; color:#007cbd; line-height: 13px; color: #9a9a9a; }
+
+	.footer_dos_wrap { width: 100%; height: 55px; float: left; background: #efefef; border-top: 2px solid #ededed; }
+	.footer_dos { width: 1135px; height: 55px; margin: 0 auto; }
+	.footer_dos .izq { float: left; margin-top: 18px;  }
+	.footer_dos .izq p { float: left; margin:0; padding:0; font:14px "sans_regular", "tahoma", "arial"; font-style: italic; color:#c0bebe; }
+	.footer_dos .der { float: right; margin-top: 18px; }
+	.footer_dos .der ul { float: left; margin:0; padding:0; }
+	.footer_dos .der ul li { float: left; margin:0; padding:0; list-style: none; margin-left: 32px; }
+	.footer_dos .der ul li a { float: left; margin:0; padding:0; list-style: none; }
+	.footer_dos .der ul li a p { float: left; margin:0; padding:0; font:14px "sans_regular", "tahoma", "arial"; color:#ababab; }
+
+ 
+
+	@media all and (min-width: 0) and (max-width: 860px) {
+
+	.footer_uno .mapa_web  { width: 100%; float: left; margin-right: 30px;  }
+	.footer_uno .newsletter { width: 100%; float: left; }
+	.footer_uno .newsletter .formulario { width: 100%; }
+
+	.footer_uno .redes_idiomas { width:100%; float: right; }
+
+
+ 	.web_footer { width: 100%; height: auto; }
+ 	.footer_dos_wrap { width: 100%; height: auto; }
+
+	.footer_uno { width: 90%;  }
+	.footer_dos { width: 90%; height: 55px; margin: 0 auto; }
+
+	}
+
+
+	@media all and (min-width: 861px) and (max-width: 1200px) {
+
+	.footer_uno .logo { width: 100%; background: transparent;  height: 100px; float: left; margin-right: 30px; position: relative; }
+	.footer_uno .logo a {  background: transparent; }
+
+	.footer_uno .mapa_web  { width: 100%; float: left; margin-right: 30px;  }
+	.footer_uno .newsletter { width: 48%; float: left; }
+	.footer_uno .newsletter .formulario { width: 100%; }
+
+	.footer_uno .redes_idiomas { width:48%; float: right; }
+
+
+ 	.web_footer { width: 100%; height: auto; }
+ 	.footer_dos_wrap { width: 100%; height: auto; }
+
+	.footer_uno { width: 90%;  }
+	.footer_dos { width: 90%; height: 55px; margin: 0 auto; }
+
+	}
+
+	@media all and (min-width: 1201px) {
+
+	}
+
+
+
+
+
+
+
+
+
+
+	  
+	@font-face { font-family: fuente2; src: url('fonts/RobotoSlab-Light.ttf'), url('../fonts/fonts/RobotoSlab-Light.eot'); /* IE9 */  }
+
+
+	@font-face { font-family: Roboto; src: url('fonts/Roboto-Regular.ttf'), url('fonts/Roboto-Regular.eot'); /* IE9 */  }
+	@font-face { font-family: Robotolight; src: url('fonts/Roboto-Light.ttf'), url('fonts/Roboto-Light.eot'); /* IE9 */  }
+	@font-face { font-family: Robotothin; src: url('fonts/Roboto-Thin.ttf'), url('fonts/Roboto-Thin.eot'); /* IE9 */  }
+	@font-face { font-family: Robotobold; src: url('fonts/Roboto-Bold.ttf'), url('fonts/Roboto-Bold.eot'); /* IE9 */  }
+	@font-face { font-family: texgyreadventor; src: url('fonts/texgyreadventor-bold-webfont.ttf'), url('fonts/texgyreadventor-bold-webfont.eot'); /* IE9 */  }
+	@font-face { font-family: governor; src: url('fonts/governor.ttf'), url('fonts/governor.eot'); /* IE9 */  }
+
+
+	/* Generated by Font Squirrel (http://www.fontsquirrel.com) on April 25, 2014 */
+
+
+
+	@font-face {
+	    font-family: 'sans_regular';
+	    src: url('source/fonts/opens_sans/opensans-regular-webfont.eot');
+	    src: url('source/fonts/opens_sans/opensans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('source/fonts/opens_sans/opensans-regular-webfont.woff') format('woff'),
+	         url('source/fonts/opens_sans/opensans-regular-webfont.ttf') format('truetype'),
+	         url('source/fonts/opens_sans/opensans-regular-webfont.svg#open_sansregular') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+		
+	}
+
+
+	@font-face {
+	    font-family: 'sans_light';
+	    src: url('source/fonts/opens_sans/opensans-light-webfont.eot');
+	    src: url('source/fonts/opens_sans/opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('source/fonts/opens_sans/opensans-light-webfont.woff') format('woff'),
+	         url('source/fonts/opens_sans/opensans-light-webfont.ttf') format('truetype'),
+	         url('source/fonts/opens_sans/opensans-light-webfont.svg#open_sanslight') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+		
+	}
+
+	@font-face {
+	    font-family: 'sans_regular';
+	    src: url('source/fonts/opens_sans/opensans-bold-webfont.eot');
+	    src: url('source/fonts/opens_sans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('source/fonts/opens_sans/opensans-bold-webfont.woff') format('woff'),
+	         url('source/fonts/opens_sans/opensans-bold-webfont.ttf') format('truetype'),
+	         url('source/fonts/opens_sans/opensans-bold-webfont.svg#open_sansbold') format('svg');
+	    font-weight: bold;
+	    font-style: normal;
+		
+	}
+
+	@font-face {
+	    font-family: 'sans_bold';
+	    src: url('source/fonts/opens_sans/opensans-bold-webfont.eot');
+	    src: url('source/fonts/opens_sans/opensans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('source/fonts/opens_sans/opensans-bold-webfont.woff') format('woff'),
+	         url('source/fonts/opens_sans/opensans-bold-webfont.ttf') format('truetype'),
+	         url('source/fonts/opens_sans/opensans-bold-webfont.svg#open_sansbold') format('svg');
+	    font-weight: bold;
+	    font-style: normal;
+
+	}
+
+	@font-face {
+	    font-family: 'open_sansbold_italic';
+	    src: url('source/opensans-bolditalic-webfont.eot');
+	    src: url('source/opensans-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('source/opensans-bolditalic-webfont.woff') format('woff'),
+	         url('source/opensans-bolditalic-webfont.ttf') format('truetype'),
+	         url('source/opensans-bolditalic-webfont.svg#open_sansbold_italic') format('svg');
+	    font-weight: normal;
+	    font-style: italic;
+
+	}
+
+	@font-face {
+	    font-family: 'open_sansextrabold';
+	    src: url('opensans-extrabold-webfont.eot');
+	    src: url('opensans-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('opensans-extrabold-webfont.woff') format('woff'),
+	         url('opensans-extrabold-webfont.ttf') format('truetype'),
+	         url('opensans-extrabold-webfont.svg#open_sansextrabold') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+
+
+
+	@font-face {
+	    font-family: 'open_sansextrabold_italic';
+	    src: url('opensans-extrabolditalic-webfont.eot');
+	    src: url('opensans-extrabolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('opensans-extrabolditalic-webfont.woff') format('woff'),
+	         url('opensans-extrabolditalic-webfont.ttf') format('truetype'),
+	         url('opensans-extrabolditalic-webfont.svg#open_sansextrabold_italic') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+
+
+
+	@font-face {
+	    font-family: 'open_sansitalic';
+	    src: url('opensans-italic-webfont.eot');
+	    src: url('opensans-italic-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('opensans-italic-webfont.woff') format('woff'),
+	         url('opensans-italic-webfont.ttf') format('truetype'),
+	         url('opensans-italic-webfont.svg#open_sansitalic') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+
+
+
+	@font-face {
+	    font-family: 'open_sanslight';
+	    src: url('opensans-light-webfont.eot');
+	    src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('opensans-light-webfont.woff') format('woff'),
+	         url('opensans-light-webfont.ttf') format('truetype'),
+	         url('opensans-light-webfont.svg#open_sanslight') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+
+	 
+
+
+
+	@font-face {
+	    font-family: 'open_sanssemibold';
+	    src: url('source/opensans-semibold-webfont.eot');
+	    src: url('source/opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('source/source/opensans-semibold-webfont.woff') format('woff'),
+	         url('source/opensans-semibold-webfont.ttf') format('truetype'),
+	         url('source/opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+
+
+
+	@font-face {
+	    font-family: 'open_sanssemibold_italic';
+	    src: url('opensans-semibolditalic-webfont.eot');
+	    src: url('opensans-semibolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+	         url('opensans-semibolditalic-webfont.woff') format('woff'),
+	         url('opensans-semibolditalic-webfont.ttf') format('truetype'),
+	         url('opensans-semibolditalic-webfont.svg#open_sanssemibold_italic') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+
+	}
+
+
+
+	 
+
+ 
+
+
+	

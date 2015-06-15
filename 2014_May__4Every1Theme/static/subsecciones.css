@@ -1,0 +1,488 @@
+
+
+
+
+
+	.middle_box_wrap { width:100%; float:left; clear:both; margin-top: 70px; position:relative; margin-bottom:20px; }
+	.middle_box { width:100%; float:left; clear:both; position:relative; }
+	.middle_box .box { width:100%; background:#fff; padding:10px 0;  float:left; margin:0; margin-bottom:0px;    }
+	.middle_box .box_int { padding:0 20px; }
+	.middle_box .box_int h1 { width: 100%; font:40px "sans_bold", "arial"; color: #005cb9; text-align: center;}
+		
+
+/* PORTADA
+--------------------------------------------------------------------------------------- */
+
+/* You might want to change these options for the main container */ 
+#slideshow, #slideshow li { height: 100%; width: 100%; } 
+/* images container - This is the most important container - Don't change important properties */ 
+#slideshow { list-style: none !important; float: left; margin: 0 !important; padding: 0 !important; overflow: hidden !important; position: relative !important; } 
+/* each slider item - Nothing to change here */ 
+#slideshow li { display: none; float: left; margin: 0; position: absolute; width: 100%; } 
+/* Don't edit this part */ 
+#slideshow li.current { display: block; z-index: 2 !important; } 
+/* Don't edit this part */ 
+#slideshow li.next { display: block; z-index: 1 !important; } 
+/* Don't edit this part - prevents inline lists from being hidden */ 
+#slideshow li ul li { display: block !important; position: relative !important; }
+#slideshow li ul li img { height: 103%; width: 0;}
+
+.slide_large { width:100%; height:297px; float:left; position:relative !important; margin: 0 !important; padding: 0 !important;  background: #282828 url(img/comun/loading.gif) 50% 50% no-repeat;
+			  background: #fff url(img/comun/loading.gif) 50% 50% no-repeat;  list-style: none !important; overflow: hidden !important; position: relative !important; }
+.slide_large ul { width:100%; height:100%; float: left; }
+.slide_large ul li { width:100%; height:100%; float: left; position: absolute; top:0; left:0; overflow: hidden; display: none;  background: #282828 url(img/comun/loading.gif) 50% 50% no-repeat; }
+.slide_large ul li img { width:100%; height: auto;  }
+.slide_large ul li.current { width:100%; display: block; z-index: 2 !important; }
+.slide_large ul li.next { width:100%; display: block; z-index: 1 !important; }
+.slide_large ul li .diapo { width: 100%; height: 100%; float: left;  }
+.slide_large ul li .diapo a { width: 100%; height: 100%; float: left;  }
+.slide_large ul li .diapo .info { width: 361px; height: 100%; display: none; float: left; top:0; right: 0; position: absolute; z-index:100; }
+.slide_large ul li .diapo .info h1 { width: 100%; float: left; clear: both; font:30px "sans_regular", "arial", "tahoma"; }
+.slide_large ul li .diapo .imagen { width: 100%; height: 100%; float: left; position: absolute; z-index:20; }
+.slide_large ul li .diapo .imagen .blur_image { width: 361px; height: 100%; display: none; -khtml-opacity: 0.98; opacity: 0.98; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=98); overflow: hidden; float: left; right: 0; position: absolute; z-index:80; }
+.slide_large ul li .diapo .imagen .blur_image img { width: auto; height: 109%; margin-top: -20px; margin-right: -20px; float: right; -webkit-filter: blur(20px); -moz-filter: blur(20px); -o-filter: blur(20px); -ms-filter: blur(20px); filter: blur(20px); }
+.slide_large ul li .diapo .imagen .full_image {  width: 100%; height: 100%; float: left; left: 0; top:0; position: absolute; z-index:50; }
+.slide_large ul li .diapo .imagen .full_image img { height: 100% !important; width: auto !important;  margin-top: 0; }
+
+.slide_large .flecha_izquierda { width: 60px; height:100%; display:none ; cursor: pointer; z-index:200; position: absolute; left: 0; top:0; float: left; clear: both;   }
+.slide_large .flecha_izquierda span:hover { background-position: 0% 0%;  }
+.slide_large .flecha_izquierda span { width: 20px; height:35px; z-index:200; position: absolute; left: 20px; top:139px; float: left; clear: both;  background-image: url(img/comun/slide_flechas.png); background-position: 100% 0%; background-repeat:no-repeat;  }
+.slide_large .flecha_derecha { width: 60px; height:100%; display:none ; cursor: pointer; z-index:200; position: absolute; right: 0; top:0; float: left; clear: both;   }
+.slide_large .flecha_derecha span:hover { background-position: 100% 100%;  }
+.slide_large .flecha_derecha span { width: 20px; height:35px; z-index:200; position: absolute; left: 20px; top:139px; float: left; clear: both;  background-image: url(img/comun/slide_flechas.png); background-position: 0% 100%; background-repeat:no-repeat;  }
+
+.slide_large .controles { width: 100%; height: 50px; background: red; z-index:300; position: absolute; bottom: 0; float: left; clear: both;   }
+.slide_large .controles li, .slider_selector_dis li { display: block !important; background: url(images/slider_selector.png) no-repeat top left; background: blue; cursor: pointer; float: left; margin: 0 3px !important; height: 10px !important; position: relative !important; width: 10px !important;}
+/* Sets the current selector */
+.slide_large .controles .slider_selector li.current, .slider_selector_dis li.current { background: url(images/slider_selector_current.png) no-repeat top left; }
+/* Disables the selectors */
+.slide_large .controles .slider_selector_dis li { cursor: default !important; z-index: 5; }
+
+
+
+/* COMUN
+--------------------------------------------------------------------------------------- */
+
+.box_wrap { width: 100%; float: left; clear: both; }
+.box { margin-left:1.5%; margin-right: 1.5%; }
+
+.block_wrap { width: 100%; float: left; clear: both; padding-top: 25px; background: url(img/comun/degrada_gris.jpg) repeat-x; border-top: 1px solid #ececec; }
+.block { margin-left:0%; margin-right:0%; margin-left:3%; margin-right: 3.5%; }
+
+.titulo_enorme { width: 100%; float: left; clear: both; margin-top:30px; margin-bottom: 30px; margin-left: 0%; }
+.titulo_enorme h1 { width: 100%; float: left; clear: both; text-align: center; text-transform: capitalize; font:30px "sans_bold", "tahoma", "arial"; color: #454545; }
+.titulo_enorme h1 a:hover { color: #454545; }
+         
+.titulo_grande { width: 100%; float: left; clear: both; margin-top:20px; margin-bottom: 20px; margin-left: 0%; }
+.titulo_grande h1 { width: 100%; float: left; clear: both; text-align: center; text-transform: uppercase; font:20px "sans_regular", "tahoma", "arial"; color: #454545; }
+.titulo_grande h1 a:hover { color: #454545; }
+         
+.titulo_peque { width: 100%; float: left; clear: both;  margin-bottom: 20px; margin-left: 0%  }
+.titulo_peque h1 { width: 60%; float: left; }
+.titulo_peque h1 a { float: left; clear: both; font:18px "sans_regular", "tahoma", "arial"; color: #444; }
+.titulo_peque p { float: right; text-align: right;   }
+.titulo_peque p a { float: left; font:16px "sans_light", "tahoma", "arial"; color: #909090; }
+
+.publicidad { width: 100%; float: left; clear: both; }
+.publicidad h1 { width: 100%; height: 12px; float: left; clear: both; }
+.publicidad h1 a { width: 100%; float: right; font:11px "tahoma", "arial"; line-height: 11px; color: #5f5f5f; }
+.publicidad .ad_box { width:100%; height:250px; background:#f4f4f4; float:left; clear:both; margin-top: 10px; }
+
+.canciones_wrap { width: 100%; float: left; clear: both;  padding-top: 25px; background: url(img/comun/degrada_gris.jpg) repeat-x; border-top: 1px solid #ececec;  }
+.canciones { margin-left: 1.7%; margin-right: 1.7%; }
+/* Song box Full */
+ 
+.song_box_wrap {  width:20%; float:left; margin-bottom:20px; }
+.song_box { width:100%; height:150px; overflow: hidden; position: relative; float: none;  }
+.song_box { width:90%; height:auto; margin: 0 auto; vertical-align: top;}
+
+.song_box:hover .info { display: block; }
+.song_box:hover .reproducir { background:url(img/comun/transparencia_negra.png); }
+.song_box:hover .reproducir .play { background:url(img/comun/transparencia_negra.png); }
+.song_box:hover .reproducir .play span { width:100%; height:100%; float:left; background:url(img/comun/btn_play.png) 50% 50% no-repeat; margin:0;  } 
+.song_box .info { width:100%; float: left; display:none ; position: absolute; z-index: 1000; bottom: 15px; left: 0; }
+.song_box .info h1 { margin-left:15px; margin-right:15px; float:left;  clear:both;   }
+.song_box .info h1 a { width:100%; float:left; font:14px "sans_bold", "helvetica", "arial"; color:#fff; line-height:100%; }
+.song_box .info p { width:100%; float:left; clear:both; margin-top:5px; font:12px "sans_regular", "helvetica", "arial"; font-weight:normal; line-height:100%; }
+.song_box .info p a { width:100%; text-indent:15px;  float:left; font:12px "sans_regular", "helvetica", "arial"; color:#fff; line-height:100%; }
+.song_box .reproducir { width:100%; height:100%; background: url(img/comun/degrada_abajo.png) 0% 100% repeat-x; float:left; position:absolute; top:0; left:0; z-index:120; }
+.song_box .reproducir .play { width:100%; height:100%; float:left; z-index:30; position:abosolute; top:0; left:0; }
+.song_box .reproducir .see_profile { width:100%; height:100%; float:left; z-index:30; position:absolute; top:0; left:0; }
+.song_box img { width:100%; height: auto; }
+
+
+/* TOP TRACKS
+--------------------------------------------------------------------------------------- */
+
+.top_tracks { width: 100%; float: left; clear: both; }
+.top_tracks h1 { width: 100%; float: left; margin-bottom: 20px; font:16px "sans_regular", "tahoma", "arial"; line-height: 16px; color: #343434; }
+.top_tracks span { float: right; }
+.top_tracks span a { float: left; font:16px "sans_light", "tahoma", "arial"; line-height: 16px; color: #909090; }
+
+.top_tracks .listado { width: 100%; margin-top: 0; position: relative; float: left; clear: both; }
+.top_tracks .listado .top_largo { width: 100%; height: 80px; overflow: hidden; position: absolute; z-index: 50; top: 0; background: #f6f6f6; margin-bottom: 0; float: left; clear: both; }
+.top_tracks .listado .top_largo .imagen { width: 58px; height: 58px; margin-right: 15px; overflow: hidden; background: #f4f4f4;border:1px solid #cecece; float: left; }
+.top_tracks .listado .top_largo .imagen a { width: 100%; height: 58px; float: left; }
+.top_tracks .listado .top_largo .imagen img { width: 100% !important; height: auto !important; }
+.top_tracks .listado .top_largo .info { width: 220px; float: left; }
+.top_tracks .listado .top_largo .info h1 { width: 100%; float: left; clear: both; margin:0; padding:0;  }
+.top_tracks .listado .top_largo .info h1 a { width: 100%; float: left; clear: both; font:14px "sans_regular", "tahoma", "arial"; line-height: 14px; color: #0067d0; }
+.top_tracks .listado .top_largo .info p { width: 100%; float: left; clear: both; margin-top:5px; }
+.top_tracks .listado .top_largo .info p a { width: 100%; float: left; clear: both; font:13px "sans_regular", "tahoma", "arial"; color: #404040; }
+.top_tracks .listado ul { width: 100%; overflow: hidden; float: left; clear: both; margin-top: 47px; }
+.top_tracks .listado ul li { width: 100%; min-height: 29px; overflow: hidden; position: relative; float: left; clear: both; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.top_tracks .listado ul li:hover { background: #ebebeb;   }
+.top_tracks .listado ul li a { width: 100%; overflow: hidden; float: left; clear: both; }
+.top_tracks .listado ul li a span { width: 20px; overflow: hidden; margin-top: 5px; font:14px "tahoma", "arial"; line-height: 14px; float: left; clear: both; color: #0067d0; }
+.top_tracks .listado ul li a p { width: 90%; margin-top: 5px; font:14px "tahoma", "arial"; line-height: 14px; overflow: hidden; float: right;  color: #787878; }
+ 
+
+
+/* PERFIL CANCION
+--------------------------------------------------------------------------------------- */
+
+.perfil_cancion { width: 100%; float: left; clear: both; position: relative; }
+
+.s_izquierda {  width: 23%; float: left; position: relative;  }
+.s_izquierda .caratula { width: 100%; height: auto; float: left; clear: both;  }
+.s_izquierda .caratula img { width: 100% !important; height: auto !important;   }
+.s_izquierda .share { width: 100%; height: auto; float: left; clear: both; margin-top:25px; }
+.s_izquierda .share ul { width: 100%; height: auto; float: left; clear: both;  }
+.s_izquierda .share ul li { width: 100%; background: #d7d7d7; height: 35px; float: left; clear: both; margin-bottom: 5px;  }
+.s_izquierda .share ul li a { width: 100%; height: 100%; float: left; clear: both;  }
+.s_izquierda .share ul li a p { width: 100%; text-align: center; float: left; clear: both;  }
+
+.s_derecha { width: 74%; float: right; margin-bottom: 0; }
+.s_derecha h3 { width: 100%; font:14px "sans_bold"; color: #fff; margin:0; padding:0; margin-bottom: 10px; float: left; clear: both; position: relative;  }
+.s_derecha h3 a { float: left; font:16px "sans_regular"; text-transform: capitalize; border:0 solid #444; color: #5d5d5d; padding:0; margin-right:20px; }
+.s_derecha h3 a:hover { color: #2a2a2a;  }
+.s_derecha h1 { width: 100%; font:30px "sans_bold"; color: #444; line-height: 30px; margin-bottom: 10px; float: left; clear: both; position: relative;  }
+.s_derecha h4 { width: 100%; font:14px "sans_bold";  color: #696969; margin:0; padding:0; margin-bottom: 15px; float: left; clear: both; position: relative; border-top:0 dotted #cecece;  padding-top:15px;  }
+.s_derecha h4 span { width:20px; height: 20px; float: left; display:none; margin-right: 10px; background: url(img/comun/gray-comment-icon.png);}
+
+.s_derecha h2 { width: 100%; font:14px "sans_bold"; color: #fff; margin-top: 15px;  margin-bottom: 15px; float: left; clear: both; position: relative;  }
+.s_derecha h2 span { float: left; color: #444; font:16px "sans_light"; margin-right: 10px; }
+.s_derecha h2 a { float: left; font:14px "sans_light"; background: #f4f4f4; color: #444; padding:2px 6px; margin-right:10px; }
+.s_derecha h2 a:hover { background: #f4f4f4;   }
+
+.s_derecha p { font:14px "sans_regular"; color:#7b7b7b; float: left; clear: both; width: 100% !important; margin:0; padding:0; margin-top: 10px; margin-bottom: 0; }
+.s_derecha p a { font:14px "sans_regular"; color:#7b7b7b;  float: left; clear: both; clear:both; margin:0; padding:0; margin-bottom: 5px; }
+.s_derecha p a:hover { color:#0067d0; }
+.s_derecha object { width: 100% !important; float: left; clear: both; margin:0; padding:0; }
+.s_derecha embed { width: 100% !important; float: left; clear: both; }
+  
+
+.s_centro { width: 100%; float: left; clear:both; margin-bottom: 0; }
+.s_centro h4 { width: 100%; font:14px "sans_bold";  color: #696969; margin:0; padding:0; margin-bottom: 15px; float: left; clear: both; position: relative; border-top:0 dotted #cecece;  padding-top:15px;  }
+.s_centro h4 span { width:20px; height: 20px; float: left; display:none; margin-right: 10px; background: url(img/comun/gray-comment-icon.png);}
+
+
+
+/* Related TRACKS
+--------------------------------------------------------------------------------------- */
+
+.related_tracks { width: 100%; float: left; clear: both; }
+.related_tracks h1 { width: 100%; float: left; margin-bottom: 20px; font:16px "sans_regular", "tahoma", "arial"; color: #343434; }
+.top_tracks span { float: right; }
+.top_tracks span a { float: left; font:16px "sans_light", "tahoma", "arial"; color: #909090; }
+
+.related_tracks .listado { width: 100%; overflow: hidden; margin-top: 0; position: relative; float: left; clear: both; }
+.related_tracks .listado .top_largo { width: 100%; height: 75px; overflow: hidden; position: relative; z-index: 50; top: 0; background: #f6f6f6; margin-bottom: 0; float: left; clear: both; }
+.related_tracks .listado .top_largo .imagen { width: 60px; height: 60px; overflow: hidden; background: #f4f4f4; float: left; }
+.related_tracks .listado .top_largo .imagen a { width: 60px; height: 60px; float: left; }
+.related_tracks .listado .top_largo .imagen img { width: 100% !important; height: auto !important; }
+.related_tracks .listado .top_largo .info { width: 225px; float: left; margin-left: 15px; }
+.related_tracks .listado .top_largo .info h1 { width: 100%; float: left; clear: both; margin:0; padding:0;  }
+.related_tracks .listado .top_largo .info h1 a { width: 100%; float: left; clear: both; font:13px "sans_regular", "tahoma", "arial"; color: #0067d0; }
+.related_tracks .listado .top_largo .info p { width: 100%; float: left; clear: both;   }
+.related_tracks .listado .top_largo .info p a { width: 100%; float: left; clear: both; font:13px "sans_regular", "tahoma", "arial"; color: #404040; }
+ 
+
+/*** NEWSLETTER ***/
+
+.newsletter { width: 100%; float: left; clear: both; }
+.newsletter h1 { width: 100%; float: left; margin-bottom: 20px; font:16px "sans_bold", "tahoma", "arial"; color: #343434; }
+.newsletter p { width: 100%; float: left; margin-bottom: 20px; font:14px "sans_regular", "tahoma", "arial"; color: #343434; }
+.newsletter .formulario_wrap { width: 100%; height: 60px; float: left; background: #EBE9E9; }
+.newsletter .formulario { margin:10px; }
+.newsletter .formulario input#campo { width: 60%; height: 40px; float: left; font:14px "sans_regular", "tahoma", "arial"; border: 0; background: #fafcff; outline: 0; color: #515152; text-indent: 15px; }
+.newsletter .formulario input#icono { width: 39%; height: 42px; float: left; font:14px "sans_regular", "tahoma", "arial"; border: 0; background: #6ea9e5; outline: 0; color: #eff7ff; }
+ 
+.newsletter .formulario input#campo ::-webkit-input-placeholder { /* WebKit browsers */ color: #999; } 
+.newsletter .formulario input#campo :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: #999; opacity: 1; } 
+.newsletter .formulario input#campo ::-moz-placeholder { /* Mozilla Firefox 19+ */ color: #999; opacity: 1; } 
+.newsletter .formulario input#campo :-ms-input-placeholder { /* Internet Explorer 10+ */ color: #999; }
+	
+
+/*** NEWSLETTER ***/
+
+.send_your_track { width: 100%; height: 290px; float: left; clear: both; }
+.send_your_track h1 { width: 100%; float: left; margin-bottom: 20px; font:16px "sans_bold", "tahoma", "arial"; color: #343434; }
+.send_your_track .ad_box_wrap { width: 100%; height: 225px; padding-bottom: 10px; background: url(img/ad/send.jpg); float: left; clear: both; }
+.send_your_track .ad_box { margin:10px; display: table; padding: 25px 30px; background: #fff; opacity: 0.5; }
+.send_your_track .ad_box h2 { width: 100%; float: left; color: #343434;  color: #00458b; margin-bottom:15px; font:16px "sans_bold", "tahoma", "arial"; }
+.send_your_track .ad_box p { width: 100%; float: left; margin-bottom: 20px; font:14px "sans_regular", "tahoma", "arial"; color: #343434; }
+.send_your_track .ad_box .upload_b { width: 100%; height: 30px; background: #f4f4f4; float: left; font:14px "sans_regular", "tahoma", "arial"; color: #343434; }
+
+ 
+
+
+
+           
+/* EVENTOS
+--------------------------------------------------------------------------------------- */
+.eventos { margin-left:3%; margin-right: 3%; }
+.evento { width: 100%; height: 300px; position: relative; overflow: hidden; float: left; clear:both; }
+.evento a { width: 100%; height: 100%; position: relative; float: left; clear:both; }
+.evento .protect_wallpaper { width: 100%; z-index: 10; background: url(img/comun/degrada_negro.png) 0% 100% repeat-x; height: 100%; top: 0; left: 0; position: absolute; overflow: hidden; float: left; clear:both; }
+.evento .fecha { width: 90px; height: 85px; background: url(img/comun/bg_eventos.png); border-bottom: 5px solid #0067d0; z-index: 100; position: absolute; right: 30px; z-index: 100; float: left; clear:both; }
+.evento .fecha p { width: 100%; margin-top: 20px; color: #0067d0; text-align: center; font:22px "sans_regular", "arial"; line-height: 22px; }
+.evento .fecha p span { width: 100%; float: left; text-align: center; font:22px "sans_bold"; line-height: 22px; }
+.evento .titulo { width: 100%; float: left; position: absolute; z-index: 100; top: 130px; left: 0; }
+.evento .titulo h1 { width: 100%; text-align: center; font:36px "sans_bold"; text-shadow: 1px 1px #000; line-height: 36px; color: #fff; }
+.evento .titulo h2 { width: 100%; text-align: center; font:16px "sans_bold"; text-shadow: 1px 1px #000; line-height: 16px; color: #fff; }
+.evento img { width: 110%; height: auto; }
+  
+           
+/* Noticias 
+--------------------------------------------------------------------------------------- */
+
+ .noticia { width: 100%; float: left; clear:both; }
+ .noticia h1 { width: 100%; text-align:center; font:50px "sans_regular", "arial", "tahoma"; line-height: 55px; margin-bottom: 30px; margin-top: 10px; color:#444; float: left; clear:both; }
+ .noticia h2 { width: 100%; text-align:left;  margin-bottom:20px; font:24px "sans_bold", "arial", "tahoma"; color:#444; float: left; clear:both; }
+ .noticia p { width: 100%; text-align:left; margin-bottom:20px; font:18px "sans_regular", "arial", "tahoma"; color:#252525; float: left; clear:both; }
+ .noticia p.espanol { width: 100%; text-align:left; font:20px "sans_regular", "arial", "tahoma"; color:#444; float: left; clear:both; }
+ .noticia p.other { margin-bottom: 5px; }
+
+
+/* SEARCH
+--------------------------------------------------------------------------------------- */
+
+.campo_busca { width: 100%; height: 80px; background: red; float: left; clear: both; }
+.campo_busca input { width: 100%; height: 80px; font:24px "sans_regular"; border: 0; border-bottom: 1px solid #d8d8d8; text-transform: capitalize; text-indent: 3%; float: left; clear: both; }
+
+.result { width: 100%; min-height: 110px; float: left; clear: both; position: relative; margin-bottom: 25px; border-bottom: 1px solid #f4f4f4; }
+.result .link { width: 100%; height: 100%; position: absolute; float: left; clear: both; top: 0; left: 0; }
+.result .link a { width: 100%; height: 100%; float: left; }
+.result .imagen { width: 20%; height: 110px; overflow: hidden; float: left; }
+.result .imagen img { width: 100%; height: auto; margin-top:-40px; }
+.result .info { width: 75%; float: right; }
+.result .info h1 { width: 100%; float: left; clear: both; color: #404040; font:22px "sans_bold", "arial"; line-height: 22px; }
+.result .info h2 { width: 100%; float: left; clear: both; color: #404040; font:16px "sans_regular", "arial"; line-height: 16px; }
+
+/* 404 ERROR
+--------------------------------------------------------------------------------------- */
+
+.error_wrap { width: 100%; height: 465px; float: left; clear: both; margin-top: 0; position: fixed; top:32%; padding:0; padding-top:0; }
+.error { width: 450px; height: 475px; margin:0 auto; }
+.imagen_wave_error { width: 100%; height: 180px; float: left; background:url(img/error/imagen_wave_error.png) 50% 50% no-repeat; } 
+.info_error { width: 100%;  float: left; margin-top:50px; } 
+.info_error h1 { width: 100%; text-align: center; float: left; font:30px "sans_regular", "tahoma"; color: #444; line-height: normal; margin-bottom: 15px; } 
+.info_error p { width: 100%; color: #292828; text-align: justify; font:16px "Roboto"; line-height: normal; float: left; margin-bottom: 5px; } 
+.info_error p a { color: #646464; font:16px "Roboto"; line-height: normal; float: left; } 
+
+.footer_reducido_wrap { width:100%; height:28px; float:left; background:#e2e2e2; border-top:1px solid #b8b8b8; clear:both; position:fixed; bottom:0; z-index:100; }
+.footer_reducido { width:350px; height: 28px; margin:0 auto; }
+.footer_reducido ul { width:350px; float: left; margin-top:8px;  }
+.footer_reducido ul li {  float: left; list-style: none; margin-right: 15px; }
+.footer_reducido ul li a { font:11px arial; float: left; list-style: none;  }
+.footer_reducido ul li a p { font:12px arial; color:#797979; float: left; list-style: none;   }
+
+  
+
+
+
+/* UPLOADER
+--------------------------------------------------------------------------------------- */
+ 
+.uploader_wrap { margin-left: 6%; margin-right: 6%; }
+ 
+.cab_send_tracks { width: 100%; height: 292px; position: relative; background: url(img/send_tracks/cabecera.jpg) 50% 50%; float: left; clear: both;  }
+.cab_send_tracks span {  width: 100%; height: 100%; position: absolute; float: left; top:0; left: 0; z-index: 0; background: url(img/send_tracks/trans_negra.png);  }
+.cab_send_tracks .info { width: 80%; margin: 0 auto; margin-top: 125px; }
+.cab_send_tracks .info h1 { width: 100%; text-indent: 3%; text-align: center; color: #fff; float: left; clear: both; font:28px "sans_bold", "tahoma", "arial"; line-height: 28px; }
+.cab_send_tracks .info h2 { width: 100%; text-indent: 3%; text-align: center; color: #fff; float: left; clear: both; font:14px "sans_regular", "tahoma", "arial"; line-height: 14px; margin-top: 5px; }
+ 
+ 
+.exito { width: 100%; float: left; display: none; clear: both; padding-top: 30px; padding-bottom: 30px; background: #88b8e4; border-top: 0 solid #0f2a4a; margin-top: 0px; margin-bottom: 30px; } 
+.exito h1 { width: 100%; font:18px "sans_regular", "arial"; text-indent: 6%; color: #fff; } 
+.exito h3 { width: 100%; margin: 0; font:18px "sans_regular", "arial"; text-indent: 6%; color: #fff; } 
+.exito p { width: 100%; font:14px "sans_regular", "arial"; margin: 0; text-indent: 6%; color: #f4f4f4; } 
+
+ 
+.fracaso { width: 100%; float: left; display: none; clear: both; padding-top: 30px; padding-bottom: 30px; background: #b34040; border-top: 0 solid #0f2a4a; margin-top: 0px; margin-bottom: 30px; } 
+.fracaso h1 { width: 100%; font:18px "sans_regular", "arial"; text-indent: 6%; color: #fff; } 
+.fracaso h3 { width: 100%; margin: 0; font:18px "sans_regular", "arial"; text-indent: 6%; color: #fff; } 
+.fracaso p { width: 100%; font:14px "sans_regular", "arial"; margin: 0; text-indent: 6%; color: #f4f4f4; } 
+ 
+
+.uploader_wrap h1 { width: 100%; float: left; clear: both; margin-top: 25px; font:30px "sans_bold", "tahoma"; color: #444; }
+.uploader_wrap h2 { width: 100%; float: left; clear: both; font:16px "sans_regular", "tahoma"; }
+.uploader { width: 100%; float: left; clear: both; margin-top:30px; display: table; padding-bottom: 50px; }
+.uploader .campo { width:100%; height:57px; display: table; clear:both; margin-bottom:25px; background:url(go/comun/mascara_blanca.png); outline: 0; -webkit-box-shadow: inset 0px 0px 0px 1px rgba(202, 202, 202, 1); -moz-box-shadow: inset 0px 0px 0px 1px rgba(202, 202, 202, 1); box-shadow: inset 0px 0px 0px 1px rgba(202, 202, 202, 1); background: #fff; -webkit-border-radius: 3px;  -moz-border-radius: 3px;  border-radius: 3px;   }
+.uploader .campo input { width:100%; float: left; outline: 0; text-indent: 21px; height:57px; font:16px "sans_regular", arial; line-height: 16px; background: transparent; clear:both; border:0; outline: 0; }
+.uploader .campo textarea { width:100%; max-width:100%; float: left; padding-top: 21px; height:130px; outline: 0; text-indent: 21px; font:16px "sans_regular", arial; line-height: 16px; background: transparent; clear:both; border:0; }
+.uploader .campo input#artistic_name { float: left; text-indent: 66px; height:57px; background: url(img/send_tracks/btn_user_name.png) no-repeat;  }
+.uploader .campo input#contact_mail { float: left; text-indent: 66px; height:57px;  background: url(img/send_tracks/btn_mail.png) no-repeat;  }
+.uploader .campo input#link { width:100%; float: left; text-indent: 66px; height:57px; background: url(img/send_tracks/btn_link.png) no-repeat;  }
+ 
+.uploader .enviar_campo { width:100%; height: 57px; background:#70bf00;  clear:both; float: left; margin-top:10px; overflow: hidden; -webkit-border-radius: 3px;  -moz-border-radius: 3px;  border-radius: 3px; -webkit-border-radius: 3px;  -moz-border-radius: 3px;  border-radius: 3px;     }
+.uploader .enviar_campo input { width:100%; height: 57px; cursor: pointer; color: #ffffff; float: left; border:0; font:20px "Roboto", arial; padding:15px 0; line-height: 20px; background: transparent; clear:both; border:0; outline: 0; }
+
+
+
+.uploader .desplegable { width:48%; height:57px; float:left; margin-bottom: 20px; -webkit-box-shadow: inset 0px 0px 0px 1px rgba(202, 202, 202, 1); -moz-box-shadow: inset 0px 0px 0px 1px rgba(202, 202, 202, 1); box-shadow: inset 0px 0px 0px 1px rgba(202, 202, 202, 1); background: #fff; -webkit-border-radius: 3px;  -moz-border-radius: 3px;  border-radius: 3px;    }
+
+.opciones_desplegables { width: 50%; height: 100%; float: left; clear: both; position: relative; background-color: #646464; 
+	box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);  -moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3); box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3);
+	background: #ededed; background:#ececec url(go/send_tracks/input_oscuro.jpg) repeat-x; border: 1px solid #d3d3d3; color: #999;  -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }  
+
+
+.sbHolder { width: 100%; height: 100%; outline: 0; font: 16px arial; padding: 0; margin: 0;font-weight: normal; position: relative;  }
+.sbHolder:focus .sbSelector{ }
+.sbSelector { padding: 0; margin: 0; padding-top: 21px; float: left; clear: both; display: block; outline: 0 !important; height: 100%; left: 0; font:16px "sans_regular", "arial"; line-height: 16px; outline: none; overflow: hidden; position: absolute; text-indent: 21px; top: 0; width: 100%; color: #464646; font-weight: bold; } 
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{ color: #464646; }
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{ outline: none; text-decoration: none; }
+.sbToggle { width: 20px; height: 20px; right: 20px; top: 19px; opacity: 0.5; background:url(img/send_tracks/btn_desplegable.png) 50% 50% no-repeat; display: block; outline: none; position: absolute;}
+.sbToggle:hover{ background: url(go/send_tracks/select-icons.png) 0 -0 no-repeat; }
+.sbToggleOpen { width: 20px; height: 20px; right: 20px; top: 19px;opacity: 1;  background:url(img/send_tracks/btn_desplegable.png) 50% 50% no-repeat; display: block; outline: none; position: absolute;}
+.sbToggleOpen:hover{ background: url(go/send_tracks/select-icons.png) 0 0 no-repeat; }
+.sbHolderDisabled{ background-color: #3C3C3C; border: solid 1px #515151; }
+.sbHolderDisabled .sbHolder { }
+.sbHolderDisabled .sbToggle { }
+.sbOptions { background-color: #eaeaea; list-style: none; left: 0px; margin: 0; padding: 0; position: absolute; top: 35px; width: 100%; z-index: 1; overflow-y: auto; -webkit-box-shadow: inset 0px 0px 0px 1px rgba(202, 202, 202, 1); -moz-box-shadow: inset 0px 0px 0px 1px rgba(202, 202, 202, 1); box-shadow: inset 0px 0px 0px 1px rgba(202, 202, 202, 1); -webkit-border-bottom-right-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-bottomright: 3px; -moz-border-radius-bottomleft: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; }
+.sbOptions li { width: 100%; overflow: hidden; } 
+.sbOptions li:hover{ background: #f34f29; color: #fff; } 
+.sbOptions li:hover a { color: #fff; } 
+.sbOptions a { width: 100%; display: block; outline: none; text-indent: 21px; padding-top: 8px; padding-bottom: 8px; border-bottom: 1px solid #dadada;  border-bottom:0; font:16px "sans_regular", "arial"; color: #888888;  line-height: 16px; }
+.sbOptions a:link, .sbOptions a:visited {color: #606060; text-decoration: none; }  
+.sbOptions li.last a { border-bottom: none; } 
+
+
+ 
+	@media all and (min-width: 0) and (max-width: 599px) {
+ 		
+
+ 		/*** Slide ***/
+		.slide_large { width:100%; height:200px !important;  }
+		.slide_large ul li img { width: 100%; height: auto; }
+		.slide_large .flecha_izquierda { display: block !important; }
+		.slide_large .flecha_derecha { display: block !important; }
+		.slide_large .flecha_izquierda span { top:85px; }
+		.slide_large .flecha_derecha span {  top:85px;  }
+ 		.slide_large ul li .diapo .imagen .full_image img { height: 100% !important; width: auto !important;  margin-left: -180px; }
+
+		.titulo_peque { width: 100%; }
+		.titulo_peque h1 { width: 100%; }
+		.titulo_peque h1 a { width: 100%; text-align: center; font:25px "sans_bold", "tahoma", "arial"; }
+		.titulo_peque h1 a span { width: 100%; float: left; clear: both; font:16px "sans_regular", "tahoma", "arial"; }
+		.titulo_peque p { display: none; }
+
+
+ 		.song_box_wrap {  width:50%; float:left; margin-bottom:20px; }
+		.song_overview .s_izquierda { width: 100%; float: left; position: relative;  }
+		.caratula img { width: 100%; float: left; clear: both;}
+		.song_overview .s_derecha { width: 100%; float: right; margin-top: 30px;  margin-bottom: 20px; }
+
+
+ 
+ 		.evento img { width: auto; height: 100% !important; }
+
+
+		.result .imagen img { margin-top:0 !important; }
+		.campo_busca { margin-top:50px; }
+
+ 
+		.s_izquierda { width:100% !important; }
+		.s_derecha { width:100% !important; margin-top: 20px; }
+   		
+   		/*** Send your track ***/
+		.cab_send_tracks { height: 200px !important;  }
+		.cab_send_tracks .info { margin-top: 55px; }
+ 		.uploader_wrap { margin-left: 5%; margin-right: 5%; margin-top: 20px; margin-bottom: 120px; }
+		.uploader_wrap h1 {  text-align: center; margin-top: 25px; font:24px "sans_bold", "tahoma"; color: #444; }
+
+ 
+ 
+
+	}
+
+	@media all and (min-width: 600px) and (max-width: 900px) {
+ 
+		.slide_large .flecha_izquierda { display: block !important; }
+		.slide_large .flecha_derecha { display: block !important; }
+
+ 		.song_box_wrap {  width:25%; float:left; margin-bottom:20px; }
+		.song_box .cover { width:100%; height:150px; float:left; margin:0; clear:both; margin-bottom:15px; position:relative; overflow:hidden; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1); -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1); -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1); box-shadow: 0 2px 4px rgba(0,0,0,0.1);  }
+  
+  		/*** Send your track ***/
+ 		.uploader_wrap { margin-left: 5%; margin-right: 5%; margin-top: 20px; margin-bottom: 120px; }
+		.uploader_wrap h1 {  text-align: center; }
+
+  		/*** Song ***/
+		.s_izquierda { width:100% !important; }
+		.s_derecha { width:100% !important; }
+
+
+ 		.evento img { height: 110% !important; width: auto !important; }
+
+
+		.result .imagen img { margin-top:0 !important; }
+		.campo_busca { margin-top:50px; }
+
+
+	}
+
+	@media all and (min-width: 900px) and (max-width: 1149px) {
+ 		
+ 		/*** HOME slider ***/
+
+		.slide_large .flecha_izquierda { display: block !important; }
+		.slide_large .flecha_derecha { display: block !important; }
+ 		.slide_large ul li .diapo .imagen .full_image img { width: 103% !important; height: auto !important; margin-top: 0; }
+
+  		/*** Send your track ***/
+ 		.uploader_wrap { margin-left: 5%; margin-right: 5%; margin-top: 20px; margin-bottom: 120px; }
+		.uploader_wrap h1 {  text-align: center; }
+
+
+ 		.evento img { width: 100% !important; height: auto !important; }
+
+ 		.song_box_wrap {  width:25%; float:left; margin-bottom:20px; }
+		.song_box .cover { width:100%; height:150px; float:left; margin:0; clear:both; margin-bottom:15px; position:relative; overflow:hidden; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.1); -ms-box-shadow: 0 2px 4px rgba(0,0,0,0.1); -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.1); box-shadow: 0 2px 4px rgba(0,0,0,0.1);  }
+  
+
+		.result .imagen img { margin-top:0 !important; }
+		.campo_busca { margin-top:50px; }
+
+	}
+	@media all and (min-width: 1150px) and (max-width: 1399px) {
+	 		.slide_large ul li .diapo .imagen .full_image img { height: 103% !important; width: auto !important; margin-left:0; }
+	}
+ 
+	@media all and (min-width: 1400px) and (max-width: 1500px) {
+
+		.slide_large { height:320px; }
+	 	.slide_large ul li .diapo .imagen .full_image img { height: 100% !important; width: auto !important; margin-left:-30px; }
+
+		
+		.evento { width: 100%; height: 350px; position: relative; overflow: hidden; float: left; clear:both; }
+		.evento .titulo { width: 100%; float: left; position: absolute; z-index: 100; top: 143px; left: 0; }
+		.evento .titulo h1 { font:45px "sans_bold";  }
+		.evento .titulo h2 { font:24px "sans_bold"; margin-top: 0; }
+
+
+
+	}
+
+	@media all and (min-width: 1500px) {
+		.slide_large { height:350px; }
+
+		.slide_large { height:350px; }
+ 		.slide_large ul li img { width:100%;  }
+
+
+	}
+
+
+

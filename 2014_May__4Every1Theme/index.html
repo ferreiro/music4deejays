@@ -1,0 +1,681 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+
+    <title>Music4deejays</title>
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="user-scalable=no">
+    <meta name="viewport" content="target-densitydpi=device-dpi">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+
+    <link href="style.css" title="compact" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!-- jQuery easing plugin - VERY IMPORTANT -->
+    <script type="text/javascript" src="http://music4deejays.com/wp-content/themes/music4deejays_theme/static/js/jquery.easing.1.3.js"></script>
+    <!-- DDSlider jQuery Plugin - VERY IMPORTANT -->
+    <script type="text/javascript" src="http://music4deejays.com/wp-content/themes/music4deejays_theme/static/js/jquery.DDSlider.min.js"></script>
+    <script type="text/javascript" src="http://music4deejays.com/wp-content/themes/music4deejays_theme/static/js/animaciones.js"></script>
+
+</head>
+<body>
+    
+
+<div class="eslogan" style="width:150px; background:#f4f4f4; border:#cecece 1px solid; padding:10px; z-index:300; opacity:0.9; position:fixed; bottom:10px; left:10px;"><h1 style="width:100%; font:12px arial;">Slogan: The house of Deejays, producers and music lovers. La casa de los deejays, productores y amantes de la música.</h1></div>
+
+
+
+
+<div class="header_wrap"><div class="header">
+
+      <div class="logotipo">
+        <div class="link"><a href="index.html"></a></div>
+      </div>
+
+      <div class="menu">
+      <ul> 
+
+         <div class="separador"></div>
+         <li class="seleccionado"><a href="index.html"><p>Home</p></a></li>
+
+
+         <!-- Menu Music -->
+         <li id="menu_musica" style="display:none;">
+
+            <a id="sinpulsar" class="pulsada"><p>Music</p><span class="flecha_abajo"></span></a>
+            <a id="pulsado" class="pulsada"><p>Music</p><span class="flecha_abajo"></span></a>
+
+               <div class="dropdown" id="dropdown_menu">
+                 <div class="flecha_top"></div>
+                 <div class="menu_content">
+                    
+                    <div class="title"><h1>Genres</h1></div>
+                    <div class="m_c_submenu">
+                        <div class="link"><a href="categories.html">Progressive</a></div>
+                        <div class="link"><a href="categories.html">Electro</a></div>
+                        <div class="link"><a href="categories.html">Dubstep</a></div>
+                        <div class="separa"></div>                  
+                        <div class="link"><a href="categories.html">Trance</a></div>
+                        <div class="link"><a href="categories.html">Trap</a></div>
+                        <div class="link"><a href="categories.html">House</a></div>
+                    </div>
+                    
+                    <div class="separador_menu_dropdown"></div>      
+
+                    <div class="title"><h1>Categories</h1></div>
+                    <div class="m_c_submenu">
+                        <div class="link"><a href="categories.html">Mashups</a></div>
+                        <div class="link"><a href="categories.html">Originals</a></div>
+                        <div class="link"><a href="categories.html">Remixes</a></div>
+                        <div class="separa"></div>                  
+                        <div class="link"><a href="categories.html">Bootlegs</a></div>
+                        <div class="link"><a href="categories.html">Packs</a></div>
+                        <div class="link"><a href="categories.html">Acapella</a></div>
+                    </div>
+
+                  </div>
+                </div>
+         </li>
+
+         <div class="separador"></div>
+
+         <li><a href="categories.html"><p>Discover music</p></a></li><div class="separador"></div>
+         <li><a href="events.html"><p>Events</p></a></li><div class="separador"></div>
+         <li><a href="artists.html"><p>Artists</p></a></li> 
+
+       </ul>  
+      </div>
+
+      <div class="cabecera_derecha">
+         <div class="separador"></div>
+
+         <div class="panel_conectado">
+            
+            <div class="profile_view">
+            [Audio player]
+            </div>
+
+            <div class="separador" style="margin-left:8px;"></div>
+
+            <div class="upload">
+            <a href="upload.html">
+                <span></span>
+                <p>Upload</p>
+            </a>
+            </div>
+
+            <div class="separador" style="background:#2372b0; margin-left:8px;"></div>
+
+            <div class="opciones">
+ 
+                <div class="title sin_pulsar">
+                    <span></span>
+                </div>
+
+                <div class="title pulsado">
+                    <span></span>
+                </div>
+
+                <div class="menu_opciones">
+                    <div class="flecha_top"></div>
+                    <div class="opciones_lista">
+                        <ul>
+                            <li><a href="edit_profile.html"><p>About us</p></a></li>
+                            <li><a href="settings.html"><p>Send your feedback</p></a></li>
+                            <li><a href="index.html"><p>Send your song</p></a></li>
+                            <li class="ultimo"><a href="index.html"><p>Contact us</p></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+         </div><!-- Fin panel_no conectado -->
+
+         <div class="panel_no_conectado" style="display:none;">
+         <ul>
+            <li class="login"><a href="login.html"><span></span><p>Login in</p></a></li>
+            <li class="register"><a href="register.html"><span></span><p>Create a new profile</p></a></li>
+         </ul>
+         </div><!-- Fin panel_no conectado -->
+
+      </div>
+ 
+</div></div><!-- Fin cabecera -->
+
+
+
+ 
+
+
+                                    
+                                    
+ 
+
+<div class="container_wrap">
+    <div class="container">
+        
+        <div class="aux_module_wrap">
+            <div class="aux_module">
+                
+                <h1>My music</h1>
+                <ul>
+                    <li class="seleccionado"><a href=""><span class=""></span><p>Mi perfil</p></a></li>
+                    <li><a href=""><span class=""></span><p>All songs</p></a></li>
+                    <li class="fans"><a href=""><span></span><p>Exclusive for fans</p></a></li>
+                    <li><a href=""><span class=""></span><p>Private songs</p></a></li>
+                    <li><a href=""><span class=""></span><p>Configurar cuenta</p></a></li>
+                
+                </ul>
+                
+            </div>
+        </div>
+        
+
+        <div class="main_module_wrap">
+            <div class="main_module">
+                
+
+                <div class="slide_large">
+                <ul id="slideshow">
+
+                
+                    <li class="fading">
+                    <div class="diapo" >
+                    <a href="song.html">
+                        <div class="info">
+                          <h1>Are you a producer? Join to Music4deejays</h1>
+                        </div>
+                        <div class="imagen">
+                          <div class="full_image"><img width="990" height="292" src="http://music4deejays.com/wp-content/uploads/2014/05/producer4.png" class="attachment-990x990 wp-post-image" alt="producer" /></div>
+                        </div>
+                    </a>
+                    </div>
+                    </li>
+          
+                
+                    <li class="fading">
+                    <div class="diapo" >
+                    <a href="song.html">
+                        <div class="info">
+                          <h1>Summer festivals on Music4deejays</h1>
+                        </div>
+                        <div class="imagen">
+                          <div class="full_image"><img width="990" height="292" src="http://music4deejays.com/wp-content/uploads/2014/05/summer.png" class="attachment-990x990 wp-post-image" alt="summer" /></div>
+                        </div>
+                    </a>
+                    </div>
+                    </li>
+          
+                
+                    <li class="fading">
+                    <div class="diapo" >
+                    <a href="song.html">
+                        <div class="info">
+                          <h1>4everyone festival</h1>
+                        </div>
+                        <div class="imagen">
+                          <div class="full_image"><img width="990" height="292" src="http://music4deejays.com/wp-content/uploads/2014/05/4everyone_slide.png" class="attachment-990x990 wp-post-image" alt="4everyone_slide" /></div>
+                        </div>
+                    </a>
+                    </div>
+                    </li>
+          
+                
+                
+                    <li class="fading">
+                    <div class="diapo" >
+                    <a href="http://twitter.com/music4deejays" target="_blank">
+                        <div class="info">
+                          <h1>twitter</h1>
+                        </div>
+                        <div class="imagen">
+                          <div class="full_image"><img width="990" height="292" src="http://music4deejays.com/wp-content/uploads/2014/05/twitter2.png" class="attachment-990x990 wp-post-image" alt="twitter" /></div>
+                        </div>
+                    </a>
+                    </div>
+                    </li>
+          
+                </ul>  
+
+                <div class="flecha_izquierda"><span></span></div>
+                <div class="flecha_derecha"><span></span></div>
+                <div class="seleccionar_diapositiva">
+                    <ul class="slider_selector"></ul>
+                </div>
+
+                </div><!-- Fin slider -->
+
+
+
+
+                <div class="left_box_wrap">
+                    <div class="left_box">
+
+
+                                <div class="slide" style="display:none;">
+             
+            						<div class="slide_centro">
+            						  <img src="media/cover/slide.jpg" alt="">
+            						</div> 
+
+            					</div>
+
+                                <div class="box"><div class="box_int">
+                                             
+
+									<div class="category_content">
+    																			
+									    <h1 class="titulo_peque">New hot music of the Day</h1>
+										 
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                        <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                        <img src="media/cover/1.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                        <h1>PUSHING ON</h1>
+                                                        <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                        <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                        <img src="media/cover/2.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                        <h1>Ping pong</h1>
+                                                        <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                        <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                        <img src="media/cover/3.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                        <h1>Ping pong</h1>
+                                                        <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                        <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                        <img src="media/cover/4.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                        <h1>Ping pong</h1>
+                                                        <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                        <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                        <img src="media/cover/5.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                        <h1>Ping pong</h1>
+                                                        <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                            <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                            <img src="media/cover/8820190.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                            <h1>Vivir mi Vida</h1>
+                                                                <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                            <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                            <img src="media/cover/8804602.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                            <h1>Vivir mi Vida</h1>
+                                                                <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                            
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                            <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                            <img src="media/cover/8788827.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                            <h1>Vivir mi Vida</h1>
+                                                                <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                              
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                            <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                            <img src="media/cover/8859431.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                            <h1>Vivir mi Vida</h1>
+                                                                <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                            <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                            <img src="media/cover/8747881.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                            <h1>Vivir mi Vida</h1>
+                                                                <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+
+                                                                    
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                            <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                            <img src="media/cover/8837792.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                            <h1>Vivir mi Vida</h1>
+                                                                <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                            <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                            <img src="media/cover/8804533.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                            <h1>Vivir mi Vida</h1>
+                                                                <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                            <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                            <img src="media/cover/8883633.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                            <h1>Vivir mi Vida</h1>
+                                                                <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                            <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                            <img src="media/cover/8567646.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                            <h1>Vivir mi Vida</h1>
+                                                                <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                        <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                        <img src="media/cover/8815389.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                        <h1>Vivir mi Vida</h1>
+                                                        <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+
+                                        
+                                        <div class="song_box_wrap"><div class="song_box"> 
+                                            <a href="song.html">
+                                                 <div class="cover">
+                                                        <div class="box_trans"><div class="play"><span></span></div></div><!-- transparent  -->
+                                                        <img src="media/cover/3.jpg" alt="">
+                                                 </div>
+                                                 <div class="info">
+                                                        <h1>Vivir mi Vida</h1>
+                                                        <p>Otras opciones...</p>
+                                                 </div>
+                                            </a>
+                                        </div></div>
+
+                                        
+                                        <div class="load_content_wrap">
+                                            <div class="load_content">
+                                                <a href="#"><p>See more songs</p></a>
+                                            </div>
+                                        </div>
+                        
+
+											   
+						 			<!-- End Category Content --></div> 
+									
+
+                            </div></div><!-- Fin box -->
+
+
+                            <div class="box"><div class="box_int">
+                                <div class="panel_acceso">    
+                                  
+                                    <h1>Promote your talent</h1>
+                                    <div class="ad_box_wrap"><div class="ad_box">
+                                      <h2>Deejay, producer or want to send us a track you like?</h2> 
+                                      <p>It's your time to send us your music and appears on Music4deejays!</p>
+                                      <div class="upload_b"><a href="send_song.html">Send my song</a></div>
+                                    </div></div>                       
+
+                                     <h1><b>Nombre</b> es más increible aún si te creas una cuenta:</h1>
+                                     <p>Añadir botones con gráficos: Sube tu musica a la nube, comparte canciones con otros usuarios, descarga temas ineditos, music cloud..</p>
+                                     <div class="acceso">
+                                            <a href="create_account.html">Create an account</a>
+                                     </div>
+                                 
+                                     <div class="registro">
+                                            <p>Have an account?</p>
+                                            <a href="login.html">Login</a>
+                                    </div>
+                                    
+                                </div>
+                            </div></div><!-- Fin box -->
+
+									 
+                    </div>
+                </div><!-- Left box -->
+                
+
+                <div class="right_box_wrap">
+                    <div class="right_box">
+                        
+
+                                <div class="box"><div class="box_int">
+                                    <div class="mini_chart">
+                                        
+
+                                    <div class="titulo">
+                                        <h1>Top 6 songs</h1>
+                                        <a href="#">See top 100</a>
+                                    </div>
+                                    
+                                    <ul>
+                                        <li>
+                                            <div class="cover">
+                                                <span><a href="#"></a></span>
+                                                <img src="media/cover/8804533.jpg" alt="">
+                                             </div>
+                                             <div class="info">
+                                                <h1><a href="#">Nombre de la cancion destacada</a></h1>
+                                                <p><a href="" class="escuchar">Escuchar</a></p>
+                                             </div>
+                                        </li><!-- Fin box -->               
+                                    
+                                        <li>
+                                            <div class="cover">
+                                                <span><a href="#"></a></span>
+                                                <img src="media/cover/8815389.jpg" alt="">
+                                             </div>
+                                             <div class="info">
+                                                <h1><a href="#">Nombre de la cancion destacada</a></h1>
+                                                <p><a href="" class="escuchar">Escuchar</a></p>
+                                             </div>
+                                        </li><!-- Fin box -->
+                                    
+                                        <li>
+                                            <div class="cover">
+                                                <span><a href="#"></a></span>
+                                                <img src="media/cover/8820190.jpg" alt="">
+                                             </div>
+                                             <div class="info">
+                                                <h1><a href="#">Nombre de la cancion destacada</a></h1>
+                                                <p><a href="" class="escuchar">Escuchar</a></p>
+                                             </div>
+                                        </li><!-- Fin box -->
+                                        <li>
+                                            <div class="cover">
+                                                <span><a href="#"></a></span>
+                                                <img src="media/cover/8804533.jpg" alt="">
+                                             </div>
+                                             <div class="info">
+                                                <h1><a href="#">Nombre de la cancion destacada</a></h1>
+                                                <p><a href="" class="escuchar">Escuchar</a></p>
+                                             </div>
+                                        </li><!-- Fin box -->               
+                                    
+                                        <li>
+                                            <div class="cover">
+                                                <span><a href="#"></a></span>
+                                                <img src="media/cover/8815389.jpg" alt="">
+                                             </div>
+                                             <div class="info">
+                                                <h1><a href="#">Nombre de la cancion destacada</a></h1>
+                                                <p><a href="" class="escuchar">Escuchar</a></p>
+                                             </div>
+                                        </li><!-- Fin box -->
+                                    
+                                        <li>
+                                            <div class="cover">
+                                                <span><a href="#"></a></span>
+                                                <img src="media/cover/8820190.jpg" alt="">
+                                             </div>
+                                             <div class="info">
+                                                <h1><a href="#">Nombre de la cancion destacada</a></h1>
+                                                <p><a href="" class="escuchar">Escuchar</a></p>
+                                             </div>
+                                        </li><!-- Fin box -->
+                                    
+                                        
+                                        </ul>
+                                    </div><!-- Fin mini tabla -->
+                                </div></div><!-- Fin box -->
+
+
+
+
+                                <div class="box"><div class="box_int">
+                                    <div class="mini_events">
+                                        
+
+                                    <div class="titulo">
+                                        <h1>Events</h1>
+                                        <a href="events.html">See more events</a>
+                                    </div>
+                                    
+                                    <ul>
+                                        <li>
+                                            <div class="cover">
+                                                <span><a href="events.html"></a></span>
+                                                <img src="media/cover/8804533.jpg" alt="">
+                                             </div>
+                                             <div class="info">
+                                                <h1><a href="events.html">Nombre de la cancion destacada</a></h1>
+                                                <p><a href="events.html" class="escuchar">See event</a></p>
+                                             </div>
+                                        </li><!-- Fin box -->               
+                                    
+
+                                        
+                                        </ul>
+                                    </div><!-- Fin mini tabla -->
+                                </div></div><!-- Fin box -->
+
+
+
+                                <div class="box"><div class="box_int">
+                                    New comments
+                                </div></div>
+                                
+                    </div>
+                </div><!-- Right box -->
+                
+                
+            </div>
+        </div>
+            
+    </div>
+</div>
+
+
+<div class="footer_wrap">
+    <div class="footer">
+    
+    
+    
+    </div>
+</div>
+    
+
+
+
+
+    
+
+</body>
+</html>
+
