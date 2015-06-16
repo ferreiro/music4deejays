@@ -94,8 +94,9 @@
 
                 <ul class="stream__item_options">
                     <li class="options_comments border">
-                        <a href="#">
+                        <a href="<?php the_permalink(); ?>#comments">
                             <span class="icon-bubbles2"></span> <!-- Añadir icono por css -->  
+                            Comments
                         </a>
                     </li>
                     <li class=" border">
@@ -147,7 +148,7 @@
                         </div>
                         <div class='sidebar__chart__info'>
                             <h3 class='sidebar__chart__item_title'><a href='<?php the_permalink(); ?>'><?php the_title(); ?></a></h3>
-                            <p class='sidebar__chart__genre'><a href='category.html'>Genre</a></p>
+                            <p class='sidebar__chart__genre'><a href='category.html'>Genre</a></p   >
                         </div>
                     </li>
                 <? endwhile; endif; ?> 

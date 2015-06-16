@@ -84,6 +84,7 @@
                                 $category_id = $categories[0]->cat_ID;
                                 wpp_get_mostpopular( "range=monthly&limit=6&post_type=post&freshness=1&order_by=views&title_length=8&title_by_words=1&thumbnail_width=40&thumbnail_height=40&stats_views=0&post_html=\"<li class='sidebar__chart__item'><div class='sidebar__chart__thumbnail'><a href='{url}'>{thumb}</a></div> <div class='sidebar__chart__info'><h3 class='sidebar__chart__item_title'><a href='{url}'>{text_title}</a></h3> <p class='sidebar__chart__genre'><a href='category.html'>Genre</a></p></h2></div></a></li>\"" );
                             ?>
+                            <!--
                             <li class='sidebar__chart__item'> 
                                 <div class='sidebar__chart__thumbnail'>
                                     <a href='single.html'>
@@ -95,7 +96,8 @@
                                     <p class='sidebar__chart__genre'><a href='category.html'>Genre</a></p>
                                 </div>
                             </li>
-
+                            -->
+                            
                         </ul>
                     </div>
 
