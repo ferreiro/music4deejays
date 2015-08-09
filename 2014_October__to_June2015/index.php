@@ -151,16 +151,15 @@
                 <div class="sliderButtonNext icon-next"></div>
                 <ul class="sliderSelector"></ul>
                 <ul class="sliderDiapos" id="sliderDiapos">
-                    <li class="fading" style="background-image:url(http://music4deejays.com/media/uploads/2015/06/cartelweb_short.jpg);">
+                    <!-- <li class="fading" style="background-image:url(http://music4deejays.com/media/uploads/2015/06/cartelweb_short.jpg);">
                         <div class="sliderDiaposInfo">
                             <h1><a href="http://music4deejays.com/4everyone">4every1 Festival</a></h1>
                             <h2>Festivals and events</h2>
-                            <!-- <p><a href="#" onclick="event.preventDefault(); $('#playlist_list #playlist2').prepend($('.BoxSongUrl')); api_loadPlaylist(hap_players[0],{hidden: true, id: '#playlist2'}); api_playAudio(hap_players[0]); return false;">Listen song</a></p> -->
                         </div>
                         <div class="sliderDiaposLink">
                             <a href="http://music4deejays.com/4everyone"></a>
                         </div>
-                    </li> 
+                    </li> -->
                     <?php 
                         $i = 0;
                         query_posts(array('orderby' => 'date', 'showposts' => 2, 'cat' => '-208')); 
