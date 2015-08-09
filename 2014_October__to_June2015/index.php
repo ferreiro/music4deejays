@@ -162,7 +162,7 @@
                     </li> -->
                     <?php 
                         $i = 0;
-                        query_posts(array('orderby' => 'date', 'showposts' => 2, 'cat' => '-208')); 
+                        query_posts(array('orderby' => 'date', 'showposts' => 3, 'cat' => '-208')); 
                         if (have_posts()) : while (have_posts()) : the_post(); 
                     ?>
                         <?php PostSlide($i, "thumbnail"); ?>    
